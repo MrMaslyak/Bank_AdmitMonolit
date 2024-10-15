@@ -1,0 +1,42 @@
+.main {
+    -fx-background-color: linear-gradient(from 0% 0% to 75% 50%, #e343e4 37%, #33dcd7 62%, #33f798 81%);
+}
+
+
+.login-panel {
+    -fx-background-color: linear-gradient(from 0% 0% to 50% 75%, #0ceb67, #13e9be);
+    -fx-border-color: grey;
+    -fx-border-width: 2px;
+
+}
+
+
+.up-panel {
+    -fx-background-color: linear-gradient(to right, #e65fff 16%, #1dbafd 48%, #45fc86 90%);
+    -fx-border-color: grey;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.border-pane{
+ -fx-border-color: grey;
+    -fx-border-width: 2px;
+}
+
+.date-picker {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #e65fff, #1dbafd);
+    -fx-border-color: grey;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-text-fill: #ffffff; /* Белый текст */
+    -fx-font-size: 14px; /* Изменение размера шрифта */
+    -fx-padding: 5 10 5 10; /* Отступы внутри поля */
+}
+.date-picker .arrow {
+    -fx-background-color: #45fc86; /* Цвет стрелки */
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent; /* Прозрачный фон внутри текстового поля */
+    -fx-text-fill: #ffffff; /* Цвет текста внутри поля */
+}

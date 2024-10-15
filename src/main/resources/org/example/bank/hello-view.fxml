@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1000.0" styleClass="main" stylesheets="@Style/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="582.0" prefHeight="665.0" prefWidth="418.0" styleClass="login-panel">
+         <children>
+            <Button layoutX="162.0" layoutY="380.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="117.0" text="JOIN" textFill="#1969bf">
+               <font>
+                  <Font name="Segoe Print" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="58.0" layoutY="604.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="326.0" text="Registration">
+               <font>
+                  <Font name="Segoe Print Bold" size="18.0" />
+               </font>
+            </Button>
+            <PasswordField layoutX="103.0" layoutY="298.0" prefHeight="41.0" prefWidth="237.0" />
+            <TextField layoutX="102.0" layoutY="230.0" prefHeight="41.0" prefWidth="237.0" />
+            <Label layoutX="151.0" layoutY="109.0" prefHeight="47.0" prefWidth="142.0" text="LOGIN" underline="true">
+               <font>
+                  <Font name="Poor Richard" size="47.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <DialogPane layoutX="-9.0" prefHeight="57.0" prefWidth="591.0" styleClass="up-panel" />
+      <Label layoutX="244.0" layoutY="57.0" prefHeight="57.0" prefWidth="85.0" text="NEWS">
+         <font>
+            <Font name="Playbill" size="53.0" />
+         </font>
+      </Label>
+      <BorderPane layoutX="156.0" layoutY="-7.0" prefHeight="64.0" prefWidth="20.0" styleClass="border-pane" />
+      <DatePicker fx:id="datePicker" layoutX="432.0" layoutY="7.0" prefHeight="44.0" prefWidth="142.0" styleClass="date-picker" />
+      <Label layoutX="49.0" layoutY="8.0" prefHeight="41.0" prefWidth="74.0" text="19:20">
+         <font>
+            <Font name="Berlin Sans FB" size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
