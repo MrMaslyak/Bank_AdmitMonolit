@@ -21,22 +21,52 @@
  -fx-border-color: grey;
     -fx-border-width: 2px;
 }
-
-.date-picker {
-    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #e65fff, #1dbafd);
-    -fx-border-color: grey;
-    -fx-border-width: 2px;
-    -fx-border-radius: 10;
-    -fx-background-radius: 10;
-    -fx-text-fill: #ffffff; /* Белый текст */
-    -fx-font-size: 14px; /* Изменение размера шрифта */
-    -fx-padding: 5 10 5 10; /* Отступы внутри поля */
-}
-.date-picker .arrow {
-    -fx-background-color: #45fc86; /* Цвет стрелки */
+.join {
+    -fx-background-color: linear-gradient(#3b3b3b, #1c1c1c);
+    -fx-background-radius: 20px;
+    -fx-border-color: #696969;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand; /* курсор-указатель при наведении */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
 }
 
-.date-picker .text-field {
-    -fx-background-color: transparent; /* Прозрачный фон внутри текстового поля */
-    -fx-text-fill: #ffffff; /* Цвет текста внутри поля */
+.join:hover {
+    -fx-background-color: linear-gradient(#4d4d4d, #2c2c2c);
 }
+
+.join:pressed {
+    -fx-background-color: #1a1a1a;
+    -fx-text-fill: #81d8d0;
+    -fx-padding: 12px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0.5, 0.0, 0.0);
+}
+
+.registration {
+    -fx-background-color: #2e2e2e;
+    -fx-background-radius: 20px;
+    -fx-border-color: #696969;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.5, 0.0, 0.0);
+}
+
+.registration:hover {
+    -fx-background-color: #444444;
+}
+
+.registration:pressed {
+    -fx-background-color: #1c1c1c;
+    -fx-text-fill: #81d8d0;
+    -fx-padding: 7px 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0.5, 0.0, 0.0);
+}
+
+

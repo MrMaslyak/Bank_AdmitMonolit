@@ -7,6 +7,7 @@ module org.example.bank {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
     opens org.example.bank to javafx.fxml;
     exports org.example.bank;
