@@ -30,7 +30,6 @@ public class Controller {
         plnValue.setText(plnRate);
         euroValue.setText(euroRate);
         dollarValue.setText(dollarRate);
-
         News news  = new News();
         news1.setText(news.getNews1());
         news2.setText(news.getNews2());

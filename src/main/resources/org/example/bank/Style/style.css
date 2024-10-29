@@ -30,7 +30,7 @@
     -fx-text-fill: #ffffff;
     -fx-font-size: 18px;
     -fx-padding: 10px 20px;
-    -fx-cursor: hand; /* курсор-указатель при наведении */
+    -fx-cursor: hand;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
 }
 
@@ -68,5 +68,21 @@
     -fx-padding: 7px 10px;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0.5, 0.0, 0.0);
 }
+.news {
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 5px 10px;
+    -fx-wrap-text: true;
+    -fx-font-size: 16px;
+    -fx-max-height: Infinity;
+    -fx-max-width: 500px;
+    -fx-text-alignment: justify;
+}
+
+
+
+
+
+
 
 
