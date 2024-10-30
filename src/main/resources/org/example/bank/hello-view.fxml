@@ -18,14 +18,14 @@
                         <Font name="Segoe Print" size="15.0"/>
                     </font>
                 </Button>
-                <Button layoutX="58.0" layoutY="604.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="326.0"
+                <Button fx:id="registration" onAction="#setRegistration" layoutX="58.0" layoutY="604.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="326.0"
                         styleClass="registration" text="Registration">
                     <font>
                         <Font name="Segoe Print Bold" size="18.0"/>
                     </font>
                 </Button>
-                <PasswordField layoutX="103.0" layoutY="298.0" prefHeight="41.0" prefWidth="237.0"/>
-                <TextField layoutX="102.0" layoutY="230.0" prefHeight="41.0" prefWidth="237.0"/>
+                <PasswordField layoutX="103.0" layoutY="298.0" prefHeight="41.0" prefWidth="237.0"  promptText="Enter password"/>
+                <TextField layoutX="102.0" layoutY="230.0" prefHeight="41.0" prefWidth="237.0"   promptText="Enter login"/>
                 <Label layoutX="151.0" layoutY="109.0" prefHeight="47.0" prefWidth="142.0" text="LOGIN"
                        underline="true">
                     <font>
