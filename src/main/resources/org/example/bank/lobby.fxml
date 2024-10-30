@@ -6,7 +6,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0"
-            prefWidth="1000.0" styleClass="main" stylesheets="@Style/style.css"
+            prefWidth="1000.0" styleClass="main" stylesheets="@Style/lobby.css"
             xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="org.example.bank.Controller">
     <children>

@@ -1,0 +1,76 @@
+
+.main {
+    -fx-background-color: linear-gradient(to bottom, #3a3a3a, #1c1c1c);
+    -fx-padding: 10;
+}
+
+
+.Label {
+    -fx-text-fill: #00cc99;
+    -fx-font-size: 30px;
+    -fx-font-family: "Elephant";
+    -fx-font-weight: bold;
+}
+
+
+.acceptButton {
+    -fx-background-color: #28a745;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-family: "MV Boli";
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #1969bf;
+
+
+}
+
+.acceptButton:hover {
+    -fx-background-color: #218838;
+}
+
+.acceptButton:pressed {
+    -fx-background-color: #1e7e34;
+}
+
+
+.backButton {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 15px;
+    -fx-font-family: "MV Boli";
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+
+
+}
+
+.backButton:hover {
+    -fx-background-color: #5a6268;
+}
+
+.backButton:pressed {
+    -fx-background-color: #555f5e;
+}
+
+
+.password {
+    -fx-background-color: #2c2c2c;
+    -fx-text-fill: #e2e2e2;
+    -fx-prompt-text-fill: #a8a8a8;
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: #28a745;
+}
+
+
+.login {
+    -fx-background-color: #2c2c2c;
+    -fx-text-fill: #e2e2e2;
+    -fx-prompt-text-fill: #a8a8a8;
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: #28a745;
+}
