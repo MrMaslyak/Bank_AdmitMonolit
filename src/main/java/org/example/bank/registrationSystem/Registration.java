@@ -1,4 +1,4 @@
-package org.example.bank;
+package org.example.bank.registrationSystem;
 
 
 import javafx.fxml.FXMLLoader;
@@ -21,7 +21,7 @@ public class Registration {
 
     public void back() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("lobby.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/bank/lobby.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));

@@ -12,4 +12,6 @@ module org.example.bank {
 
     opens org.example.bank to javafx.fxml;
     exports org.example.bank;
+    exports org.example.bank.registrationSystem;
+    opens org.example.bank.registrationSystem to javafx.fxml;
 }
