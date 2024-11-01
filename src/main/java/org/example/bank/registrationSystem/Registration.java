@@ -12,7 +12,6 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.regex.Pattern;
 
 public class Registration {
 
@@ -21,77 +20,11 @@ public class Registration {
     public PasswordField passwordS;
     public TextField loginS, emailS;
     public Button accept;
-    private boolean isEmailValid = true, isLoginValid = true, isPasswordValid = true;
+    private SystemR systemR;
 
 
-    public void onLoginChanged() {
-        String login = loginS.getText();
-
-        if (isValidLogin(login)) {
-            indicatorLogin.setStyle("-fx-fill: green");
-            isLoginValid = true;
-        } else {
-            indicatorLogin.setStyle("-fx-fill: red");
-            isLoginValid = false;
-        }
-
-    }
-
-    private boolean isValidLogin(String login) {
-        String loginRegex = "^[a-zA-Z0-9_]{3,20}$";
-
-        Pattern pat = Pattern.compile(loginRegex);
-        if (login == null)
-            return false;
-        return pat.matcher(login).matches();
-    }
-
-
-    public void onPasswordChanged() {
-        String password = passwordS.getText();
-        if (isValidPassword(password) && password.length() >= 8) {
-            indicatorPassword.setStyle("-fx-fill: green");
-            isPasswordValid = true;
-        } else {
-            indicatorPassword.setStyle("-fx-fill: red");
-            isPasswordValid = false;
-        }
-
-    }
-
-    private boolean isValidPassword(String password) {
-
-        String passwordRegex = "^[a-zA-Z0-9]{8,20}$";
-
-        Pattern pat = Pattern.compile(passwordRegex);
-        if (password == null)
-            return false;
-        return pat.matcher(password).matches();
-    }
-
-    public void onEmailChanged() {
-        String email = emailS.getText();
-
-        if (isValidEmail(email)) {
-            indicatorEmail.setStyle("-fx-fill: green");
-            isEmailValid = true;
-        } else {
-            indicatorEmail.setStyle("-fx-fill: red");
-            isEmailValid = false;
-        }
-
-    }
-
-    private boolean isValidEmail(String email) {
-        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." +
-                "[a-zA-Z0-9_+&*-]+)*@" +
-                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-                "A-Z]{2,7}$";
-
-        Pattern pat = Pattern.compile(emailRegex);
-        if (email == null)
-            return false;
-        return pat.matcher(email).matches();
+    public void initialize() {
+      systemR = new SystemR(indicatorEmail, indicatorLogin, indicatorPassword, passwordS, loginS, emailS);
     }
 
 
@@ -112,10 +45,10 @@ public class Registration {
 
 
     public void onAccept() {
-        onLoginChanged();
-        onPasswordChanged();
-        onEmailChanged();
-        if (isEmailValid && isLoginValid && isPasswordValid) {
+        systemR.onLoginChanged();
+        systemR.onPasswordChanged();
+        systemR.onEmailChanged();
+        if (systemR.isEmailValid() && systemR.isLoginValid() && systemR.isPasswordValid()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/bank/lobby.fxml"));
                 Parent root = loader.load();
