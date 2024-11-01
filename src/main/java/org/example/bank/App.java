@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.example.bank.registrationSystem.database.DatabaseR;
+import org.example.bank.registrationSystem.database.repository.IDB;
 
 import java.io.IOException;
 
@@ -15,6 +17,7 @@ public class App extends Application {
         stage.setTitle("Maslyak Bank");
         stage.setScene(scene);
         stage.show();
+        IDB dataBase = DatabaseR.getInstance();
     }
 
     public static void main(String[] args) {

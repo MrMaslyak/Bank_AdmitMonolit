@@ -12,14 +12,14 @@
             <Font name="Elephant" size="27.0" />
          </font>
       </Label>
-      <Button layoutX="307.0" layoutY="420.0" minHeight="40.0" minWidth="136.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="136.0" styleClass="acceptButton" text="Accept">
+      <Button layoutX="307.0" layoutY="420.0" minHeight="40.0" minWidth="136.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="136.0" styleClass="acceptButton" text="Accept" fx:id="accept" onAction="#onAccept">
          <font>
             <Font name="MV Boli" size="10.0" />
          </font>
       </Button>
-      <PasswordField layoutX="254.0" layoutY="262.0" prefHeight="30.0" prefWidth="243.0" promptText="Enter password" styleClass="password" />
-      <TextField layoutX="254.0" layoutY="184.0" prefHeight="30.0" prefWidth="243.0" promptText="Enter login" styleClass="login" />
-      <TextField layoutX="254.0" layoutY="343.0" prefHeight="32.0" prefWidth="243.0" promptText="Enter email" styleClass="login" />
+      <PasswordField layoutX="254.0" layoutY="262.0" prefHeight="30.0" prefWidth="243.0" promptText="Enter password" styleClass="password" fx:id="passwordS" />
+      <TextField layoutX="254.0" layoutY="184.0" prefHeight="30.0" prefWidth="243.0" promptText="Enter login" styleClass="login" fx:id="loginS" />
+      <TextField layoutX="254.0" layoutY="343.0" prefHeight="32.0" prefWidth="243.0" promptText="Enter email" styleClass="login" fx:id="emailS"/>
       <Button fx:id="back" layoutX="14.0" layoutY="708.0" minHeight="26.0" minWidth="109.0" mnemonicParsing="false" onAction="#back" prefHeight="32.0" prefWidth="117.0" styleClass="backButton" text="Back">
          <font>
             <Font size="15.0" />

@@ -9,6 +9,7 @@ module org.example.bank {
     requires org.kordamp.bootstrapfx.core;
     requires java.desktop;
     requires org.jsoup;
+    requires java.sql;
 
     opens org.example.bank to javafx.fxml;
     exports org.example.bank;

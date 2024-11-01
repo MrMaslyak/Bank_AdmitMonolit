@@ -4,6 +4,7 @@ package org.example.bank;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import org.example.bank.registrationSystem.database.DatabaseR;
 import org.example.bank.threads.Time;
 import org.example.bank.webscrap.ExchangeRate;
 import org.example.bank.webscrap.News;
@@ -27,6 +28,7 @@ public class Controller {
             dollarRate = exchangeRate.getDollar(),
             euroRate = exchangeRate.getEuro(),
             plnRate = exchangeRate.getPln();
+    private DatabaseR database = DatabaseR.getInstance();
 
 
 
@@ -45,7 +47,6 @@ public class Controller {
         news4.setText(news.getNews4());
         news5.setText(news.getNews5());
         news6.setText(news.getNews6());
-
 
 
     }
