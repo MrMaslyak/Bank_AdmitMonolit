@@ -1,8 +1,10 @@
 package org.example.bank.registrationSystem;
 
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Circle;
+import org.example.bank.registrationSystem.database.DatabaseR;
 
 import java.util.regex.Pattern;
 
@@ -12,21 +14,25 @@ public class SystemR {
     public Circle indicatorEmail, indicatorLogin, indicatorPassword;
     public PasswordField passwordS;
     public TextField loginS, emailS;
+    public Label  errorMsg;
 
-    public SystemR(Circle indicatorEmail, Circle indicatorLogin, Circle indicatorPassword, PasswordField passwordS, TextField loginS, TextField emailS) {
+    public SystemR(Circle indicatorEmail, Circle indicatorLogin, Circle indicatorPassword, PasswordField passwordS, TextField loginS, TextField emailS, Label errorMsg) {
         this.indicatorEmail = indicatorEmail;
         this.indicatorLogin = indicatorLogin;
         this.indicatorPassword = indicatorPassword;
         this.passwordS = passwordS;
         this.loginS = loginS;
         this.emailS = emailS;
+        this.errorMsg = errorMsg;
     }
+
 
     public void onLoginChanged() {
         String login = loginS.getText();
 
-        if (isValidLogin(login)) {
+        if (isValidLogin(login) && !DatabaseR.getInstance().availableLogin(login)) {
             indicatorLogin.setStyle("-fx-fill: green");
+            errorMsg.setVisible(false);
             setLoginValid(true);
         } else {
             indicatorLogin.setStyle("-fx-fill: red");
@@ -37,12 +43,13 @@ public class SystemR {
 
     private boolean isValidLogin(String login) {
         String loginRegex = "^[a-zA-Z0-9_]{3,20}$";
-
         Pattern pat = Pattern.compile(loginRegex);
-        if (login == null)
+        if (login == null && DatabaseR.getInstance().availableLogin(login))
             return false;
         return pat.matcher(login).matches();
     }
+
+
 
 
     public void onPasswordChanged() {

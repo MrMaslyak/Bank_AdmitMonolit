@@ -74,3 +74,14 @@
     -fx-background-radius: 5;
     -fx-border-color: #28a745;
 }
+
+.errorMsg{
+    -fx-text-fill: #dd1b1b; /* Цвет текста (красный) */
+    -fx-background-color: rgba(255, 0, 0, 0.1); /* Полупрозрачный красный фон */
+    -fx-border-color: #dd1b1b; /* Цвет рамки (красный) */
+    -fx-border-width: 1px; /* Ширина рамки */
+    -fx-border-radius: 5px; /* Закругленные углы рамки */
+    -fx-background-radius: 5px; /* Закругленные углы фона */
+    -fx-opacity: 1;
+     -fx-alignment: center;
+}

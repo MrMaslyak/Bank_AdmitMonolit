@@ -1,15 +1,16 @@
 package org.example.bank.registrationSystem;
 
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import org.example.bank.registrationSystem.database.DatabaseR;
 
 import java.io.IOException;
 
@@ -20,11 +21,20 @@ public class Registration {
     public PasswordField passwordS;
     public TextField loginS, emailS;
     public Button accept;
+    public Label errorMsg;
     private SystemR systemR;
 
 
     public void initialize() {
-      systemR = new SystemR(indicatorEmail, indicatorLogin, indicatorPassword, passwordS, loginS, emailS);
+
+        DatabaseR.getInstance().setRegistration(this);
+        systemR = new SystemR(indicatorEmail, indicatorLogin, indicatorPassword, passwordS, loginS, emailS, errorMsg);
+
+    }
+
+    public void showError(String message) {
+        errorMsg.setText(message);
+        errorMsg.setVisible(true);
     }
 
 
@@ -48,7 +58,15 @@ public class Registration {
         systemR.onLoginChanged();
         systemR.onPasswordChanged();
         systemR.onEmailChanged();
+
         if (systemR.isEmailValid() && systemR.isLoginValid() && systemR.isPasswordValid()) {
+            if (DatabaseR.getInstance().availableLogin(loginS.getText())) {
+                errorMsg.setText("User with this login already exists");
+                return;
+            }
+
+            DatabaseR.getInstance().addUser(loginS.getText(), passwordS.getText(), emailS.getText());
+
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/bank/lobby.fxml"));
                 Parent root = loader.load();
@@ -56,16 +74,11 @@ public class Registration {
                 stage.setScene(new Scene(root));
                 stage.show();
                 back.getScene().getWindow().hide();
-//TODO add func how add in DB
-                System.out.println(passwordS.getText());
-                System.out.println(loginS.getText());
-                System.out.println(emailS.getText());
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
-
     }
+
 }
