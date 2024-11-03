@@ -60,10 +60,7 @@ public class Registration {
         systemR.onEmailChanged();
 
         if (systemR.isEmailValid() && systemR.isLoginValid() && systemR.isPasswordValid()) {
-            if (DatabaseR.getInstance().availableLogin(loginS.getText())) {
-                errorMsg.setText("User with this login already exists");
-                return;
-            }
+
 
             DatabaseR.getInstance().addUser(loginS.getText(), passwordS.getText(), emailS.getText());
 

@@ -85,6 +85,31 @@ public class DatabaseR implements IDB {
         return false;
     }
 
+
+    public boolean availableEmail(String email) {
+        String query = "SELECT * FROM bankUsers WHERE email = ?";
+        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setString(1, email);
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                System.out.println("Email такой существует в базе.");
+                Platform.runLater(() -> register.showError("This Email already exists"));
+                return true;
+            } else {
+                System.out.println("Пользователь с таким email не найден.");
+                return false;
+            }
+        } catch (Exception e) {
+            System.out.println("Ошибка при поиске пользователя.");
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
     public void setRegistration(Registration registration) {
         this.register = registration;
     }

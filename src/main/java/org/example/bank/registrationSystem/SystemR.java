@@ -77,8 +77,9 @@ public class SystemR {
     public void onEmailChanged() {
         String email = emailS.getText();
 
-        if (isValidEmail(email)) {
+        if (isValidEmail(email) && !DatabaseR.getInstance().availableEmail(email)) {
             indicatorEmail.setStyle("-fx-fill: green");
+            errorMsg.setVisible(false);
             setEmailValid(true);
         } else {
             indicatorEmail.setStyle("-fx-fill: red");
@@ -94,7 +95,7 @@ public class SystemR {
                 "A-Z]{2,7}$";
 
         Pattern pat = Pattern.compile(emailRegex);
-        if (email == null)
+        if (email == null && DatabaseR.getInstance().availableEmail(email))
             return false;
         return pat.matcher(email).matches();
     }
