@@ -4,8 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.example.bank.registrationSystem.database.DatabaseR;
-import org.example.bank.registrationSystem.database.repository.IDB;
+import org.example.bank.database.DatabaseR;
+import org.example.bank.database.repository.IDB;
 
 import java.io.IOException;
 

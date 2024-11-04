@@ -9,7 +9,7 @@
     <children>
         <Pane layoutX="582.0" prefHeight="675.0" prefWidth="418.0" styleClass="login-panel">
             <children>
-                <Button layoutX="162.0" layoutY="380.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="117.0" styleClass="join" text="JOIN" textFill="#1969bf">
+                <Button layoutX="162.0" layoutY="380.0" mnemonicParsing="false" onAction="#setLogin" prefHeight="41.0" prefWidth="117.0" styleClass="join" text="JOIN" textFill="#1969bf">
                     <font>
                         <Font name="Segoe Print" size="15.0" />
                     </font>
@@ -19,8 +19,8 @@
                         <Font name="Segoe Print Bold" size="18.0" />
                     </font>
                 </Button>
-                <PasswordField layoutX="103.0" layoutY="298.0" prefHeight="41.0" prefWidth="237.0" promptText="Enter password" />
-                <TextField layoutX="102.0" layoutY="230.0" prefHeight="41.0" prefWidth="237.0" promptText="Enter login" />
+                <PasswordField fx:id="passwordL" layoutX="103.0" layoutY="298.0" prefHeight="41.0" prefWidth="237.0" promptText="Enter password" />
+                <TextField fx:id="loginL" layoutX="102.0" layoutY="230.0" prefHeight="41.0" prefWidth="237.0" promptText="Enter login" />
                 <Label layoutX="151.0" layoutY="109.0" prefHeight="47.0" prefWidth="142.0" text="LOGIN" underline="true">
                     <font>
                         <Font name="Poor Richard" size="47.0" />
@@ -31,6 +31,7 @@
                   <Font name="Curlz MT" size="21.0" />
                </font>
             </Label>
+            <Label fx:id="errorL" layoutX="72.0" layoutY="180.0" prefHeight="34.0" prefWidth="299.0" styleClass="errorL" text="Error" textAlignment="CENTER" textFill="#1e57d6" visible="false" />
             </children>
         </Pane>
         <DialogPane layoutX="-9.0" prefHeight="57.0" prefWidth="591.0" styleClass="up-panel" />

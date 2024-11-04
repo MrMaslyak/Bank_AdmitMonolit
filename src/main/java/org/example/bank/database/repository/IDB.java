@@ -1,6 +1,4 @@
-package org.example.bank.registrationSystem.database.repository;
-
-import java.io.File;
+package org.example.bank.database.repository;
 
 public interface IDB {
 

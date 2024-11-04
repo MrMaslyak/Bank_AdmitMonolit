@@ -10,7 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
-import org.example.bank.registrationSystem.database.DatabaseR;
+import org.example.bank.database.DatabaseR;
 
 import java.io.IOException;
 

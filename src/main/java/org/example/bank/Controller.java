@@ -1,10 +1,13 @@
 package org.example.bank;
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import org.example.bank.registrationSystem.database.DatabaseR;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import org.example.bank.database.DatabaseR;
 import org.example.bank.threads.Time;
 import org.example.bank.webscrap.ExchangeRate;
 import org.example.bank.webscrap.News;
@@ -19,8 +22,10 @@ public class Controller {
 
 
     public Button registration  ;
+    public TextField loginL ;
+    public PasswordField passwordL;
     @FXML
-    private Label time, plnValue, euroValue, dollarValue, news1, news2, news3, news4, news5, news6;
+    private Label time, plnValue, euroValue, dollarValue, news1, news2, news3, news4, news5, news6, errorL;
 
     private Time threadTime;
     private ExchangeRate exchangeRate = new ExchangeRate();
@@ -47,8 +52,6 @@ public class Controller {
         news4.setText(news.getNews4());
         news5.setText(news.getNews5());
         news6.setText(news.getNews6());
-
-
     }
 
     public void setRegistration() {
@@ -69,4 +72,26 @@ public class Controller {
         }
     }
 
+    public void setLogin() {
+        if (database.passBank(loginL.getText(), passwordL.getText())){
+            errorL.setVisible(false);
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("bank.fxml"));
+                Parent root = loader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.initStyle(StageStyle.DECORATED);
+                registration.getScene().getWindow().hide();
+
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else {
+            System.out.println("Неверный логин или пароль");
+            errorL.setVisible(true);
+            errorL.setText("Incorrect login or password");
+        }
+
+    }
 }

@@ -76,12 +76,12 @@
 }
 
 .errorMsg{
-    -fx-text-fill: #dd1b1b; /* Цвет текста (красный) */
-    -fx-background-color: rgba(255, 0, 0, 0.1); /* Полупрозрачный красный фон */
-    -fx-border-color: #dd1b1b; /* Цвет рамки (красный) */
-    -fx-border-width: 1px; /* Ширина рамки */
-    -fx-border-radius: 5px; /* Закругленные углы рамки */
-    -fx-background-radius: 5px; /* Закругленные углы фона */
+    -fx-text-fill: #dd1b1b;
+    -fx-background-color: rgba(255, 0, 0, 0.1);
+    -fx-border-color: #dd1b1b;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
     -fx-opacity: 1;
      -fx-alignment: center;
 }

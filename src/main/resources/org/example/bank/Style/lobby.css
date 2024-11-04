@@ -79,6 +79,18 @@
     -fx-text-alignment: justify;
 }
 
+.errorL {
+    -fx-text-fill: #ff4c4c; /* Ярко-красный цвет текста для индикации ошибки */
+    -fx-font-weight: bold; /* Жирный текст для большей заметности */
+    -fx-background-color: #ffe6e6; /* Светло-красный фон для контраста */
+    -fx-background-radius: 5px; /* Закругленные углы фона */
+    -fx-border-color: #ff1a1a; /* Красная рамка для выделения */
+    -fx-border-width: 2px;
+    -fx-padding: 4px; /* Внутренние отступы для визуального комфорта */
+
+    -fx-alignment: center; /* Центрирование текста */
+    -fx-effect: dropshadow(gaussian, rgba(255, 0, 0, 0.5), 10, 0.5, 0, 0); /* Тень для акцента */
+}
 
 
 

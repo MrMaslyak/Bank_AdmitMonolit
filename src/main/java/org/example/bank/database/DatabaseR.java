@@ -1,11 +1,8 @@
-package org.example.bank.registrationSystem.database;
+package org.example.bank.database;
 
 import javafx.application.Platform;
 import org.example.bank.registrationSystem.Registration;
-import org.example.bank.registrationSystem.SystemR;
-import org.example.bank.registrationSystem.database.repository.IDB;
-
-import java.io.File;
+import org.example.bank.database.repository.IDB;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -40,10 +37,35 @@ public class DatabaseR implements IDB {
     }
 
 
+
+    public boolean passBank(String login, String password){
+
+        String query = "SELECT * FROM bankUsers WHERE login = ? AND password = ?";
+        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setString(1, login);
+            statement.setString(2, password);
+
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                System.out.println("Пользователь найден в базе.");
+                return true;
+            } else {
+                System.out.println("Пользователь не найден в базе.");
+                return false;
+            }
+        } catch (Exception e) {
+            System.out.println("Ошибка при поиске пользователя.");
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
     @Override
     public void addUser(String login, String password, String email){
-
-
 
         String query = "INSERT INTO bankUsers (login, password, email) VALUES (?, ?, ?) " +
                 "ON CONFLICT (login) DO UPDATE SET password = EXCLUDED.password, email = EXCLUDED.email";

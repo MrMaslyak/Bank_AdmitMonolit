@@ -4,7 +4,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Circle;
-import org.example.bank.registrationSystem.database.DatabaseR;
+import org.example.bank.database.DatabaseR;
 
 import java.util.regex.Pattern;
 
