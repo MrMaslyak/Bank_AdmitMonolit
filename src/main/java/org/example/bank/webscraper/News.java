@@ -1,4 +1,4 @@
-package org.example.bank.webscrap;
+package org.example.bank.webscraper;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

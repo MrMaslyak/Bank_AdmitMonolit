@@ -1,4 +1,4 @@
-package org.example.bank.registrationSystem;
+package org.example.bank.controller;
 
 
 import javafx.fxml.FXMLLoader;
@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import org.example.bank.database.DatabaseR;
+import org.example.bank.systems.SystemRegistration;
 
 import java.io.IOException;
 
@@ -22,13 +23,13 @@ public class Registration {
     public TextField loginS, emailS;
     public Button accept;
     public Label errorMsg;
-    private SystemR systemR;
+    private SystemRegistration systemRegistration;
 
 
     public void initialize() {
 
         DatabaseR.getInstance().setRegistration(this);
-        systemR = new SystemR(indicatorEmail, indicatorLogin, indicatorPassword, passwordS, loginS, emailS, errorMsg);
+        systemRegistration = new SystemRegistration(indicatorEmail, indicatorLogin, indicatorPassword, passwordS, loginS, emailS, errorMsg);
 
     }
 
@@ -40,7 +41,7 @@ public class Registration {
 
     public void back() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/bank/lobby.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/bank/fxml/lobby.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -55,17 +56,17 @@ public class Registration {
 
 
     public void onAccept() {
-        systemR.onLoginChanged();
-        systemR.onPasswordChanged();
-        systemR.onEmailChanged();
+        systemRegistration.onLoginChanged();
+        systemRegistration.onPasswordChanged();
+        systemRegistration.onEmailChanged();
 
-        if (systemR.isEmailValid() && systemR.isLoginValid() && systemR.isPasswordValid()) {
+        if (systemRegistration.isEmailValid() && systemRegistration.isLoginValid() && systemRegistration.isPasswordValid()) {
 
 
             DatabaseR.getInstance().addUser(loginS.getText(), passwordS.getText(), emailS.getText());
 
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/bank/lobby.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/bank/fxml/lobby.fxml"));
                 Parent root = loader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));

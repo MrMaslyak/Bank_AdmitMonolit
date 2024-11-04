@@ -1,8 +1,9 @@
 package org.example.bank.database;
 
 import javafx.application.Platform;
-import org.example.bank.registrationSystem.Registration;
+import org.example.bank.controller.Registration;
 import org.example.bank.database.repository.IDB;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

@@ -1,16 +1,15 @@
 package org.example.bank;
 
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import org.example.bank.database.DatabaseR;
-import org.example.bank.threads.Time;
-import org.example.bank.webscrap.ExchangeRate;
-import org.example.bank.webscrap.News;
+import org.example.bank.until.TimeLobby;
+import org.example.bank.webscraper.ExchangeRate;
+import org.example.bank.webscraper.News;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -27,7 +26,7 @@ public class Controller {
     @FXML
     private Label time, plnValue, euroValue, dollarValue, news1, news2, news3, news4, news5, news6, errorL;
 
-    private Time threadTime;
+    private TimeLobby threadTimeLobby;
     private ExchangeRate exchangeRate = new ExchangeRate();
     private String
             dollarRate = exchangeRate.getDollar(),
@@ -40,8 +39,8 @@ public class Controller {
 
 
     public void initialize() {
-        threadTime = new Time(time);
-        threadTime.start();
+        threadTimeLobby = new TimeLobby(time);
+        threadTimeLobby.start();
         plnValue.setText(plnRate);
         euroValue.setText(euroRate);
         dollarValue.setText(dollarRate);
@@ -57,7 +56,7 @@ public class Controller {
     public void setRegistration() {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("registration.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/registration.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
@@ -76,7 +75,7 @@ public class Controller {
         if (database.passBank(loginL.getText(), passwordL.getText())){
             errorL.setVisible(false);
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("bank.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/bank.fxml"));
                 Parent root = loader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));

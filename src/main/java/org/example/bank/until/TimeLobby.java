@@ -1,17 +1,17 @@
-package org.example.bank.threads;
+package org.example.bank.until;
 
 import javafx.application.Platform;
 import javafx.scene.control.Label;
 import java.time.LocalTime;
 
-public class Time  extends Thread{
+public class TimeLobby extends Thread{
 
     private LocalTime currentTime = LocalTime.now();
     private final Label time;
 
 
 
-    public Time(javafx.scene.control.Label time) {
+    public TimeLobby(javafx.scene.control.Label time) {
         this.time = time;
     }
 
@@ -24,7 +24,7 @@ public class Time  extends Thread{
 
                 Platform.runLater(() -> time.setText(timeString));
 
-                Time.sleep(1000);
+                TimeLobby.sleep(1000);
             }
         } catch (InterruptedException e) {
             throw new RuntimeException(e);

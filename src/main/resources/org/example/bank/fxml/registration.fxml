@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="750.0" styleClass="main" stylesheets="@Style/registration.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bank.registrationSystem.Registration">
+<AnchorPane prefHeight="600.0" prefWidth="750.0" styleClass="main" stylesheets="@../Style/registration.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bank.controller.Registration">
    <children>
       <Label layoutX="285.0" layoutY="49.0" prefHeight="71.0" prefWidth="180.0" text="Registration" textFill="#32b564">
          <font>

@@ -1,4 +1,4 @@
-package org.example.bank.registrationSystem;
+package org.example.bank.systems;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -8,7 +8,7 @@ import org.example.bank.database.DatabaseR;
 
 import java.util.regex.Pattern;
 
-public class SystemR {
+public class SystemRegistration {
 
     private boolean isEmailValid, isLoginValid, isPasswordValid;
     public Circle indicatorEmail, indicatorLogin, indicatorPassword;
@@ -16,7 +16,7 @@ public class SystemR {
     public TextField loginS, emailS;
     public Label  errorMsg;
 
-    public SystemR(Circle indicatorEmail, Circle indicatorLogin, Circle indicatorPassword, PasswordField passwordS, TextField loginS, TextField emailS, Label errorMsg) {
+    public SystemRegistration(Circle indicatorEmail, Circle indicatorLogin, Circle indicatorPassword, PasswordField passwordS, TextField loginS, TextField emailS, Label errorMsg) {
         this.indicatorEmail = indicatorEmail;
         this.indicatorLogin = indicatorLogin;
         this.indicatorPassword = indicatorPassword;
