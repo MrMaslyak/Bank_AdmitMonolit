@@ -1,4 +1,4 @@
 package org.example.bank.controller;
 
-public class BankController {
+public class Bank {
 }
