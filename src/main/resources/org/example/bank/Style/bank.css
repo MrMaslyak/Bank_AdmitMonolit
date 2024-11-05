@@ -8,7 +8,7 @@
 }
 
 .creditB{
-  -fx-background-image: url("../Img/credit.png");
+  -fx-background-image: url("../Img/bank/funcButton/credit.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -18,7 +18,7 @@
 }
 
 .transferCurrencyB{
-  -fx-background-image: url("../Img/transferCurrency.png");
+  -fx-background-image: url("../Img/bank/funcButton/transferCurrency.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -28,7 +28,7 @@
 }
 
 .moneyboxB{
-  -fx-background-image: url("../Img/pigbank.png");
+  -fx-background-image: url("../Img/bank/funcButton/pigbank.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -38,7 +38,7 @@
 }
 
 .transferCardB{
-    -fx-background-image: url("../Img/transferCard.png");
+    -fx-background-image: url("../Img/bank/funcButton/transferCard.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -48,7 +48,7 @@
 }
 
 .mobileAddB {
-    -fx-background-image: url("../Img/mobileApp.png");
+    -fx-background-image: url("../Img/bank/funcButton/mobileApp.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -58,7 +58,7 @@
 }
 
 .previousCardB{
-   -fx-background-image: url("../Img/previousCard.png");
+   -fx-background-image: url("../Img/bank/previousCard.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -68,7 +68,7 @@
 }
 
 .nextCardB{
-  -fx-background-image: url("../Img/nextCard.png");
+  -fx-background-image: url("../Img/bank/nextCard.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;

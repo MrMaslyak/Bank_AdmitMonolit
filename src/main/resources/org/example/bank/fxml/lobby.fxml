@@ -99,17 +99,17 @@
 
         <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="465.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../Img/dollar.png" />
+                <Image url="@../Img/values/dollar.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="346.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../Img/poland.png" />
+                <Image url="@../Img/values/poland.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="228.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../Img/euro.png" />
+                <Image url="@../Img/values/euro.png" />
             </image>
         </ImageView>
         <Label fx:id="euroValue" layoutX="277.0" layoutY="13.0" prefHeight="31.0" prefWidth="46.0" text="54.3">
