@@ -60,6 +60,7 @@ public class LobbyController {
             Parent root = loader.load();
 
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setScene(new Scene(root));
             stage.initStyle(StageStyle.DECORATED);
 
@@ -78,6 +79,7 @@ public class LobbyController {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/bank.fxml"));
                 Parent root = loader.load();
                 Stage stage = new Stage();
+                stage.setResizable(false);
                 stage.setScene(new Scene(root));
                 stage.initStyle(StageStyle.DECORATED);
                 registration.getScene().getWindow().hide();

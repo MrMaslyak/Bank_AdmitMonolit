@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.bank.controller.Bank"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@../Style/bank.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bank.controller.Bank">
+   <children>
+      <Pane layoutX="388.0" layoutY="106.0" prefHeight="226.0" prefWidth="393.0" styleClass="card">
+         <children>
+            <Label layoutX="21.0" layoutY="14.0" prefHeight="37.0" prefWidth="170.0" text="Card Unior" textFill="#c91717">
+               <font>
+                  <Font name="Bell MT" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="64.0" prefHeight="26.0" prefWidth="255.0" text="4499 5588 4798 5059" textFill="#d7c8c8">
+               <font>
+                  <Font name="Bell MT" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="104.0" text="09/26" textFill="#d7c8c8">
+               <font>
+                  <Font name="Bell MT" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="184.0" prefHeight="37.0" prefWidth="82.0" text="999" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="188.0" prefHeight="26.0" prefWidth="93.0" text="UAH" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="25.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Button layoutX="280.0" layoutY="397.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="mobileAddB" />
+      <Button layoutX="544.0" layoutY="397.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="transferCardB" />
+      <Button layoutX="825.0" layoutY="397.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="moneyboxB" />
+      <Button layoutX="402.0" layoutY="483.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="transferCurrencyB" />
+      <Button layoutX="691.0" layoutY="483.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="creditB" />
+      <Button layoutX="266.0" layoutY="211.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" styleClass="previousCardB" />
+      <Button layoutX="853.0" layoutY="211.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" styleClass="nextCardB" />
+   </children>
 </AnchorPane>

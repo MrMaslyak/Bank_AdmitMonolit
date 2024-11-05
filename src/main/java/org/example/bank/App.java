@@ -16,6 +16,7 @@ public class App extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1000, 666);
         stage.setTitle("Maslyak Bank");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
         IDB dataBase = DatabaseR.getInstance();
     }

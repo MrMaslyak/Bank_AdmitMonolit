@@ -44,6 +44,7 @@ public class Registration {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/bank/fxml/lobby.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setScene(new Scene(root));
             stage.show();
             back.getScene().getWindow().hide();
@@ -69,6 +70,7 @@ public class Registration {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/bank/fxml/lobby.fxml"));
                 Parent root = loader.load();
                 Stage stage = new Stage();
+                stage.setResizable(false);
                 stage.setScene(new Scene(root));
                 stage.show();
                 back.getScene().getWindow().hide();
