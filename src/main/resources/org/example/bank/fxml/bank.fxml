@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@../Style/bank.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bank.controller.Bank">
    <children>
-      <Pane layoutX="388.0" layoutY="106.0" prefHeight="226.0" prefWidth="393.0" styleClass="card">
+      <Pane layoutX="404.0" layoutY="106.0" prefHeight="226.0" prefWidth="393.0" styleClass="card">
          <children>
             <Label layoutX="21.0" layoutY="14.0" prefHeight="37.0" prefWidth="170.0" text="Card Unior" textFill="#c91717">
                <font>
@@ -34,12 +35,29 @@
                </font>
             </Label>
          </children></Pane>
-      <Button layoutX="280.0" layoutY="397.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="mobileAddB" />
-      <Button layoutX="544.0" layoutY="397.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="transferCardB" />
-      <Button layoutX="825.0" layoutY="397.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="moneyboxB" />
-      <Button layoutX="402.0" layoutY="483.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="transferCurrencyB" />
-      <Button layoutX="691.0" layoutY="483.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="creditB" />
-      <Button layoutX="266.0" layoutY="211.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" styleClass="previousCardB" />
-      <Button layoutX="853.0" layoutY="211.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" styleClass="nextCardB" />
+      <Pane layoutX="530.0" layoutY="25.0" prefHeight="37.0" prefWidth="141.0" styleClass="panelCourse">
+         <children>
+            <Label layoutX="71.0" layoutY="6.0" prefHeight="22.0" prefWidth="48.0" text="41.10" textFill="#111111">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="22.0" fitWidth="21.0" layoutX="26.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/values/dollarBank.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane layoutY="373.0" prefHeight="427.0" prefWidth="1380.0" styleClass="panelMain">
+         <children>
+            <Button layoutX="577.0" layoutY="56.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="mobileAddB" />
+            <Button layoutX="390.0" layoutY="56.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="transferCardB" />
+            <Button layoutX="474.0" layoutY="153.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="moneyboxB" />
+            <Button layoutX="662.0" layoutY="159.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="transferCurrencyB" />
+            <Button layoutX="764.0" layoutY="56.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="creditB" />
+         </children></Pane>
+      <Button layoutX="855.0" layoutY="204.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" styleClass="nextCardB" />
+      <Button layoutX="308.0" layoutY="204.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" styleClass="previousCardB" />
+      <Button layoutX="308.0" layoutY="29.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" styleClass="addCard" />
    </children>
 </AnchorPane>
