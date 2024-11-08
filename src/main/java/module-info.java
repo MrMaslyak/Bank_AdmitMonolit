@@ -10,6 +10,7 @@ module org.example.bank {
     requires java.desktop;
     requires org.jsoup;
     requires java.sql;
+    requires org.slf4j;
 
     opens org.example.bank to javafx.fxml;
     exports org.example.bank;

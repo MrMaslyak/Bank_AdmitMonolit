@@ -3,11 +3,15 @@ package org.example.bank.database;
 import javafx.application.Platform;
 import org.example.bank.controller.Registration;
 import org.example.bank.database.repository.IDB;
+import org.slf4j.Logger;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+
 
 public class DatabaseR implements IDB {
 
@@ -17,22 +21,25 @@ public class DatabaseR implements IDB {
     private static final String DB_USER = "postgres";
     private static final String DB_PASSWORD = "LaLa27418182";
     private Registration register;
+    private static final Logger logger = org.slf4j.LoggerFactory.getLogger(DatabaseR.class);
 
     public DatabaseR() {
         try {
             Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            System.out.println("Connected to the PostgreSQL server successfully.");
+            logger.info("Connected to the PostgreSQL server successfully.");
             connection.close();
-
         } catch (Exception e) {
-            System.out.println("Connection failure.");
-            e.printStackTrace();
+            logger.warn("Connection failure.", e);
         }
     }
 
     public static DatabaseR getInstance() {
         if (dataBase == null) {
             dataBase = new DatabaseR();
+            logger.info("DatabaseR instance created.");
+        }
+        else {
+            logger.warn("DatabaseR instance already exists.");
         }
         return dataBase;
     }
@@ -51,14 +58,14 @@ public class DatabaseR implements IDB {
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
-                System.out.println("Пользователь найден в базе.");
+                logger.info("Пользователь найден в базе.");
                 return true;
             } else {
-                System.out.println("Пользователь не найден в базе.");
+                logger.warn("Пользователь не найден в базе.");
                 return false;
             }
         } catch (Exception e) {
-            System.out.println("Ошибка при поиске пользователя.");
+            logger.error("Ошибка при поиске пользователя.", e);
             e.printStackTrace();
         }
         return false;
@@ -78,9 +85,10 @@ public class DatabaseR implements IDB {
             statement.setString(3, email);
 
             statement.executeUpdate();
-            System.out.println("Пользователь добавлен или обновлен успешно.");
+            logger.info("Пользователь добавлен или обновлен успешно.");
+
         } catch (Exception e) {
-            System.out.println("Ошибка при добавлении пользователя.");
+            logger.error("Ошибка при добавлении пользователя.", e);
             e.printStackTrace();
         }
     }
@@ -94,15 +102,15 @@ public class DatabaseR implements IDB {
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
-                System.out.println("Пользователь существует в базе.");
+                logger.warn("Пользователь существует в базе.");
                 Platform.runLater(() -> register.showError("User with this login already exists"));
                 return true;
             } else {
-                System.out.println("Пользователь с таким логином не найден.");
+                logger.info("Пользователь не найден в базе.");
                 return false;
             }
         } catch (Exception e) {
-            System.out.println("Ошибка при поиске пользователя.");
+            logger.error("Ошибка при поиске пользователя.", e);
             e.printStackTrace();
         }
         return false;
@@ -118,15 +126,15 @@ public class DatabaseR implements IDB {
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
-                System.out.println("Email такой существует в базе.");
+                logger.warn("Email такой существует в базе.");
                 Platform.runLater(() -> register.showError("This Email already exists"));
                 return true;
             } else {
-                System.out.println("Пользователь с таким email не найден.");
+                logger.info("Email не найден в базе.");
                 return false;
             }
         } catch (Exception e) {
-            System.out.println("Ошибка при поиске пользователя.");
+            logger.error("Ошибка при поиске пользователя.", e);
             e.printStackTrace();
         }
         return false;

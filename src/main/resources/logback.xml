@@ -1,0 +1,23 @@
+<configuration>
+    <!-- Настраиваем консольный аппендер для вывода логов в консоль -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Настраиваем файл аппендер для записи логов в файл -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>app.log</file> <!-- Путь к файлу логов -->
+        <append>true</append> <!-- Логи будут дописываться, а не перезаписываться -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Логируем все события уровня INFO и выше в консоль и файл -->
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
