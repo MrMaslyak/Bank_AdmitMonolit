@@ -64,10 +64,10 @@ public class Registration {
         systemRegistration.onLoginChanged();
         systemRegistration.onPasswordChanged();
         systemRegistration.onEmailChanged();
+        logger.info("Проверка валидности данных...");
 
         if (systemRegistration.isEmailValid() && systemRegistration.isLoginValid() && systemRegistration.isPasswordValid()) {
-
-
+            logger.info("Все данные валидны, регистрация прошла успешно");
             DatabaseR.getInstance().addUser(loginS.getText(), passwordS.getText(), emailS.getText());
 
             try {
@@ -84,6 +84,8 @@ public class Registration {
                 logger.error("Ошибка при переходе на главную страницу", e);
                 e.printStackTrace();
             }
+        }else {
+            logger.warn("Данные не валидны, регистрация не прошла");
         }
     }
 
