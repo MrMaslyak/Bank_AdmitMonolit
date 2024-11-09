@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1000.0" styleClass="main" stylesheets="@../Style/lobby.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bank.LobbyController"  >
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1000.0" styleClass="main" stylesheets="@../Style/lobby.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bank.LobbyController">
     <children>
         <Pane layoutX="582.0" prefHeight="675.0" prefWidth="418.0" styleClass="login-panel">
             <children>
@@ -33,6 +32,11 @@
                </font>
             </Label>
             <Label fx:id="errorL" layoutX="72.0" layoutY="180.0" prefHeight="34.0" prefWidth="299.0" styleClass="errorL" text="Error" textAlignment="CENTER" textFill="#1e57d6" visible="false" />
+            <Label fx:id="textTime" layoutX="14.0" layoutY="14.0" prefHeight="41.0" prefWidth="168.0" styleClass="textTime" text="TEXT" textFill="#316ef2">
+               <font>
+                  <Font name="Curlz MT" size="16.0" />
+               </font>
+            </Label>
             </children>
         </Pane>
         <DialogPane layoutX="-9.0" prefHeight="57.0" prefWidth="591.0" styleClass="up-panel" />

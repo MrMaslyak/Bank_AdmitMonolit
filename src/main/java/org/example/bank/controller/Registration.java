@@ -12,6 +12,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import org.example.bank.database.DatabaseR;
 import org.example.bank.systems.SystemRegistration;
+import org.slf4j.Logger;
 
 import java.io.IOException;
 
@@ -24,7 +25,7 @@ public class Registration {
     public Button accept;
     public Label errorMsg;
     private SystemRegistration systemRegistration;
-
+    private static final Logger logger = org.slf4j.LoggerFactory.getLogger(Registration.class);
 
     public void initialize() {
 
@@ -34,6 +35,7 @@ public class Registration {
     }
 
     public void showError(String message) {
+        logger.error("Ошибка: " + message);
         errorMsg.setText(message);
         errorMsg.setVisible(true);
     }
@@ -48,8 +50,10 @@ public class Registration {
             stage.setScene(new Scene(root));
             stage.show();
             back.getScene().getWindow().hide();
+            logger.info("Переход на главную страницу");
 
         } catch (IOException e) {
+            logger.error("Ошибка при переходе на главную страницу", e);
             e.printStackTrace();
         }
 
@@ -73,9 +77,11 @@ public class Registration {
                 stage.setResizable(false);
                 stage.setScene(new Scene(root));
                 stage.show();
+                logger.info("Переход на главную страницу");
                 back.getScene().getWindow().hide();
 
             } catch (IOException e) {
+                logger.error("Ошибка при переходе на главную страницу", e);
                 e.printStackTrace();
             }
         }

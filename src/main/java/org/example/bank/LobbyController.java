@@ -24,7 +24,7 @@ public class LobbyController {
     public TextField loginL ;
     public PasswordField passwordL;
     @FXML
-    private Label time, plnValue, euroValue, dollarValue, news1, news2, news3, news4, news5, news6, errorL;
+    private Label time, plnValue, euroValue, dollarValue, news1, news2, news3, news4, news5, news6, errorL, textTime;
 
     private TimeLobby threadTimeLobby;
     private ExchangeRate exchangeRate = new ExchangeRate();
@@ -39,7 +39,7 @@ public class LobbyController {
 
 
     public void initialize() {
-        threadTimeLobby = new TimeLobby(time);
+        threadTimeLobby = new TimeLobby(time, textTime);
         threadTimeLobby.start();
         plnValue.setText(plnRate);
         euroValue.setText(euroRate);

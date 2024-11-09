@@ -80,17 +80,36 @@
 }
 
 .errorL {
-    -fx-text-fill: #ff4c4c; /* Ярко-красный цвет текста для индикации ошибки */
-    -fx-font-weight: bold; /* Жирный текст для большей заметности */
-    -fx-background-color: #ffe6e6; /* Светло-красный фон для контраста */
-    -fx-background-radius: 5px; /* Закругленные углы фона */
-    -fx-border-color: #ff1a1a; /* Красная рамка для выделения */
-    -fx-border-width: 2px;
-    -fx-padding: 4px; /* Внутренние отступы для визуального комфорта */
 
-    -fx-alignment: center; /* Центрирование текста */
-    -fx-effect: dropshadow(gaussian, rgba(255, 0, 0, 0.5), 10, 0.5, 0, 0); /* Тень для акцента */
+    -fx-text-fill: #ff4c4c;
+    -fx-font-weight: bold;
+    -fx-background-color: #ffe6e6;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ff1a1a;
+    -fx-border-width: 2px;
+    -fx-padding: 4px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(255, 0, 0, 0.5), 10, 0.5, 0, 0);
+
 }
+
+.textTime {
+    -fx-background-color:
+        linear-gradient(to right,
+            rgba(255, 223, 186, 0.8),
+            rgba(255, 153, 204, 0.8));
+    -fx-background-radius: 20px;
+    -fx-padding: 5px 10px;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 2, 0.0, 0.0);
+    -fx-alignment: center;
+    -fx-layout-x: 20px;
+    -fx-layout-y: 20px;
+}
+
+
 
 
 

@@ -29,7 +29,7 @@ public class DatabaseR implements IDB {
             logger.info("Connected to the PostgreSQL server successfully.");
             connection.close();
         } catch (Exception e) {
-            logger.warn("Connection failure.", e);
+            logger.error("Connection failure.", e);
         }
     }
 
@@ -39,7 +39,7 @@ public class DatabaseR implements IDB {
             logger.info("DatabaseR instance created.");
         }
         else {
-            logger.warn("DatabaseR instance already exists.");
+            logger.error("DatabaseR instance already exists.");
         }
         return dataBase;
     }
