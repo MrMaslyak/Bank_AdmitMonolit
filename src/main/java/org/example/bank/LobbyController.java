@@ -15,17 +15,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.slf4j.Logger;
+
 import java.io.IOException;
 
 public class LobbyController {
 
 
-    public Button registration  ;
-    public TextField loginL ;
+    public Button registration;
+    public TextField loginL;
     public PasswordField passwordL;
     @FXML
     private Label time, plnValue, euroValue, dollarValue, news1, news2, news3, news4, news5, news6, errorL, textTime;
-
     private TimeLobby threadTimeLobby;
     private ExchangeRate exchangeRate = new ExchangeRate();
     private String
@@ -33,9 +34,7 @@ public class LobbyController {
             euroRate = exchangeRate.getEuro(),
             plnRate = exchangeRate.getPln();
     private DatabaseR database = DatabaseR.getInstance();
-
-
-
+    private static final Logger logger = org.slf4j.LoggerFactory.getLogger(LobbyController.class);
 
 
     public void initialize() {
@@ -44,7 +43,7 @@ public class LobbyController {
         plnValue.setText(plnRate);
         euroValue.setText(euroRate);
         dollarValue.setText(dollarRate);
-        News news  = new News();
+        News news = new News();
         news1.setText(news.getNews1());
         news2.setText(news.getNews2());
         news3.setText(news.getNews3());
@@ -63,17 +62,18 @@ public class LobbyController {
             stage.setResizable(false);
             stage.setScene(new Scene(root));
             stage.initStyle(StageStyle.DECORATED);
-
             registration.getScene().getWindow().hide();
-
             stage.show();
+            logger.info("Переход на страницу регистрации");
+
         } catch (IOException e) {
+            logger.error("Ошибка при переходе на страницу регистрации", e);
             e.printStackTrace();
         }
     }
 
     public void setLogin() {
-        if (database.passBank(loginL.getText(), passwordL.getText())){
+        if (database.passBank(loginL.getText(), passwordL.getText())) {
             errorL.setVisible(false);
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/bank.fxml"));
@@ -83,13 +83,16 @@ public class LobbyController {
                 stage.setScene(new Scene(root));
                 stage.initStyle(StageStyle.DECORATED);
                 registration.getScene().getWindow().hide();
-
                 stage.show();
+                logger.info("Переход на страницу банка");
+
+
             } catch (IOException e) {
+                logger.error("Ошибка при переходе на страницу банка", e);
                 e.printStackTrace();
             }
-        }else {
-            System.out.println("Неверный логин или пароль");
+        } else {
+            logger.warn("Неверный логин или пароль");
             errorL.setVisible(true);
             errorL.setText("Incorrect login or password");
         }
