@@ -63,3 +63,63 @@
 2024-11-11 23:48:35 INFO  org.example.bank.until.TimeLobby - Время обновлено: 23:48:35.206109300
 2024-11-11 23:48:35 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
 2024-11-11 23:48:44 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-11 23:52:16 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-11 23:52:16 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-11 23:52:16 INFO  org.example.bank.until.TimeLobby - Время обновлено: 23:52:16.452845900
+2024-11-11 23:52:16 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-11 23:52:16 INFO  org.example.bank.App - Запуск приложения
+2024-11-11 23:52:25 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-11 23:52:25 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-11 23:54:26 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-11 23:54:26 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-11 23:54:26 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-11 23:54:26 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-11 23:54:46 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-11 23:54:46 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-11 23:54:46 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-11 23:54:46 WARN  org.example.bank.database.DatabaseR - Email такой существует в базе.
+2024-11-11 23:54:46 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-11 23:54:46 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-11 23:54:46 ERROR o.e.bank.controller.Registration - Ошибка: This Email already exists
+2024-11-11 23:54:58 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-11 23:54:58 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-11 23:54:58 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-11 23:54:58 INFO  org.example.bank.database.DatabaseR - Email не найден в базе.
+2024-11-11 23:54:58 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-11 23:54:58 INFO  o.e.bank.controller.Registration - Все данные валидны, регистрация прошла успешно
+2024-11-11 23:54:58 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-11 23:54:58 INFO  org.example.bank.database.DatabaseR - Пользователь добавлен или обновлен успешно.
+2024-11-11 23:55:00 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-11 23:55:00 INFO  org.example.bank.until.TimeLobby - Время обновлено: 23:55:00.129588900
+2024-11-11 23:55:00 INFO  o.e.bank.controller.Registration - Переход на главную страницу
+2024-11-12 00:02:01 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-12 00:02:01 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-12 00:02:01 INFO  org.example.bank.until.TimeLobby - Время обновлено: 00:02:01.331706100
+2024-11-12 00:02:01 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-12 00:02:01 INFO  org.example.bank.App - Запуск приложения
+2024-11-12 00:02:08 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-12 00:02:08 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-12 00:02:12 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-12 00:02:12 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-12 00:02:14 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-12 00:02:14 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-12 00:02:44 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-12 00:02:44 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-12 00:02:51 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-12 00:02:51 WARN  org.example.bank.database.DatabaseR - Пользователь существует в базе.
+2024-11-12 00:02:51 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-12 00:02:51 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-12 00:02:51 ERROR o.e.bank.controller.Registration - Ошибка: User with this login already exists
+2024-11-12 00:03:11 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-12 00:03:12 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-12 00:03:12 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-12 00:03:12 INFO  org.example.bank.database.DatabaseR - Email не найден в базе.
+2024-11-12 00:03:12 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-12 00:03:12 INFO  o.e.bank.controller.Registration - Все данные валидны, регистрация прошла успешно
+2024-11-12 00:03:12 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-12 00:03:12 INFO  org.example.bank.database.DatabaseR - Пользователь добавлен или обновлен успешно.
+2024-11-12 00:03:12 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-12 00:03:12 INFO  org.example.bank.until.TimeLobby - Время обновлено: 00:03:12.909160600
+2024-11-12 00:03:13 INFO  o.e.bank.controller.Registration - Переход на главную страницу
+2024-11-12 00:03:28 WARN  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-12 00:03:28 WARN  org.example.bank.LobbyController - Неверный логин или пароль

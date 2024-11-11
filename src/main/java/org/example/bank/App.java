@@ -6,10 +6,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.example.bank.database.DatabaseR;
 import org.example.bank.database.repository.IDB;
+import org.slf4j.Logger;
 
 import java.io.IOException;
 
 public class App extends Application {
+    private static final Logger logger = org.slf4j.LoggerFactory.getLogger(App.class);
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("fxml/lobby.fxml"));
@@ -19,6 +22,8 @@ public class App extends Application {
         stage.setResizable(false);
         stage.show();
         IDB dataBase = DatabaseR.getInstance();
+        logger.info("Запуск приложения");
+
     }
 
     public static void main(String[] args) {
