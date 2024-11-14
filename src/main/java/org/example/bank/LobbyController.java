@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import org.example.bank.controller.Bank;
+import org.example.bank.database.DatabaseAccount;
 import org.example.bank.database.DatabaseR;
 import org.example.bank.until.TimeLobby;
 import org.example.bank.webscraper.ExchangeRate;
@@ -36,6 +37,7 @@ public class LobbyController {
             euroRate = exchangeRate.getEuro(),
             plnRate = exchangeRate.getPln();
     private DatabaseR database = DatabaseR.getInstance();
+    private DatabaseAccount databaseAccount = DatabaseAccount.getInstance();
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(LobbyController.class);
     private Bank bank;
     private Label balance;
@@ -89,7 +91,7 @@ public class LobbyController {
                 stage.setScene(new Scene(root));
                 stage.initStyle(StageStyle.DECORATED);
                 registration.getScene().getWindow().hide();
-                BigDecimal balance = database.getUserBalance(loginL.getText());
+                BigDecimal balance = databaseAccount.getUserBalance(loginL.getText());
                 bank = loader.getController();
                 bank.setBalance(balance);
                 stage.show();

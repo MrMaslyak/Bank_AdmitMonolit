@@ -46,22 +46,6 @@ public class DatabaseR implements IDB {
     }
 
 
-    public BigDecimal getUserBalance(String login) {
-        String query = "SELECT balance FROM bankUsers WHERE login = ?";
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-             PreparedStatement statement = connection.prepareStatement(query)) {
-
-            statement.setString(1, login);
-            ResultSet resultSet = statement.executeQuery();
-
-            if (resultSet.next()) {
-                return resultSet.getBigDecimal("balance");
-            }
-        } catch (Exception e) {
-            logger.error("Ошибка при извлечении баланса пользователя.", e);
-        }
-        return BigDecimal.ZERO;
-    }
 
 
     public boolean passBank(String login, String password){
