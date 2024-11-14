@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.example.bank.controller.Bank;
 import org.example.bank.database.DatabaseR;
 import org.example.bank.until.TimeLobby;
 import org.example.bank.webscraper.ExchangeRate;
@@ -18,6 +19,7 @@ import javafx.stage.StageStyle;
 import org.slf4j.Logger;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 
 public class LobbyController {
 
@@ -35,7 +37,8 @@ public class LobbyController {
             plnRate = exchangeRate.getPln();
     private DatabaseR database = DatabaseR.getInstance();
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(LobbyController.class);
-
+    private Bank bank;
+    private Label balance;
 
     public void initialize() {
         threadTimeLobby = new TimeLobby(time, textTime);
@@ -72,20 +75,26 @@ public class LobbyController {
         }
     }
 
+
+
     public void setLogin() {
         if (database.passBank(loginL.getText(), passwordL.getText())) {
             errorL.setVisible(false);
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/bank.fxml"));
                 Parent root = loader.load();
+
                 Stage stage = new Stage();
                 stage.setResizable(false);
                 stage.setScene(new Scene(root));
                 stage.initStyle(StageStyle.DECORATED);
                 registration.getScene().getWindow().hide();
+                BigDecimal balance = database.getUserBalance(loginL.getText());
+                bank = loader.getController();
+                bank.setBalance(balance);
                 stage.show();
-                logger.info("Переход на страницу банка");
 
+                logger.info("Переход на страницу банка");
 
             } catch (IOException e) {
                 logger.error("Ошибка при переходе на страницу банка", e);
@@ -96,6 +105,6 @@ public class LobbyController {
             errorL.setVisible(true);
             errorL.setText("Incorrect login or password");
         }
-
     }
+
 }

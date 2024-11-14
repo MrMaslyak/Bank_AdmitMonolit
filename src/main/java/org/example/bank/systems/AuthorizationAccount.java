@@ -1,2 +1,6 @@
-package org.example.bank.systems;public class AuthorizationAccount {
+package org.example.bank.systems;
+
+public class AuthorizationAccount {
+
+
 }

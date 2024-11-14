@@ -6,6 +6,7 @@ import org.example.bank.database.repository.IDB;
 import org.slf4j.Logger;
 
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -44,6 +45,23 @@ public class DatabaseR implements IDB {
         return dataBase;
     }
 
+
+    public BigDecimal getUserBalance(String login) {
+        String query = "SELECT balance FROM bankUsers WHERE login = ?";
+        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setString(1, login);
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                return resultSet.getBigDecimal("balance");
+            }
+        } catch (Exception e) {
+            logger.error("Ошибка при извлечении баланса пользователя.", e);
+        }
+        return BigDecimal.ZERO;
+    }
 
 
     public boolean passBank(String login, String password){

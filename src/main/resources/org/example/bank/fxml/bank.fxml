@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@../Style/bank.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bank.controller.Bank">
+<AnchorPane prefHeight="800.0" prefWidth="700.0" stylesheets="@../Style/bank.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bank.controller.Bank">
    <children>
       <Pane layoutX="404.0" layoutY="106.0" prefHeight="226.0" prefWidth="393.0" styleClass="card">
          <children>
@@ -24,7 +24,7 @@
                   <Font name="Bell MT" size="19.0" />
                </font>
             </Label>
-            <Label layoutX="21.0" layoutY="184.0" prefHeight="37.0" prefWidth="82.0" text="999" textFill="WHITE">
+            <Label fx:id="balanceLabel" layoutX="21.0" layoutY="184.0" prefHeight="37.0" prefWidth="82.0" text="999" textFill="WHITE">
                <font>
                   <Font name="Bell MT" size="30.0" />
                </font>

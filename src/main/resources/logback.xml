@@ -14,7 +14,20 @@
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
         </encoder>
+    </appender>
 
+    <appender name="DB" class="ch.qos.logback.classic.db.DBAppender">
+        <connectionSource class="ch.qos.logback.core.db.DriverManagerConnectionSource">
+            <driverClass>org.postgresql.Driver</driverClass>
+            <url>jdbc:postgresql://localhost:5432/postgres</url>
+            <user>postgres</user>
+            <password>LaLa27418182</password>
+        </connectionSource>
+
+        <sql>
+            INSERT INTO log_entries (timestamp, level, logger, message, thread, exception)
+            VALUES (CURRENT_TIMESTAMP, '%level', '%logger', '%message', '%thread', '%ex')
+        </sql>
     </appender>
 
     <root level="info">
