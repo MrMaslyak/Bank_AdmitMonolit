@@ -11,12 +11,13 @@ import java.util.regex.Pattern;
 public class SystemRegistration {
 
     private boolean isEmailValid, isLoginValid, isPasswordValid;
-    public Circle indicatorEmail, indicatorLogin, indicatorPassword;
-    public PasswordField passwordS;
-    public TextField loginS, emailS;
-    public Label  errorMsg;
+    private final Circle indicatorEmail, indicatorLogin, indicatorPassword;
+    private final PasswordField passwordS;
+    private final TextField loginS, emailS;
+    private final Label errorMsg;
 
-    public SystemRegistration(Circle indicatorEmail, Circle indicatorLogin, Circle indicatorPassword, PasswordField passwordS, TextField loginS, TextField emailS, Label errorMsg) {
+    public SystemRegistration(Circle indicatorEmail, Circle indicatorLogin, Circle indicatorPassword,
+                              PasswordField passwordS, TextField loginS, TextField emailS, Label errorMsg) {
         this.indicatorEmail = indicatorEmail;
         this.indicatorLogin = indicatorLogin;
         this.indicatorPassword = indicatorPassword;
@@ -26,90 +27,73 @@ public class SystemRegistration {
         this.errorMsg = errorMsg;
     }
 
-
     public void onLoginChanged() {
         String login = loginS.getText();
-
-        if (isValidLogin(login) && !DatabaseR.getInstance().availableLogin(login)) {
-            indicatorLogin.setStyle("-fx-fill: green");
-            errorMsg.setVisible(false);
-            setLoginValid(true);
-        } else {
-            indicatorLogin.setStyle("-fx-fill: red");
+        if (login == null || login.isEmpty()) {
+            updateIndicator(indicatorLogin, false);
             setLoginValid(false);
+            return;
         }
 
+        boolean isAvailable = false;
+        try {
+            isAvailable = DatabaseR.getInstance().availableLogin(login);
+        } catch (Exception e) {
+            errorMsg.setText("Ошибка проверки логина.");
+            errorMsg.setVisible(true);
+        }
+
+        boolean isValid = isValidLogin(login) && !isAvailable;
+        updateIndicator(indicatorLogin, isValid);
+        setLoginValid(isValid);
     }
 
     private boolean isValidLogin(String login) {
         String loginRegex = "^[a-zA-Z0-9_]{3,20}$";
-        Pattern pat = Pattern.compile(loginRegex);
-        if (login == null && DatabaseR.getInstance().availableLogin(login))
-            return false;
-        return pat.matcher(login).matches();
+        return Pattern.matches(loginRegex, login);
     }
-
-
-
 
     public void onPasswordChanged() {
         String password = passwordS.getText();
-        if (isValidPassword(password) && password.length() >= 8) {
-            indicatorPassword.setStyle("-fx-fill: green");
-            setPasswordValid(true);
-        } else {
-            indicatorPassword.setStyle("-fx-fill: red");
-            setPasswordValid(false);
-        }
-
+        boolean isValid = password != null && isValidPassword(password) && password.length() >= 8;
+        updateIndicator(indicatorPassword, isValid);
+        setPasswordValid(isValid);
     }
 
     private boolean isValidPassword(String password) {
-
         String passwordRegex = "^[a-zA-Z0-9]{8,20}$";
-
-        Pattern pat = Pattern.compile(passwordRegex);
-        if (password == null)
-            return false;
-        return pat.matcher(password).matches();
+        return Pattern.matches(passwordRegex, password);
     }
 
     public void onEmailChanged() {
         String email = emailS.getText();
-
-        if (isValidEmail(email) && !DatabaseR.getInstance().availableEmail(email)) {
-            indicatorEmail.setStyle("-fx-fill: green");
-            errorMsg.setVisible(false);
-            setEmailValid(true);
-        } else {
-            indicatorEmail.setStyle("-fx-fill: red");
+        if (email == null || email.isEmpty()) {
+            updateIndicator(indicatorEmail, false);
             setEmailValid(false);
+            return;
         }
 
+        boolean isAvailable = false;
+        try {
+            isAvailable = DatabaseR.getInstance().availableEmail(email);
+        } catch (Exception e) {
+            errorMsg.setText("Ошибка проверки email.");
+            errorMsg.setVisible(true);
+        }
+
+        boolean isValid = isValidEmail(email) && !isAvailable;
+        updateIndicator(indicatorEmail, isValid);
+        setEmailValid(isValid);
     }
 
     private boolean isValidEmail(String email) {
-        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." +
-                "[a-zA-Z0-9_+&*-]+)*@" +
-                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-                "A-Z]{2,7}$";
-
-        Pattern pat = Pattern.compile(emailRegex);
-        if (email == null && DatabaseR.getInstance().availableEmail(email))
-            return false;
-        return pat.matcher(email).matches();
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        return Pattern.matches(emailRegex, email);
     }
 
-    public void setEmailValid(boolean emailValid) {
-        isEmailValid = emailValid;
-    }
-
-    public void setLoginValid(boolean loginValid) {
-        isLoginValid = loginValid;
-    }
-
-    public void setPasswordValid(boolean passwordValid) {
-        isPasswordValid = passwordValid;
+    private void updateIndicator(Circle indicator, boolean isValid) {
+        indicator.setStyle("-fx-fill: " + (isValid ? "green" : "red"));
     }
 
     public boolean isEmailValid() {
@@ -122,5 +106,17 @@ public class SystemRegistration {
 
     public boolean isPasswordValid() {
         return isPasswordValid;
+    }
+
+    public void setEmailValid(boolean emailValid) {
+        isEmailValid = emailValid;
+    }
+
+    public void setLoginValid(boolean loginValid) {
+        isLoginValid = loginValid;
+    }
+
+    public void setPasswordValid(boolean passwordValid) {
+        isPasswordValid = passwordValid;
     }
 }

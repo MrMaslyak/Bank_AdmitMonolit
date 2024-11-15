@@ -586,3 +586,9 @@ Caused by: java.lang.NoSuchMethodException: org.example.bank.controller.Bank.<in
 2024-11-15 21:49:19 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
 2024-11-15 21:49:21 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
 2024-11-15 21:49:21 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 21:50:09 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 21:50:09 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 21:50:09 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 21:50:09 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 21:50:11 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:50:11 INFO  org.example.bank.App - Запуск приложения
