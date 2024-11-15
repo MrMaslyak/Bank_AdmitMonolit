@@ -68,7 +68,7 @@ public class DatabaseR implements IDB {
              PreparedStatement statement = connection.prepareStatement(query)) {
 
             statement.setString(1, login);
-            statement.setString(2, password); // Храните хэш пароля, а не сам пароль
+            statement.setString(2, password);
             statement.setString(3, email);
 
             statement.executeUpdate();

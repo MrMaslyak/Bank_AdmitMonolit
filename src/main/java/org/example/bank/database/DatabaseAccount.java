@@ -12,37 +12,36 @@ import java.sql.ResultSet;
 public class DatabaseAccount {
 
 
-    private static DatabaseAccount dataBase;
+    private static volatile DatabaseAccount instance;
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String DB_USER = "postgres";
     private static final String DB_PASSWORD = "LaLa27418182";
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(DatabaseAccount.class);
 
 
-    public DatabaseAccount() {
-        try {
-            Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            logger.info("Connected to the PostgreSQL server successfully (DatabaseAccount).");
-            connection.close();
+    private DatabaseAccount() {
+        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
+            logger.info("Connected to the PostgreSQL server successfully.");
         } catch (Exception e) {
-            logger.error("Connection failure.", e);
+            logger.error("Connection failure during initialization.", e);
         }
     }
 
     public static DatabaseAccount getInstance() {
-        if (dataBase == null) {
-            dataBase = new DatabaseAccount();
-            logger.info("DatabaseAccount instance created.");
+        if (instance == null) {
+            synchronized (DatabaseR.class) {
+                if (instance == null) {
+                    instance = new DatabaseAccount();
+                    logger.info("DatabaseAccount instance created.");
+                }
+            }
         }
-        else {
-            logger.error("DatabaseAccount instance already exists.");
-        }
-        return dataBase;
+        return instance;
     }
 
     public BigDecimal getUserBalance(String login) {
         String query = "SELECT balance FROM bankUsers WHERE login = ?";
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+        try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
 
             statement.setString(1, login);
@@ -55,6 +54,11 @@ public class DatabaseAccount {
             logger.error("Ошибка при извлечении баланса пользователя.", e);
         }
         return BigDecimal.ZERO;
+    }
+
+
+    private Connection getConnection() throws Exception {
+        return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     }
 
 }
