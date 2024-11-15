@@ -683,3 +683,52 @@ Caused by: java.lang.NoSuchMethodException: org.example.bank.controller.Bank.<in
 2024-11-15 22:02:13 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
 2024-11-15 22:02:13 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
 2024-11-15 22:02:16 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 22:16:21 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 22:16:21 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 22:16:21 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-15 22:16:21 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 22:16:23 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 22:16:25 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-15 22:16:32 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2024-11-15 22:16:32 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 22:16:32 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2024-11-15 22:16:32 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2024-11-15 22:16:37 INFO  org.example.bank.database.DatabaseR - Maslyak 1 is available for use.
+2024-11-15 22:16:37 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 22:16:37 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2024-11-15 22:16:37 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2024-11-15 22:16:40 INFO  org.example.bank.database.DatabaseR - Maslyak1 is available for use.
+2024-11-15 22:16:40 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 22:16:40 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2024-11-15 22:16:40 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2024-11-15 22:16:45 INFO  org.example.bank.database.DatabaseR - Maslyak1 is available for use.
+2024-11-15 22:16:45 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 22:16:45 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2024-11-15 22:16:45 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2024-11-15 22:17:01 INFO  org.example.bank.database.DatabaseR - Maslyak1 is available for use.
+2024-11-15 22:17:01 INFO  org.example.bank.database.DatabaseR - vdfdfgdf@gmail.com is available for use.
+2024-11-15 22:17:01 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 22:17:01 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2024-11-15 22:17:01 INFO  org.example.bank.database.DatabaseR - vdfdfgdf@gmail.com is available for use.
+2024-11-15 22:17:01 INFO  org.example.bank.database.DatabaseR - Maslyak1 is available for use.
+2024-11-15 22:17:01 INFO  org.example.bank.database.DatabaseR - User added or updated successfully.
+2024-11-15 22:17:01 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2024-11-15 22:28:35 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 22:28:35 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 22:28:36 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-15 22:28:36 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 22:28:52 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 22:29:02 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-15 22:29:04 INFO  o.e.bank.controller.Registration - Переход на страницу лобби
+2024-11-15 22:29:10 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-15 22:29:10 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 22:29:10 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2024-11-15 22:29:10 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2024-11-15 22:29:21 INFO  org.example.bank.database.DatabaseR - Mdsfsfs is available for use.
+2024-11-15 22:29:21 INFO  org.example.bank.database.DatabaseR - gfdgd@gmail.com is available for use.
+2024-11-15 22:29:21 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 22:29:21 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2024-11-15 22:29:22 INFO  org.example.bank.database.DatabaseR - gfdgd@gmail.com is available for use.
+2024-11-15 22:29:22 INFO  org.example.bank.database.DatabaseR - Mdsfsfs is available for use.
+2024-11-15 22:29:22 INFO  org.example.bank.database.DatabaseR - User added or updated successfully.
+2024-11-15 22:29:22 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.

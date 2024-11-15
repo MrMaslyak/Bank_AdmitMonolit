@@ -11,6 +11,7 @@ module org.example.bank {
     requires org.jsoup;
     requires java.sql;
     requires org.slf4j;
+    requires jbcrypt;
 
 
     opens org.example.bank to javafx.fxml;
