@@ -51,12 +51,12 @@ public class LobbyController {
 
     private void loadNews() {
         News news = new News();
-        news1.setText(news.getNews1());
-        news2.setText(news.getNews2());
-        news3.setText(news.getNews3());
-        news4.setText(news.getNews4());
-        news5.setText(news.getNews5());
-        news6.setText(news.getNews6());
+        news1.setText(news.getNews(1));
+        news2.setText(news.getNews(2));
+        news3.setText(news.getNews(3));
+        news4.setText(news.getNews(4));
+        news5.setText(news.getNews(5));
+        news6.setText(news.getNews(6));
     }
 
     public void setRegistration() {

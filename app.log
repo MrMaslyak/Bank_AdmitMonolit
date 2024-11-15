@@ -523,3 +523,10 @@ Caused by: java.lang.NoSuchMethodException: org.example.bank.controller.Bank.<in
 2024-11-15 21:41:13 ERROR o.e.bank.database.DatabaseAccount - DatabaseAccount instance already exists.
 2024-11-15 21:41:13 INFO  org.example.bank.until.TimeLobby - Время обновлено: 21:41:13.692261100
 2024-11-15 21:41:14 INFO  o.e.bank.controller.Registration - Переход на главную страницу
+2024-11-15 21:42:56 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 21:42:56 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 21:42:56 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 21:42:56 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 21:42:56 INFO  org.example.bank.until.TimeLobby - Время обновлено: 21:42:56.418822300
+2024-11-15 21:42:58 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:42:58 INFO  org.example.bank.App - Запуск приложения
