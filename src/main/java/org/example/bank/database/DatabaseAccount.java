@@ -1,6 +1,6 @@
 package org.example.bank.database;
 
-import org.example.bank.controller.Registration;
+import org.example.bank.database.repository.IDB;
 import org.slf4j.Logger;
 
 import java.math.BigDecimal;
@@ -9,7 +9,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class DatabaseAccount {
+public class DatabaseAccount implements IDB {
 
 
     private static volatile DatabaseAccount instance;
@@ -57,7 +57,7 @@ public class DatabaseAccount {
     }
 
 
-    private Connection getConnection() throws Exception {
+    public Connection getConnection() throws Exception {
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     }
 

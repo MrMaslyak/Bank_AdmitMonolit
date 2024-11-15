@@ -60,7 +60,7 @@ public class DatabaseR implements IDB {
         }
     }
 
-    @Override
+
     public void addUser(String login, String password, String email) {
         String query = "INSERT INTO bankUsers (login, password, email) VALUES (?, ?, ?) " +
                 "ON CONFLICT (login) DO UPDATE SET password = EXCLUDED.password, email = EXCLUDED.email";
@@ -106,7 +106,7 @@ public class DatabaseR implements IDB {
         }
     }
 
-    private Connection getConnection() throws Exception {
+    public Connection getConnection() throws Exception {
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     }
 }
