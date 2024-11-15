@@ -16,13 +16,13 @@ public class DatabaseAccount {
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String DB_USER = "postgres";
     private static final String DB_PASSWORD = "LaLa27418182";
-    private static final Logger logger = org.slf4j.LoggerFactory.getLogger(DatabaseR.class);
+    private static final Logger logger = org.slf4j.LoggerFactory.getLogger(DatabaseAccount.class);
 
 
     public DatabaseAccount() {
         try {
             Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            logger.info("Connected to the PostgreSQL server successfully.");
+            logger.info("Connected to the PostgreSQL server successfully (DatabaseAccount).");
             connection.close();
         } catch (Exception e) {
             logger.error("Connection failure.", e);

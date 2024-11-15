@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="800.0" prefWidth="700.0" stylesheets="@../Style/bank.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bank.controller.Bank">
+<AnchorPane prefHeight="800.0" prefWidth="1009.0" stylesheets="@../Style/bank.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bank.controller.Bank">
    <children>
       <Pane layoutX="404.0" layoutY="106.0" prefHeight="226.0" prefWidth="393.0" styleClass="card">
          <children>
@@ -48,7 +49,7 @@
                </image>
             </ImageView>
          </children></Pane>
-      <Pane layoutY="373.0" prefHeight="427.0" prefWidth="1380.0" styleClass="panelMain">
+      <Pane layoutY="380.0" prefHeight="420.0" prefWidth="1217.0" styleClass="panelMain">
          <children>
             <Button layoutX="577.0" layoutY="56.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="mobileAddB" />
             <Button layoutX="390.0" layoutY="56.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" styleClass="transferCardB" />
@@ -60,4 +61,7 @@
       <Button layoutX="308.0" layoutY="204.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" styleClass="previousCardB" />
       <Button layoutX="308.0" layoutY="29.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" styleClass="addCard" />
    </children>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
 </AnchorPane>

@@ -425,3 +425,101 @@ Caused by: java.lang.NoSuchMethodException: org.example.bank.controller.Bank.<in
 2024-11-14 23:43:04 INFO  org.example.bank.App - Запуск приложения
 2024-11-14 23:43:11 INFO  org.example.bank.database.DatabaseR - Пользователь найден в базе.
 2024-11-14 23:43:11 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-14 23:46:48 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-14 23:46:48 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-14 23:46:48 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-14 23:46:48 INFO  org.example.bank.database.DatabaseR - DatabaseAccount instance created.
+2024-11-14 23:46:48 INFO  org.example.bank.until.TimeLobby - Время обновлено: 23:46:48.665977200
+2024-11-14 23:46:49 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-14 23:46:49 INFO  org.example.bank.App - Запуск приложения
+2024-11-14 23:46:55 INFO  org.example.bank.database.DatabaseR - Пользователь найден в базе.
+2024-11-14 23:46:55 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-14 23:54:33 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-14 23:54:33 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-14 23:54:33 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-14 23:54:33 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-14 23:54:33 INFO  org.example.bank.until.TimeLobby - Время обновлено: 23:54:33.678276500
+2024-11-14 23:54:34 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-14 23:54:34 INFO  org.example.bank.App - Запуск приложения
+2024-11-14 23:54:43 WARN  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-14 23:54:43 WARN  org.example.bank.LobbyController - Неверный логин или пароль
+2024-11-14 23:54:46 INFO  org.example.bank.database.DatabaseR - Пользователь найден в базе.
+2024-11-14 23:54:47 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-14 23:56:53 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-14 23:56:53 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-14 23:56:53 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-14 23:56:53 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-14 23:56:53 INFO  org.example.bank.until.TimeLobby - Время обновлено: 23:56:53.621398500
+2024-11-14 23:56:54 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-14 23:56:54 INFO  org.example.bank.App - Запуск приложения
+2024-11-14 23:56:57 INFO  org.example.bank.database.DatabaseR - Пользователь найден в базе.
+2024-11-14 23:56:57 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-14 23:59:37 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-14 23:59:37 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-14 23:59:38 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-14 23:59:38 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-14 23:59:38 INFO  org.example.bank.until.TimeLobby - Время обновлено: 23:59:38.394471500
+2024-11-14 23:59:38 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-14 23:59:38 INFO  org.example.bank.App - Запуск приложения
+2024-11-14 23:59:47 INFO  org.example.bank.database.DatabaseR - Пользователь найден в базе.
+2024-11-14 23:59:47 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-15 00:00:25 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 00:00:25 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 00:00:25 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 00:00:25 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 00:00:25 INFO  org.example.bank.until.TimeLobby - Время обновлено: 00:00:25.805315
+2024-11-15 00:00:26 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 00:00:26 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 00:00:31 INFO  org.example.bank.database.DatabaseR - Пользователь найден в базе.
+2024-11-15 00:00:32 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-15 00:01:49 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 00:01:49 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 00:01:49 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 00:01:49 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 00:01:49 INFO  org.example.bank.until.TimeLobby - Время обновлено: 00:01:49.477871200
+2024-11-15 00:01:50 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 00:01:50 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 00:01:58 INFO  org.example.bank.database.DatabaseR - Пользователь найден в базе.
+2024-11-15 00:01:58 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-15 21:36:01 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 21:36:01 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 21:36:01 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 21:36:01 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 21:36:01 INFO  org.example.bank.until.TimeLobby - Время обновлено: 21:36:01.883843800
+2024-11-15 21:36:03 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:36:03 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 21:36:49 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 21:36:49 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 21:36:49 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 21:36:49 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 21:36:50 INFO  org.example.bank.until.TimeLobby - Время обновлено: 21:36:50.062142100
+2024-11-15 21:36:52 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:36:52 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 21:37:01 INFO  org.example.bank.database.DatabaseR - Пользователь найден в базе.
+2024-11-15 21:37:58 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 21:37:58 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 21:37:58 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 21:37:58 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 21:37:58 INFO  org.example.bank.until.TimeLobby - Время обновлено: 21:37:58.901199300
+2024-11-15 21:38:00 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:38:00 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 21:38:30 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 21:38:30 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 21:38:30 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 21:38:30 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 21:38:30 INFO  org.example.bank.until.TimeLobby - Время обновлено: 21:38:30.889693600
+2024-11-15 21:38:32 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:38:32 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 21:41:08 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 21:41:08 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 21:41:08 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 21:41:08 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 21:41:08 INFO  org.example.bank.until.TimeLobby - Время обновлено: 21:41:08.947964500
+2024-11-15 21:41:10 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:41:10 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 21:41:11 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:41:11 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-15 21:41:13 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:41:13 ERROR o.e.bank.database.DatabaseAccount - DatabaseAccount instance already exists.
+2024-11-15 21:41:13 INFO  org.example.bank.until.TimeLobby - Время обновлено: 21:41:13.692261100
+2024-11-15 21:41:14 INFO  o.e.bank.controller.Registration - Переход на главную страницу
