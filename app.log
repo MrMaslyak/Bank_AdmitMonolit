@@ -592,3 +592,94 @@ Caused by: java.lang.NoSuchMethodException: org.example.bank.controller.Bank.<in
 2024-11-15 21:50:09 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
 2024-11-15 21:50:11 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
 2024-11-15 21:50:11 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 21:54:52 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 21:54:52 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 21:54:52 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 21:54:52 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 21:54:54 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:54:54 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 21:54:55 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:54:55 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-15 21:54:56 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 21:54:56 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-15 21:55:03 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:03 WARN  org.example.bank.database.DatabaseR - Пользователь существует в базе.
+2024-11-15 21:55:03 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 21:55:03 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-15 21:55:03 ERROR o.e.bank.controller.Registration - Ошибка: User with this login already exists
+2024-11-15 21:55:08 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:08 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-15 21:55:08 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 21:55:08 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-15 21:55:11 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:11 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-15 21:55:11 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 21:55:11 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-15 21:55:14 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:15 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-15 21:55:15 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 21:55:15 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-15 21:55:21 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:21 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-15 21:55:21 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:21 INFO  org.example.bank.database.DatabaseR - Email не найден в базе.
+2024-11-15 21:55:21 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 21:55:21 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-15 21:55:24 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:24 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-15 21:55:24 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:24 INFO  org.example.bank.database.DatabaseR - Email не найден в базе.
+2024-11-15 21:55:24 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 21:55:24 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-15 21:55:25 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:25 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-15 21:55:25 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:25 INFO  org.example.bank.database.DatabaseR - Email не найден в базе.
+2024-11-15 21:55:25 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 21:55:25 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-15 21:55:35 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:35 WARN  org.example.bank.database.DatabaseR - Пользователь существует в базе.
+2024-11-15 21:55:35 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:35 INFO  org.example.bank.database.DatabaseR - Email не найден в базе.
+2024-11-15 21:55:35 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 21:55:35 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-15 21:55:35 ERROR o.e.bank.controller.Registration - Ошибка: User with this login already exists
+2024-11-15 21:55:37 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:37 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-15 21:55:37 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:37 INFO  org.example.bank.database.DatabaseR - Email не найден в базе.
+2024-11-15 21:55:37 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 21:55:37 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-15 21:55:59 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:59 INFO  org.example.bank.database.DatabaseR - Пользователь не найден в базе.
+2024-11-15 21:55:59 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:59 INFO  org.example.bank.database.DatabaseR - Email не найден в базе.
+2024-11-15 21:55:59 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 21:55:59 INFO  o.e.bank.controller.Registration - Все данные валидны, регистрация прошла успешно
+2024-11-15 21:55:59 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:59 INFO  org.example.bank.database.DatabaseR - Пользователь добавлен или обновлен успешно.
+2024-11-15 21:55:59 ERROR org.example.bank.database.DatabaseR - DatabaseR instance already exists.
+2024-11-15 21:55:59 ERROR o.e.bank.database.DatabaseAccount - DatabaseAccount instance already exists.
+2024-11-15 21:56:00 INFO  o.e.bank.controller.Registration - Переход на главную страницу
+2024-11-15 21:59:42 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 21:59:42 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 21:59:42 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 21:59:42 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 21:59:59 INFO  org.example.bank.App - Запуск приложения
+2024-11-15 22:00:15 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-15 22:00:17 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 22:00:17 WARN  o.e.bank.controller.Registration - Данные не валидны, регистрация не прошла
+2024-11-15 22:01:42 INFO  org.example.bank.database.DatabaseR - Alesha is available for use.
+2024-11-15 22:01:42 INFO  org.example.bank.database.DatabaseR - sobaka@gmail.com is available for use.
+2024-11-15 22:01:42 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-15 22:01:42 INFO  o.e.bank.controller.Registration - Все данные валидны, регистрация прошла успешно
+2024-11-15 22:01:42 INFO  org.example.bank.database.DatabaseR - User added or updated successfully.
+2024-11-15 22:01:42 ERROR o.e.bank.database.DatabaseAccount - DatabaseAccount instance already exists.
+2024-11-15 22:01:44 INFO  o.e.bank.controller.Registration - Переход на главную страницу
+2024-11-15 22:02:00 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-15 22:02:00 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-15 22:02:13 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-15 22:02:13 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-15 22:02:13 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully (DatabaseAccount).
+2024-11-15 22:02:13 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-15 22:02:16 INFO  org.example.bank.App - Запуск приложения

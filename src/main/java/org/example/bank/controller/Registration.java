@@ -29,7 +29,7 @@ public class Registration {
 
     public void initialize() {
 
-        DatabaseR.getInstance().setRegistration(this);
+
         systemRegistration = new SystemRegistration(indicatorEmail, indicatorLogin, indicatorPassword, passwordS, loginS, emailS, errorMsg);
 
     }

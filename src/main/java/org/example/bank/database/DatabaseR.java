@@ -1,150 +1,112 @@
 package org.example.bank.database;
 
-import javafx.application.Platform;
-import org.example.bank.controller.Registration;
 import org.example.bank.database.repository.IDB;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-
-
 public class DatabaseR implements IDB {
 
-
-    private static DatabaseR dataBase;
+    private static volatile DatabaseR instance;
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String DB_USER = "postgres";
     private static final String DB_PASSWORD = "LaLa27418182";
-    private Registration register;
-    private static final Logger logger = org.slf4j.LoggerFactory.getLogger(DatabaseR.class);
+    private static final Logger logger = LoggerFactory.getLogger(DatabaseR.class);
 
-    public DatabaseR() {
-        try {
-            Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+    private DatabaseR() {
+        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
             logger.info("Connected to the PostgreSQL server successfully.");
-            connection.close();
         } catch (Exception e) {
-            logger.error("Connection failure.", e);
+            logger.error("Connection failure during initialization.", e);
         }
     }
 
     public static DatabaseR getInstance() {
-        if (dataBase == null) {
-            dataBase = new DatabaseR();
-            logger.info("DatabaseR instance created.");
+        if (instance == null) {
+            synchronized (DatabaseR.class) {
+                if (instance == null) {
+                    instance = new DatabaseR();
+                    logger.info("DatabaseR instance created.");
+                }
+            }
         }
-        else {
-            logger.error("DatabaseR instance already exists.");
-        }
-        return dataBase;
+        return instance;
     }
 
-
-
-
-    public boolean passBank(String login, String password){
-
+    public boolean passBank(String login, String password) {
         String query = "SELECT * FROM bankUsers WHERE login = ? AND password = ?";
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+        try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
 
             statement.setString(1, login);
             statement.setString(2, password);
 
             ResultSet resultSet = statement.executeQuery();
+            boolean exists = resultSet.next();
 
-            if (resultSet.next()) {
-                logger.info("Пользователь найден в базе.");
-                return true;
+            if (exists) {
+                logger.info("User authenticated successfully.");
             } else {
-                logger.warn("Пользователь не найден в базе.");
-                return false;
+                logger.warn("Invalid login or password.");
             }
+            return exists;
         } catch (Exception e) {
-            logger.error("Ошибка при поиске пользователя.", e);
-            e.printStackTrace();
+            logger.error("Error during user authentication.", e);
+            return false;
         }
-        return false;
     }
 
-
     @Override
-    public void addUser(String login, String password, String email){
-
+    public void addUser(String login, String password, String email) {
         String query = "INSERT INTO bankUsers (login, password, email) VALUES (?, ?, ?) " +
                 "ON CONFLICT (login) DO UPDATE SET password = EXCLUDED.password, email = EXCLUDED.email";
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+        try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
 
             statement.setString(1, login);
-            statement.setString(2, password);
+            statement.setString(2, password); // Храните хэш пароля, а не сам пароль
             statement.setString(3, email);
 
             statement.executeUpdate();
-            logger.info("Пользователь добавлен или обновлен успешно.");
-
+            logger.info("User added or updated successfully.");
         } catch (Exception e) {
-            logger.error("Ошибка при добавлении пользователя.", e);
-            e.printStackTrace();
+            logger.error("Error during user addition or update.", e);
         }
     }
 
     public boolean availableLogin(String login) {
-        String query = "SELECT * FROM bankUsers WHERE login = ?";
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-             PreparedStatement statement = connection.prepareStatement(query)) {
-
-            statement.setString(1, login);
-            ResultSet resultSet = statement.executeQuery();
-
-            if (resultSet.next()) {
-                logger.warn("Пользователь существует в базе.");
-                Platform.runLater(() -> register.showError("User with this login already exists"));
-                return true;
-            } else {
-                logger.info("Пользователь не найден в базе.");
-                return false;
-            }
-        } catch (Exception e) {
-            logger.error("Ошибка при поиске пользователя.", e);
-            e.printStackTrace();
-        }
-        return false;
+        return isFieldExists("SELECT 1 FROM bankUsers WHERE login = ?", login);
     }
-
 
     public boolean availableEmail(String email) {
-        String query = "SELECT * FROM bankUsers WHERE email = ?";
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+        return isFieldExists("SELECT 1 FROM bankUsers WHERE email = ?", email);
+    }
+
+    private boolean isFieldExists(String query, String fieldValue) {
+        try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
 
-            statement.setString(1, email);
+            statement.setString(1, fieldValue);
             ResultSet resultSet = statement.executeQuery();
+            boolean exists = resultSet.next();
 
-            if (resultSet.next()) {
-                logger.warn("Email такой существует в базе.");
-                Platform.runLater(() -> register.showError("This Email already exists"));
-                return true;
+            if (exists) {
+                logger.warn("{} already exists in the database.", fieldValue);
             } else {
-                logger.info("Email не найден в базе.");
-                return false;
+                logger.info("{} is available for use.", fieldValue);
             }
+            return exists;
         } catch (Exception e) {
-            logger.error("Ошибка при поиске пользователя.", e);
-            e.printStackTrace();
+            logger.error("Error checking field existence.", e);
+            return false;
         }
-        return false;
     }
 
-
-    public void setRegistration(Registration registration) {
-        this.register = registration;
+    private Connection getConnection() throws Exception {
+        return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     }
-
 }
