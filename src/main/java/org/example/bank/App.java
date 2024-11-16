@@ -21,7 +21,6 @@ public class App extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
-        IDB dataBase = DatabaseR.getInstance();
         logger.info("Запуск приложения");
 
     }

@@ -25,4 +25,6 @@ public class StageManager {
             logger.error("Ошибка при смене сцены: " + fxmlPath, e);
         }
     }
+
+
 }

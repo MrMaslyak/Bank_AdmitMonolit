@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.example.bank.controller.Bank;
 import org.example.bank.database.DatabaseAccount;
 import org.example.bank.database.DatabaseR;
 import org.example.bank.systems.StageManager;
@@ -86,4 +87,6 @@ public class LobbyController {
         errorL.setText("Incorrect login or password");
         logger.warn("Неверный логин или пароль. Логин: {}", loginL.getText());
     }
+
+
 }

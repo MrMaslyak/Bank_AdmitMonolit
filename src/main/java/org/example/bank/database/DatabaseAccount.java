@@ -19,7 +19,7 @@ public class DatabaseAccount implements IDB {
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(DatabaseAccount.class);
 
 
-    private DatabaseAccount() {
+    DatabaseAccount() {
         try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
             logger.info("Connected to the PostgreSQL server successfully.");
         } catch (Exception e) {
@@ -39,22 +39,28 @@ public class DatabaseAccount implements IDB {
         return instance;
     }
 
-    public BigDecimal getUserBalance(String login) {
-        String query = "SELECT balance FROM bankUsers WHERE login = ?";
+    public void addAccount(int userId) {
+        String query = "INSERT INTO bankaccounts (user_id, balance, credit_limit, amount_usd, amount_eur, amount_uan) " +
+                "VALUES (?, ?, ?, ?, ?, ?)";
         try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
 
-            statement.setString(1, login);
-            ResultSet resultSet = statement.executeQuery();
+            statement.setInt(1, userId);
+            statement.setBigDecimal(2, BigDecimal.ZERO);
+            statement.setBigDecimal(3, BigDecimal.ZERO);
+            statement.setBigDecimal(4, BigDecimal.ZERO);
+            statement.setBigDecimal(5, BigDecimal.ZERO);
+            statement.setBigDecimal(6, BigDecimal.ZERO);
 
-            if (resultSet.next()) {
-                return resultSet.getBigDecimal("balance");
-            }
+            statement.executeUpdate();
+
+            logger.info("Account added successfully for user ID: {}", userId);
         } catch (Exception e) {
-            logger.error("Ошибка при извлечении баланса пользователя.", e);
+            logger.error("Error during account addition.", e);
         }
-        return BigDecimal.ZERO;
     }
+
+
 
 
     public Connection getConnection() throws Exception {
