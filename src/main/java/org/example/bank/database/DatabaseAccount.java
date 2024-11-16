@@ -13,14 +13,11 @@ public class DatabaseAccount implements IDB {
 
 
     private static volatile DatabaseAccount instance;
-    private static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String DB_USER = "postgres";
-    private static final String DB_PASSWORD = "LaLa27418182";
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(DatabaseAccount.class);
 
 
     DatabaseAccount() {
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
+        try (Connection connection = DatabaseConnection.getConnection()) {
             logger.info("Connected to the PostgreSQL server successfully.");
         } catch (Exception e) {
             logger.error("Connection failure during initialization.", e);
@@ -42,7 +39,7 @@ public class DatabaseAccount implements IDB {
     public void addAccount(int userId) {
         String query = "INSERT INTO bankaccounts (user_id, balance, credit_limit, amount_usd, amount_eur, amount_uan) " +
                 "VALUES (?, ?, ?, ?, ?, ?)";
-        try (Connection connection = getConnection();
+        try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
 
             statement.setInt(1, userId);
@@ -63,8 +60,6 @@ public class DatabaseAccount implements IDB {
 
 
 
-    public Connection getConnection() throws Exception {
-        return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-    }
+
 
 }

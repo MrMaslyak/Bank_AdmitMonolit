@@ -9,7 +9,6 @@ public interface IDB {
     static DatabaseAccount getInstance() {
         return null;
     }
-   Connection getConnection() throws Exception;
 
 
 }

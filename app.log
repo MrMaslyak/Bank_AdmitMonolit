@@ -1251,3 +1251,17 @@ org.postgresql.util.PSQLException: ОШИБКА: INSERT или UPDATE в таб�
 2024-11-16 22:37:17 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
 2024-11-16 22:37:19 INFO  org.example.bank.App - Запуск приложения
 2024-11-16 22:37:21 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-16 22:37:38 INFO  org.example.bank.database.DatabaseR - Maslyak123 is available for use.
+2024-11-16 22:37:38 INFO  org.example.bank.database.DatabaseR - maslyak1232@gmail.com is available for use.
+2024-11-16 22:37:38 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-16 22:37:38 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2024-11-16 22:37:38 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2024-11-16 22:37:41 INFO  org.example.bank.database.DatabaseR - Maslyak123 is available for use.
+2024-11-16 22:37:41 INFO  org.example.bank.database.DatabaseR - maslyak1232@gmail.com is available for use.
+2024-11-16 22:37:41 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-16 22:37:41 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2024-11-16 22:37:41 INFO  org.example.bank.database.DatabaseR - maslyak1232@gmail.com is available for use.
+2024-11-16 22:37:42 INFO  org.example.bank.database.DatabaseR - Maslyak123 is available for use.
+2024-11-16 22:37:42 INFO  o.e.bank.database.DatabaseAccount - Account added successfully for user ID: 5
+2024-11-16 22:37:42 INFO  org.example.bank.database.DatabaseR - User added or updated successfully.
+2024-11-16 22:37:42 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.

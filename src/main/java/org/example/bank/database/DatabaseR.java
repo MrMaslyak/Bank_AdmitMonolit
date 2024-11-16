@@ -13,13 +13,10 @@ public class DatabaseR implements IDB {
 
     private static volatile DatabaseR instance;
     private static volatile DatabaseAccount dbAcc;
-    private static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String DB_USER = "postgres";
-    private static final String DB_PASSWORD = "LaLa27418182";
     private static final Logger logger = LoggerFactory.getLogger(DatabaseR.class);
 
     private DatabaseR() {
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
+        try (Connection connection = DatabaseConnection.getConnection()) {
             logger.info("Connected to the PostgreSQL server successfully.");
             dbAcc = new DatabaseAccount();
         } catch (Exception e) {
@@ -39,34 +36,10 @@ public class DatabaseR implements IDB {
         return instance;
     }
 
-    public boolean passBank(String login, String password) {
-        String query = "SELECT * FROM bankUsers WHERE login = ? AND password = ?";
-        try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement(query)) {
-
-            statement.setString(1, login);
-            statement.setString(2, password);
-
-            ResultSet resultSet = statement.executeQuery();
-            boolean exists = resultSet.next();
-
-            if (exists) {
-                logger.info("User authenticated successfully.");
-            } else {
-                logger.warn("Invalid login or password.");
-            }
-            return exists;
-        } catch (Exception e) {
-            logger.error("Error during user authentication.", e);
-            return false;
-        }
-    }
-
-
     public void addUser(String login, String password, String email) {
         String query = "INSERT INTO bankUsers (login, password, email) VALUES (?, ?, ?) " +
                 "ON CONFLICT (login) DO UPDATE SET password = EXCLUDED.password, email = EXCLUDED.email";
-        try (Connection connection = getConnection();
+        try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
 
             statement.setString(1, login);
@@ -90,7 +63,7 @@ public class DatabaseR implements IDB {
 
     private int getUserId(String login) {
         String query = "SELECT user_id FROM bankusers WHERE login = ?";
-        try (Connection connection = getConnection();
+        try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
 
             statement.setString(1, login);
@@ -105,6 +78,29 @@ public class DatabaseR implements IDB {
     }
 
 
+    public boolean passBank(String login, String password) {
+        String query = "SELECT * FROM bankUsers WHERE login = ? AND password = ?";
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setString(1, login);
+            statement.setString(2, password);
+
+            ResultSet resultSet = statement.executeQuery();
+            boolean exists = resultSet.next();
+
+            if (exists) {
+                logger.info("User authenticated successfully.");
+            } else {
+                logger.warn("Invalid login or password.");
+            }
+            return exists;
+        } catch (Exception e) {
+            logger.error("Error during user authentication.", e);
+            return false;
+        }
+    }
+
     public boolean availableLogin(String login) {
         return isFieldExists("SELECT 1 FROM bankUsers WHERE login = ?", login);
     }
@@ -114,7 +110,7 @@ public class DatabaseR implements IDB {
     }
 
     private boolean isFieldExists(String query, String fieldValue) {
-        try (Connection connection = getConnection();
+        try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
 
             statement.setString(1, fieldValue);
@@ -133,7 +129,4 @@ public class DatabaseR implements IDB {
         }
     }
 
-    public Connection getConnection() throws Exception {
-        return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-    }
 }
