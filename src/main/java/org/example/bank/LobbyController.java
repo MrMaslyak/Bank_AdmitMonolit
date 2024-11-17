@@ -15,6 +15,8 @@ import org.example.bank.webscraper.ExchangeRate;
 import org.example.bank.webscraper.News;
 import org.slf4j.Logger;
 
+import java.math.BigDecimal;
+
 public class LobbyController {
 
     @FXML
@@ -68,7 +70,7 @@ public class LobbyController {
     public void setLogin() {
         if (validateLogin()) {
             proceedToBank();
-            databaseAccount.getBalance(database.getUserId(loginL.getText()));
+            passUserDatabase();
         } else {
             showLoginError();
         }
@@ -87,6 +89,15 @@ public class LobbyController {
         errorL.setVisible(true);
         errorL.setText("Incorrect login or password");
         logger.warn("Неверный логин или пароль. Логин: {}", loginL.getText());
+    }
+
+    private void passUserDatabase() {
+        int userId = database.getUserId(loginL.getText());
+        BigDecimal balance = databaseAccount.getBalance(userId);
+        Bank bankController = (Bank) StageManager.getController();
+        if (bankController != null) {
+            bankController.updateBalance(balance);
+        }
     }
 
 

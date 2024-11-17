@@ -12,8 +12,9 @@ public class Bank {
     private Label balanceLabel;
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(Bank.class);
 
-    public void initialize() {
-        logger.info("Bank page initialized");
-        balanceLabel.setText("Balance: " + balance);
+    public void updateBalance(BigDecimal balance) {
+        if (balanceLabel != null) {
+            balanceLabel.setText(balance.toString());
+        }
     }
 }

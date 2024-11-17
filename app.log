@@ -1273,3 +1273,32 @@ org.postgresql.util.PSQLException: ОШИБКА: INSERT или UPDATE в таб�
 2024-11-17 22:25:21 INFO  org.example.bank.App - Запуск приложения
 2024-11-17 22:25:29 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
 2024-11-17 22:25:29 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 22:29:27 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 22:29:27 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 22:29:27 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 22:29:27 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 22:29:27 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 22:29:29 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 22:29:37 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 22:29:37 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 22:29:37 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 0
+2024-11-17 22:37:34 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 22:37:34 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 22:37:34 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 22:37:34 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 22:37:34 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 22:37:36 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 22:37:46 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 22:37:46 INFO  org.example.bank.controller.Bank - Bank page initialized
+2024-11-17 22:37:46 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 22:37:46 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 0
+2024-11-17 22:38:15 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 22:38:15 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 22:38:15 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 22:38:15 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 22:38:15 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 22:38:17 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 22:38:21 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 22:38:21 INFO  org.example.bank.controller.Bank - Bank page initialized
+2024-11-17 22:38:21 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 22:38:21 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 0

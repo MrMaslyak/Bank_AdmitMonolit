@@ -11,14 +11,16 @@ import java.io.IOException;
 
 public class StageManager {
 
+    private static FXMLLoader currentLoader; // Сохраняем текущий загрузчик
+
     public static void switchScene(Button currentButton, String fxmlPath) {
         try {
-            FXMLLoader loader = new FXMLLoader(StageManager.class.getResource(fxmlPath));
-            Parent root = loader.load();
+            currentLoader = new FXMLLoader(StageManager.class.getResource(fxmlPath));
+            Parent root = currentLoader.load();
             Stage stage = new Stage();
             stage.setResizable(false);
             stage.setScene(new Scene(root));
-            currentButton.getScene().getWindow().hide();
+            currentButton.getScene().getWindow().hide(); // Закрываем текущую сцену
             stage.show();
         } catch (IOException e) {
             Logger logger = org.slf4j.LoggerFactory.getLogger(StageManager.class);
@@ -26,5 +28,12 @@ public class StageManager {
         }
     }
 
-
+    public static Object getController() {
+        if (currentLoader != null) {
+            return currentLoader.getController();
+        }
+        Logger logger = org.slf4j.LoggerFactory.getLogger(StageManager.class);
+        logger.warn("Попытка получить контроллер, но currentLoader == null.");
+        return null;
+    }
 }
