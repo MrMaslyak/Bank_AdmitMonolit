@@ -10,6 +10,7 @@ import org.example.bank.controller.Bank;
 import org.example.bank.database.DatabaseAccount;
 import org.example.bank.database.DatabaseR;
 import org.example.bank.systems.StageManager;
+import org.example.bank.systems.UpdDataUserBank;
 import org.example.bank.until.TimeLobby;
 import org.example.bank.webscraper.ExchangeRate;
 import org.example.bank.webscraper.News;
@@ -70,7 +71,6 @@ public class LobbyController {
     public void setLogin() {
         if (validateLogin()) {
             proceedToBank();
-            passUserDatabase();
         } else {
             showLoginError();
         }
@@ -80,10 +80,32 @@ public class LobbyController {
         return database.passBank(loginL.getText(), passwordL.getText());
     }
 
+
     private void proceedToBank() {
+        int userId = database.getUserId(loginL.getText());
+        if (userId == -1) {
+            logger.warn("Пользователь с логином {} не найден.", loginL.getText());
+            showLoginError();
+            return;
+        }
+
+        // Создаем объект UpdDataUserBank и передаем userId
+        UpdDataUserBank bankDataUser = new UpdDataUserBank(database, databaseAccount);
+        bankDataUser.setUserId(userId);
+
+        // Получаем баланс и обновляем UI
+        String balance = bankDataUser.getBalance();
+
+        // Передаем данные на страницу банка
         StageManager.switchScene(registration, "/org/example/bank/fxml/bank.fxml");
-        logger.info("Переход на страницу банка");
+
+        // В классе Bank нужно обновить UI
+        Bank bankController = (Bank) StageManager.getController("/org/example/bank/fxml/bank.fxml");
+        bankController.updateUI(balance);
+
+        logger.info("Переход на страницу банка. Пользователь ID: {}", userId);
     }
+
 
     private void showLoginError() {
         errorL.setVisible(true);
@@ -91,14 +113,6 @@ public class LobbyController {
         logger.warn("Неверный логин или пароль. Логин: {}", loginL.getText());
     }
 
-    private void passUserDatabase() {
-        int userId = database.getUserId(loginL.getText());
-        BigDecimal balance = databaseAccount.getBalance(userId);
-        Bank bankController = (Bank) StageManager.getController();
-        if (bankController != null) {
-            bankController.updateBalance(balance);
-        }
-    }
 
 
 }

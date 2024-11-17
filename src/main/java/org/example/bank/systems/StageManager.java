@@ -28,7 +28,7 @@ public class StageManager {
         }
     }
 
-    public static Object getController() {
+    public static Object getController(String s) {
         if (currentLoader != null) {
             return currentLoader.getController();
         }

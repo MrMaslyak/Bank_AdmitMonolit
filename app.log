@@ -1302,3 +1302,363 @@ org.postgresql.util.PSQLException: ОШИБКА: INSERT или UPDATE в таб�
 2024-11-17 22:38:21 INFO  org.example.bank.controller.Bank - Bank page initialized
 2024-11-17 22:38:21 INFO  org.example.bank.LobbyController - Переход на страницу банка
 2024-11-17 22:38:21 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 0
+2024-11-17 22:40:25 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 22:40:25 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 22:40:25 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 22:40:25 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 22:40:25 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 22:40:27 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 22:40:35 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 22:40:35 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 22:40:35 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 0
+2024-11-17 23:01:19 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:01:19 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:01:19 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:01:19 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:01:19 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:01:22 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:01:31 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:01:31 ERROR o.e.bank.systems.UpdDataUserBank - User ID not found for login 'userLogin'
+2024-11-17 23:01:31 ERROR o.example.bank.systems.StageManager - Ошибка при смене сцены: /org/example/bank/fxml/bank.fxml
+javafx.fxml.LoadException: 
+/C:/Users/Komp/IdeaProjects/Bank1/target/classes/org/example/bank/fxml/bank.fxml
+
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2692)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at org.example.bank/org.example.bank.systems.StageManager.switchScene(StageManager.java:19)
+	at org.example.bank/org.example.bank.LobbyController.proceedToBank(LobbyController.java:85)
+	at org.example.bank/org.example.bank.LobbyController.setLogin(LobbyController.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:115)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2688)
+	... 59 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "javafx.scene.control.Label.setText(String)" because "this.creditLimitLabel" is null
+	at org.example.bank/org.example.bank.controller.Bank.updateUI(Bank.java:27)
+	at org.example.bank/org.example.bank.controller.Bank.initialize(Bank.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	... 66 common frames omitted
+2024-11-17 23:01:31 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 23:01:31 INFO  o.e.bank.systems.UpdDataUserBank - Initializing data for user ID: 7
+2024-11-17 23:01:31 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 0
+2024-11-17 23:01:36 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:01:36 ERROR o.e.bank.systems.UpdDataUserBank - User ID not found for login 'userLogin'
+2024-11-17 23:01:36 ERROR o.example.bank.systems.StageManager - Ошибка при смене сцены: /org/example/bank/fxml/bank.fxml
+javafx.fxml.LoadException: 
+/C:/Users/Komp/IdeaProjects/Bank1/target/classes/org/example/bank/fxml/bank.fxml
+
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2692)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at org.example.bank/org.example.bank.systems.StageManager.switchScene(StageManager.java:19)
+	at org.example.bank/org.example.bank.LobbyController.proceedToBank(LobbyController.java:85)
+	at org.example.bank/org.example.bank.LobbyController.setLogin(LobbyController.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:115)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2688)
+	... 59 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "javafx.scene.control.Label.setText(String)" because "this.creditLimitLabel" is null
+	at org.example.bank/org.example.bank.controller.Bank.updateUI(Bank.java:27)
+	at org.example.bank/org.example.bank.controller.Bank.initialize(Bank.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	... 66 common frames omitted
+2024-11-17 23:01:36 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 23:01:36 INFO  o.e.bank.systems.UpdDataUserBank - Initializing data for user ID: 7
+2024-11-17 23:01:36 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 0
+2024-11-17 23:01:54 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:01:54 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:01:54 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:01:54 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:01:54 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:01:56 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:02:00 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:02:00 ERROR o.e.bank.systems.UpdDataUserBank - User ID not found for login 'userLogin'
+2024-11-17 23:02:00 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 23:02:01 INFO  o.e.bank.systems.UpdDataUserBank - Initializing data for user ID: 7
+2024-11-17 23:02:01 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 0
+2024-11-17 23:02:46 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:02:46 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:02:46 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:02:46 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:02:46 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:02:48 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:03:01 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:03:01 ERROR o.e.bank.systems.UpdDataUserBank - User ID not found for login 'userLogin'
+2024-11-17 23:03:02 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 23:03:02 INFO  o.e.bank.systems.UpdDataUserBank - Initializing data for user ID: 7
+2024-11-17 23:03:02 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 0
+2024-11-17 23:03:50 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:03:50 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:03:50 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:03:50 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:03:50 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:03:52 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:04:02 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:04:02 ERROR o.e.bank.systems.UpdDataUserBank - User ID not found for login 'userLogin'
+2024-11-17 23:04:02 ERROR o.example.bank.systems.StageManager - Ошибка при смене сцены: /org/example/bank/fxml/bank.fxml
+javafx.fxml.LoadException: 
+/C:/Users/Komp/IdeaProjects/Bank1/target/classes/org/example/bank/fxml/bank.fxml
+
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2692)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at org.example.bank/org.example.bank.systems.StageManager.switchScene(StageManager.java:19)
+	at org.example.bank/org.example.bank.LobbyController.proceedToBank(LobbyController.java:85)
+	at org.example.bank/org.example.bank.LobbyController.setLogin(LobbyController.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:115)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2688)
+	... 59 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.toString()" because "this.balance" is null
+	at org.example.bank/org.example.bank.systems.UpdDataUserBank.getBalance(UpdDataUserBank.java:37)
+	at org.example.bank/org.example.bank.controller.Bank.updateUI(Bank.java:23)
+	at org.example.bank/org.example.bank.controller.Bank.initialize(Bank.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	... 66 common frames omitted
+2024-11-17 23:04:02 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 23:04:02 INFO  o.e.bank.systems.UpdDataUserBank - Initializing data for user ID: 7
+2024-11-17 23:04:02 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 0
+2024-11-17 23:15:47 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:15:47 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:15:47 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:15:47 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:15:47 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:15:49 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:15:57 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:15:57 WARN  o.e.bank.database.DatabaseAccount - No account found for user ID: 0
+2024-11-17 23:15:57 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 0: 0
+2024-11-17 23:15:57 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 23:16:13 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:16:13 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:16:13 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:16:13 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:16:13 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:16:15 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:16:22 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:16:22 WARN  o.e.bank.database.DatabaseAccount - No account found for user ID: 0
+2024-11-17 23:16:22 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 0: 0
+2024-11-17 23:16:22 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 23:17:27 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:17:27 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:17:27 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:17:28 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:17:28 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:17:30 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:17:34 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:17:34 INFO  org.example.bank.LobbyController - Переход на страницу банка
+2024-11-17 23:30:13 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:30:13 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:30:13 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:30:13 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:30:13 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:30:15 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:30:24 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:30:24 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-17 23:30:24 WARN  o.e.bank.database.DatabaseAccount - No account found for user ID: 0
+2024-11-17 23:30:24 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 0: 0
+2024-11-17 23:30:24 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7
+2024-11-17 23:35:36 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:35:36 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:35:36 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:35:37 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:35:37 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:35:38 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:35:49 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:35:49 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-17 23:35:49 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 0
+2024-11-17 23:35:49 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 7: 0
+2024-11-17 23:35:49 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7
+2024-11-17 23:37:00 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:37:00 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:37:00 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:37:00 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:37:00 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:37:02 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:37:11 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:37:12 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-17 23:37:12 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 100
+2024-11-17 23:37:12 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 7: 100
+2024-11-17 23:37:12 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7

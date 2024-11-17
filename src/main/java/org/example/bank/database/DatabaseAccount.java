@@ -76,7 +76,7 @@ public class DatabaseAccount implements IDB {
         } catch (Exception e) {
             logger.error("Error during balance retrieval.", e);
         }
-        return BigDecimal.ZERO; // Возвращаем 0, если баланс не найден или произошла ошибка
+        return BigDecimal.ZERO;
     }
 
 
