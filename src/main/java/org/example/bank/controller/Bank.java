@@ -12,17 +12,8 @@ public class Bank {
     private Label balanceLabel;
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(Bank.class);
 
-
-    public void setBalance(BigDecimal balance) {
-        this.balance = balance;
-        updateBalanceLabel();
-    }
-
-    private void updateBalanceLabel() {
-        if (balanceLabel != null) {
-            balanceLabel.setText(balance.toString());
-        } else {
-            logger.warn("Метод updateBalanceLabel: balanceLabel не инициализирована.");
-        }
+    public void initialize() {
+        logger.info("Bank page initialized");
+        balanceLabel.setText("Balance: " + balance);
     }
 }

@@ -57,6 +57,28 @@ public class DatabaseAccount implements IDB {
         }
     }
 
+    public void getBalance(int userId) {
+        String query = "SELECT balance FROM bankaccounts WHERE user_id = ?";
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setInt(1, userId);
+
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    BigDecimal balance = resultSet.getBigDecimal("balance");
+                    logger.info("Balance retrieved successfully for user ID {}: {}", userId, balance);
+                    System.out.println("Balance useer: " + balance);
+                } else {
+                    logger.warn("No account found for user ID: {}", userId);
+                }
+            }
+
+        } catch (Exception e) {
+            logger.error("Error during balance retrieval.", e);
+        }
+    }
+
 
 
 

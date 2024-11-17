@@ -61,7 +61,7 @@ public class DatabaseR implements IDB {
     }
 
 
-    private int getUserId(String login) {
+    public int getUserId(String login) {
         String query = "SELECT user_id FROM bankusers WHERE login = ?";
         try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {

@@ -68,6 +68,7 @@ public class LobbyController {
     public void setLogin() {
         if (validateLogin()) {
             proceedToBank();
+            databaseAccount.getBalance(database.getUserId(loginL.getText()));
         } else {
             showLoginError();
         }
