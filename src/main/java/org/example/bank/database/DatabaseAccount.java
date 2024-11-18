@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Optional;
 
 public class DatabaseAccount implements IDB {
 
@@ -25,7 +26,7 @@ public class DatabaseAccount implements IDB {
 
     public static DatabaseAccount getInstance() {
         if (instance == null) {
-            synchronized (DatabaseR.class) {
+            synchronized (DatabaseAccount.class) {
                 if (instance == null) {
                     instance = new DatabaseAccount();
                     logger.info("DatabaseAccount instance created.");
@@ -56,7 +57,7 @@ public class DatabaseAccount implements IDB {
         }
     }
 
-    public BigDecimal getBalance(int userId) {
+    public Optional<BigDecimal> getBalance(int userId) {
         String query = "SELECT balance FROM bankaccounts WHERE user_id = ?";
         try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
@@ -67,15 +68,16 @@ public class DatabaseAccount implements IDB {
                 if (resultSet.next()) {
                     BigDecimal balance = resultSet.getBigDecimal("balance");
                     logger.info("Balance retrieved successfully for user ID {}: {}", userId, balance);
-                    return balance;
+                    return Optional.of(resultSet.getBigDecimal("balance"));
                 } else {
                     logger.warn("No account found for user ID: {}", userId);
+                    return Optional.empty();
                 }
             }
         } catch (Exception e) {
             logger.error("Error during balance retrieval.", e);
         }
-        return BigDecimal.ZERO;
+        return Optional.empty();
     }
 
     public String getLogin(int userId){

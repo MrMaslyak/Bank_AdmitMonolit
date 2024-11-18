@@ -1,11 +1,8 @@
 package org.example.bank.systems;
 
 import org.example.bank.database.DatabaseAccount;
-import org.example.bank.database.DatabaseR;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.math.BigDecimal;
 
 public class UpdDataUserBank {
 

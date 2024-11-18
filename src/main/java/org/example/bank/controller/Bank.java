@@ -8,7 +8,6 @@ public class Bank {
 
     @FXML
     private Label balanceLabel, user;
-
     private UpdDataUserBank bankDataUser;
 
     public void initialize() {
