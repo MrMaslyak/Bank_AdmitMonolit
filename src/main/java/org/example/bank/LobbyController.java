@@ -89,22 +89,18 @@ public class LobbyController {
             return;
         }
 
-        // Создаем объект UpdDataUserBank и передаем userId
-        UpdDataUserBank bankDataUser = new UpdDataUserBank(database, databaseAccount);
+        UpdDataUserBank bankDataUser = new UpdDataUserBank(databaseAccount);
         bankDataUser.setUserId(userId);
 
-        // Получаем баланс и обновляем UI
-        String balance = bankDataUser.getBalance();
-
-        // Передаем данные на страницу банка
         StageManager.switchScene(registration, "/org/example/bank/fxml/bank.fxml");
 
-        // В классе Bank нужно обновить UI
         Bank bankController = (Bank) StageManager.getController("/org/example/bank/fxml/bank.fxml");
-        bankController.updateUI(balance);
+        bankController.setBankDataUser(bankDataUser);
 
         logger.info("Переход на страницу банка. Пользователь ID: {}", userId);
     }
+
+
 
 
     private void showLoginError() {

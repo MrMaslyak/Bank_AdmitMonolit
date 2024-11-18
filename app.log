@@ -1662,3 +1662,116 @@ Caused by: java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.t
 2024-11-17 23:37:12 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 100
 2024-11-17 23:37:12 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 7: 100
 2024-11-17 23:37:12 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7
+2024-11-17 23:48:18 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:48:18 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:48:18 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:48:18 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:48:18 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:48:23 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:48:23 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:48:23 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:48:23 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:48:23 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:48:25 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:48:32 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:48:32 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-17 23:48:32 WARN  o.e.bank.database.DatabaseAccount - No account found for user ID: 0
+2024-11-17 23:48:32 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 0: 0
+2024-11-17 23:48:32 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7
+2024-11-17 23:48:58 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-17 23:48:58 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:48:58 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-17 23:48:58 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-17 23:48:58 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-17 23:49:00 INFO  org.example.bank.App - Запуск приложения
+2024-11-17 23:49:04 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-17 23:49:04 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-17 23:49:04 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 100
+2024-11-17 23:49:04 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 7: 100
+2024-11-17 23:49:04 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7
+2024-11-18 22:04:11 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-18 22:04:11 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:04:11 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-18 22:04:11 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:04:11 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-18 22:04:14 INFO  org.example.bank.App - Запуск приложения
+2024-11-18 22:07:34 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-18 22:07:34 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-18 22:07:34 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:07:34 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:07:34 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7
+2024-11-18 22:13:40 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-18 22:13:40 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:13:40 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-18 22:13:40 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:13:40 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-18 22:13:42 INFO  org.example.bank.App - Запуск приложения
+2024-11-18 22:13:53 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-18 22:13:53 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-18 22:13:53 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:13:53 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:13:53 WARN  o.e.bank.database.DatabaseAccount - No account found for user ID: 0
+2024-11-18 22:13:53 INFO  o.e.bank.systems.UpdDataUserBank - Login retrieved successfully for user ID 0: null
+2024-11-18 22:13:53 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7
+2024-11-18 22:21:55 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-18 22:21:55 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:21:55 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-18 22:21:55 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:21:55 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-18 22:21:57 INFO  org.example.bank.App - Запуск приложения
+2024-11-18 22:22:04 WARN  org.example.bank.database.DatabaseR - Invalid login or password.
+2024-11-18 22:22:04 WARN  org.example.bank.LobbyController - Неверный логин или пароль. Логин: Maslyak
+2024-11-18 22:22:17 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-18 22:22:17 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-18 22:22:17 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:22:17 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:22:17 INFO  o.e.bank.database.DatabaseAccount - Login retrieved successfully for user ID 7: Maslyak
+2024-11-18 22:22:17 INFO  o.e.bank.systems.UpdDataUserBank - Login retrieved successfully for user ID 7: Maslyak
+2024-11-18 22:22:17 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7
+2024-11-18 22:24:05 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-18 22:24:05 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:24:05 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-18 22:24:05 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:24:05 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-18 22:24:07 INFO  org.example.bank.App - Запуск приложения
+2024-11-18 22:24:16 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-18 22:24:16 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:24:16 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-18 22:24:16 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:24:16 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-18 22:24:18 INFO  org.example.bank.App - Запуск приложения
+2024-11-18 22:24:28 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-18 22:24:28 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-18 22:24:28 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:24:28 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:24:28 WARN  o.e.bank.database.DatabaseAccount - No account found for user ID: 0
+2024-11-18 22:24:28 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 0: 0
+2024-11-18 22:24:28 WARN  o.e.bank.database.DatabaseAccount - No account found for user ID: 0
+2024-11-18 22:24:28 INFO  o.e.bank.systems.UpdDataUserBank - Login retrieved successfully for user ID 0: null
+2024-11-18 22:24:28 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7
+2024-11-18 22:28:33 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-18 22:28:34 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:28:34 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-18 22:28:34 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:28:34 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-18 22:28:36 INFO  org.example.bank.App - Запуск приложения
+2024-11-18 22:28:44 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-18 22:28:44 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-18 22:28:44 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:28:44 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:28:44 INFO  o.e.bank.database.DatabaseAccount - Login retrieved successfully for user ID 7: Maslyak
+2024-11-18 22:28:44 INFO  o.e.bank.systems.UpdDataUserBank - Login retrieved successfully for user ID 7: Maslyak
+2024-11-18 22:28:44 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7
+2024-11-18 22:30:42 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-18 22:30:42 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:30:42 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-18 22:30:43 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-18 22:30:43 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-18 22:30:45 INFO  org.example.bank.App - Запуск приложения
+2024-11-18 22:30:53 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-18 22:30:53 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-18 22:30:53 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:30:53 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 7: 100
+2024-11-18 22:30:53 INFO  o.e.bank.database.DatabaseAccount - Login retrieved successfully for user ID 7: Maslyak
+2024-11-18 22:30:53 INFO  o.e.bank.systems.UpdDataUserBank - Login retrieved successfully for user ID 7: Maslyak
+2024-11-18 22:30:53 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7

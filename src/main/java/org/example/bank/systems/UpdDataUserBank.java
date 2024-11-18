@@ -10,25 +10,24 @@ import java.math.BigDecimal;
 public class UpdDataUserBank {
 
     private static final Logger logger = LoggerFactory.getLogger(UpdDataUserBank.class);
-    private final DatabaseR databaseR;
     private final DatabaseAccount databaseAccount;
     private int userId;
-    private BigDecimal balance;
 
-    public UpdDataUserBank(DatabaseR databaseR, DatabaseAccount databaseAccount) {
-        this.databaseR = databaseR;
+    public UpdDataUserBank(DatabaseAccount databaseAccount) {
         this.databaseAccount = databaseAccount;
     }
 
     public String getBalance() {
-        try {
-            balance = databaseAccount.getBalance(userId);
-            logger.info("Balance retrieved successfully for user ID {}: {}", userId, balance);
-        } catch (Exception e) {
-            logger.error("Error during balance retrieval.", e);
-        }
-        return balance.toString();
+        String balance = String.valueOf(databaseAccount.getBalance(userId));
+        logger.info("Balance retrieved successfully for user ID {}: {}", userId, balance);
+        return balance;
 
+    }
+
+    public String getLogin(){
+        String login = databaseAccount.getLogin(userId);
+        logger.info("Login retrieved successfully for user ID {}: {}", userId, login);
+        return login;
     }
 
     public void setUserId(int userId) {

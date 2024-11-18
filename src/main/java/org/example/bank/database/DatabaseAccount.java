@@ -5,7 +5,6 @@ import org.slf4j.Logger;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -77,6 +76,28 @@ public class DatabaseAccount implements IDB {
             logger.error("Error during balance retrieval.", e);
         }
         return BigDecimal.ZERO;
+    }
+
+    public String getLogin(int userId){
+        String query = "SELECT login FROM bankusers WHERE user_id = ?";
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setInt(1, userId);
+
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    String login = resultSet.getString("login");
+                    logger.info("Login retrieved successfully for user ID {}: {}", userId, login);
+                    return login;
+                } else {
+                    logger.warn("No account found for user ID: {}", userId);
+                }
+            }
+        } catch (Exception e) {
+            logger.error("Error during balance retrieval.", e);
+        }
+        return null;
     }
 
 
