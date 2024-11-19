@@ -12,6 +12,7 @@ module org.example.bank {
     requires java.sql;
     requires org.slf4j;
     requires jbcrypt;
+    requires org.hibernate.orm.core;
 
 
     opens org.example.bank to javafx.fxml;

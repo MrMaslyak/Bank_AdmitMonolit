@@ -1,4 +1,0 @@
-2024-11-08 22:19:22 INFO  org.example.bank.App - Connected to the PostgreSQL server successfully.
-2024-11-08 22:19:22 INFO  org.example.bank.App - DatabaseR instance created.
-2024-11-08 22:20:28 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
-2024-11-08 22:20:28 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
