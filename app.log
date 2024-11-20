@@ -1790,3 +1790,23 @@ Caused by: java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.t
 2024-11-19 19:59:45 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
 2024-11-19 19:59:45 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
 2024-11-19 19:59:47 INFO  org.example.bank.App - Запуск приложения
+2024-11-19 22:00:36 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-19 22:00:36 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-19 22:00:36 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-19 22:00:37 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-19 22:00:37 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-19 22:00:39 INFO  org.example.bank.App - Запуск приложения
+2024-11-19 22:00:45 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-19 22:00:48 INFO  o.e.bank.controller.Registration - Переход на страницу лобби
+2024-11-20 21:50:18 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-20 21:50:18 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 21:50:18 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-20 21:50:18 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 21:50:18 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-20 21:50:23 INFO  org.example.bank.App - Запуск приложения
+2024-11-20 21:54:01 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-20 21:54:02 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 21:54:02 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-20 21:54:02 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 21:54:02 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-20 21:54:09 INFO  org.example.bank.App - Запуск приложения
