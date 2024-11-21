@@ -1,6 +1,8 @@
 package org.example.bank.database;
 
 import org.example.bank.database.repository.IDB;
+import org.example.bank.until.HibernateUtil;
+import org.hibernate.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +16,7 @@ public class DatabaseR implements IDB {
     private static volatile DatabaseR instance;
     private static volatile DatabaseAccount dbAcc;
     private static final Logger logger = LoggerFactory.getLogger(DatabaseR.class);
+    private Session session = HibernateUtil.getSessionFactory().openSession();
 
     private DatabaseR() {
         try (Connection connection = DatabaseConnection.getConnection()) {
@@ -22,6 +25,7 @@ public class DatabaseR implements IDB {
         } catch (Exception e) {
             logger.error("Connection failure during initialization.", e);
         }
+
     }
 
     public static DatabaseR getInstance() {

@@ -1810,3 +1810,745 @@ Caused by: java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.t
 2024-11-20 21:54:02 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
 2024-11-20 21:54:02 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
 2024-11-20 21:54:09 INFO  org.example.bank.App - Запуск приложения
+2024-11-20 21:59:25 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-20 21:59:25 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 21:59:25 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-20 21:59:25 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 21:59:25 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-20 21:59:30 INFO  org.example.bank.App - Запуск приложения
+2024-11-20 21:59:55 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-20 22:00:02 INFO  o.e.bank.controller.Registration - Переход на страницу лобби
+2024-11-20 22:07:42 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-20 22:07:42 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 22:07:42 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-20 22:07:43 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 22:07:43 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-20 22:07:49 INFO  org.example.bank.App - Запуск приложения
+2024-11-20 22:07:50 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-20 22:08:05 INFO  org.example.bank.database.DatabaseR - Maslyak2 is available for use.
+2024-11-20 22:08:05 WARN  org.example.bank.database.DatabaseR - maslyak@gmail.com already exists in the database.
+2024-11-20 22:08:05 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-20 22:08:05 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2024-11-20 22:08:05 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2024-11-20 22:08:08 INFO  org.example.bank.database.DatabaseR - Maslyak2 is available for use.
+2024-11-20 22:08:08 INFO  org.example.bank.database.DatabaseR - maslyak2@gmail.com is available for use.
+2024-11-20 22:08:08 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-20 22:08:08 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2024-11-20 22:08:08 INFO  org.example.bank.database.DatabaseR - maslyak2@gmail.com is available for use.
+2024-11-20 22:08:08 INFO  org.example.bank.database.DatabaseR - Maslyak2 is available for use.
+2024-11-20 22:08:08 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-20 22:08:08 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-20 22:08:08 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-20 22:08:08 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-20 22:08:08 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-20 22:08:08 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-20 22:08:08 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-20 22:08:08 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-20 22:08:08 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-20 22:08:08 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-20 22:08:09 ERROR org.example.bank.database.DatabaseR - Error fetching user ID.
+java.lang.IllegalArgumentException: org.hibernate.query.sqm.UnknownEntityException: Could not resolve root entity 'User'
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:141)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:171)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:802)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:132)
+	at org.example.bank/org.example.bank.database.DatabaseR.getUserId(DatabaseR.java:74)
+	at org.example.bank/org.example.bank.database.DatabaseR.addUser(DatabaseR.java:53)
+	at org.example.bank/org.example.bank.controller.Registration.onAccept(Registration.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.query.sqm.UnknownEntityException: Could not resolve root entity 'User'
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.resolveRootEntity(SemanticQueryBuilder.java:1997)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitRootEntity(SemanticQueryBuilder.java:1928)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitRootEntity(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$RootEntityContext.accept(HqlParser.java:2515)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitEntityWithJoins(SemanticQueryBuilder.java:1898)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitFromClause(SemanticQueryBuilder.java:1887)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuery(SemanticQueryBuilder.java:1149)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:942)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$QuerySpecExpressionContext.accept(HqlParser.java:1844)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:927)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$SimpleQueryGroupContext.accept(HqlParser.java:1718)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectStatement(SemanticQueryBuilder.java:443)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitStatement(SemanticQueryBuilder.java:402)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.buildSemanticModel(SemanticQueryBuilder.java:311)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:71)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:165)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:147)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.interpretHql(AbstractSharedSessionContract.java:744)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:794)
+	... 58 common frames omitted
+2024-11-20 22:08:09 ERROR org.example.bank.database.DatabaseR - Failed to add account: user ID not found for login 'Maslyak2'
+2024-11-20 22:08:09 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2024-11-20 22:09:20 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-20 22:09:21 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 22:09:21 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-20 22:09:21 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 22:09:21 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-20 22:09:27 INFO  org.example.bank.App - Запуск приложения
+2024-11-20 22:09:37 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-20 22:09:38 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-20 22:09:38 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-20 22:09:38 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-20 22:09:38 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-20 22:09:38 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-20 22:09:38 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-20 22:09:38 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-20 22:09:38 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-20 22:09:38 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-20 22:09:38 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-20 22:09:39 ERROR org.example.bank.database.DatabaseR - Error fetching user ID.
+java.lang.IllegalArgumentException: org.hibernate.query.sqm.UnknownEntityException: Could not resolve root entity 'User'
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:141)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:171)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:802)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:132)
+	at org.example.bank/org.example.bank.database.DatabaseR.getUserId(DatabaseR.java:74)
+	at org.example.bank/org.example.bank.LobbyController.proceedToBank(LobbyController.java:85)
+	at org.example.bank/org.example.bank.LobbyController.setLogin(LobbyController.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.query.sqm.UnknownEntityException: Could not resolve root entity 'User'
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.resolveRootEntity(SemanticQueryBuilder.java:1997)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitRootEntity(SemanticQueryBuilder.java:1928)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitRootEntity(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$RootEntityContext.accept(HqlParser.java:2515)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitEntityWithJoins(SemanticQueryBuilder.java:1898)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitFromClause(SemanticQueryBuilder.java:1887)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuery(SemanticQueryBuilder.java:1149)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:942)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$QuerySpecExpressionContext.accept(HqlParser.java:1844)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:927)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$SimpleQueryGroupContext.accept(HqlParser.java:1718)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectStatement(SemanticQueryBuilder.java:443)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitStatement(SemanticQueryBuilder.java:402)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.buildSemanticModel(SemanticQueryBuilder.java:311)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:71)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:165)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:147)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.interpretHql(AbstractSharedSessionContract.java:744)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:794)
+	... 58 common frames omitted
+2024-11-20 22:09:39 WARN  org.example.bank.LobbyController - Пользователь с логином Maslyak не найден.
+2024-11-20 22:09:39 WARN  org.example.bank.LobbyController - Неверный логин или пароль. Логин: Maslyak
+2024-11-20 22:09:51 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-20 22:09:51 ERROR org.example.bank.database.DatabaseR - Error fetching user ID.
+java.lang.IllegalArgumentException: org.hibernate.query.sqm.UnknownEntityException: Could not resolve root entity 'User'
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:141)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:171)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:802)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:132)
+	at org.example.bank/org.example.bank.database.DatabaseR.getUserId(DatabaseR.java:74)
+	at org.example.bank/org.example.bank.LobbyController.proceedToBank(LobbyController.java:85)
+	at org.example.bank/org.example.bank.LobbyController.setLogin(LobbyController.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.query.sqm.UnknownEntityException: Could not resolve root entity 'User'
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.resolveRootEntity(SemanticQueryBuilder.java:1997)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitRootEntity(SemanticQueryBuilder.java:1928)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitRootEntity(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$RootEntityContext.accept(HqlParser.java:2515)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitEntityWithJoins(SemanticQueryBuilder.java:1898)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitFromClause(SemanticQueryBuilder.java:1887)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuery(SemanticQueryBuilder.java:1149)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:942)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$QuerySpecExpressionContext.accept(HqlParser.java:1844)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:927)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$SimpleQueryGroupContext.accept(HqlParser.java:1718)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectStatement(SemanticQueryBuilder.java:443)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitStatement(SemanticQueryBuilder.java:402)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.buildSemanticModel(SemanticQueryBuilder.java:311)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:71)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:165)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:147)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.interpretHql(AbstractSharedSessionContract.java:744)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:794)
+	... 58 common frames omitted
+2024-11-20 22:09:51 WARN  org.example.bank.LobbyController - Пользователь с логином Maslyak не найден.
+2024-11-20 22:09:51 WARN  org.example.bank.LobbyController - Неверный логин или пароль. Логин: Maslyak
+2024-11-20 22:10:08 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-20 22:10:08 ERROR org.example.bank.database.DatabaseR - Error fetching user ID.
+java.lang.IllegalArgumentException: org.hibernate.query.sqm.UnknownEntityException: Could not resolve root entity 'User'
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:141)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:171)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:802)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:132)
+	at org.example.bank/org.example.bank.database.DatabaseR.getUserId(DatabaseR.java:74)
+	at org.example.bank/org.example.bank.LobbyController.proceedToBank(LobbyController.java:85)
+	at org.example.bank/org.example.bank.LobbyController.setLogin(LobbyController.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.query.sqm.UnknownEntityException: Could not resolve root entity 'User'
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.resolveRootEntity(SemanticQueryBuilder.java:1997)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitRootEntity(SemanticQueryBuilder.java:1928)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitRootEntity(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$RootEntityContext.accept(HqlParser.java:2515)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitEntityWithJoins(SemanticQueryBuilder.java:1898)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitFromClause(SemanticQueryBuilder.java:1887)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuery(SemanticQueryBuilder.java:1149)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:942)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$QuerySpecExpressionContext.accept(HqlParser.java:1844)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:927)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:269)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.grammars.hql.HqlParser$SimpleQueryGroupContext.accept(HqlParser.java:1718)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectStatement(SemanticQueryBuilder.java:443)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.visitStatement(SemanticQueryBuilder.java:402)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.SemanticQueryBuilder.buildSemanticModel(SemanticQueryBuilder.java:311)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:71)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:165)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:147)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.interpretHql(AbstractSharedSessionContract.java:744)
+	at org.hibernate.orm.core@6.3.0.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:794)
+	... 58 common frames omitted
+2024-11-20 22:10:08 WARN  org.example.bank.LobbyController - Пользователь с логином Maslyak2 не найден.
+2024-11-20 22:10:08 WARN  org.example.bank.LobbyController - Неверный логин или пароль. Логин: Maslyak2
+2024-11-20 22:10:22 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-20 22:10:22 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 22:10:22 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-20 22:10:22 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 22:10:22 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-20 22:10:29 INFO  org.example.bank.App - Запуск приложения
+2024-11-20 22:10:30 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-20 22:10:43 INFO  org.example.bank.database.DatabaseR - Maslyak3 is available for use.
+2024-11-20 22:10:43 INFO  org.example.bank.database.DatabaseR - maslyak3@gmail.com is available for use.
+2024-11-20 22:10:43 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-11-20 22:10:43 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2024-11-20 22:10:43 INFO  org.example.bank.database.DatabaseR - maslyak3@gmail.com is available for use.
+2024-11-20 22:10:43 INFO  org.example.bank.database.DatabaseR - Maslyak3 is available for use.
+2024-11-20 22:10:43 INFO  o.e.bank.database.DatabaseAccount - Account added successfully for user ID: 9
+2024-11-20 22:10:43 INFO  org.example.bank.database.DatabaseR - User added or updated successfully.
+2024-11-20 22:10:43 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2024-11-20 22:10:59 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-20 22:10:59 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 22:10:59 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-20 22:10:59 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 22:10:59 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-20 22:11:20 INFO  org.example.bank.App - Запуск приложения
+2024-11-20 22:11:56 WARN  org.example.bank.database.DatabaseR - Invalid login or password.
+2024-11-20 22:11:56 WARN  org.example.bank.LobbyController - Неверный логин или пароль. Логин: Maslyak
+2024-11-20 22:11:58 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-20 22:11:58 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 9
+2024-11-20 22:11:58 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 9: 0
+2024-11-20 22:11:58 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 9: Optional[0]
+2024-11-20 22:11:58 INFO  o.e.bank.database.DatabaseAccount - Login retrieved successfully for user ID 9: Maslyak3
+2024-11-20 22:11:58 INFO  o.e.bank.systems.UpdDataUserBank - Login retrieved successfully for user ID 9: Maslyak3
+2024-11-20 22:11:58 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 9
+2024-11-20 22:40:40 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-20 22:40:40 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-20 22:40:41 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-20 22:40:41 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-20 22:40:41 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-20 22:40:41 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-20 22:40:41 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-20 22:40:41 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-20 22:40:41 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-20 22:40:41 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-20 22:40:41 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-20 22:40:41 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 22:40:41 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-20 22:40:41 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-20 22:40:41 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-20 22:40:47 INFO  org.example.bank.App - Запуск приложения
+2024-11-20 22:40:55 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-11-20 22:40:55 INFO  o.e.bank.systems.UpdDataUserBank - User ID set to 7
+2024-11-20 22:40:56 INFO  o.e.bank.database.DatabaseAccount - Balance retrieved successfully for user ID 7: 100
+2024-11-20 22:40:56 INFO  o.e.bank.systems.UpdDataUserBank - Balance retrieved successfully for user ID 7: Optional[100]
+2024-11-20 22:40:56 INFO  o.e.bank.database.DatabaseAccount - Login retrieved successfully for user ID 7: Maslyak
+2024-11-20 22:40:56 INFO  o.e.bank.systems.UpdDataUserBank - Login retrieved successfully for user ID 7: Maslyak
+2024-11-20 22:40:56 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 7
+2024-11-21 08:49:43 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 08:49:43 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 08:49:43 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 08:49:43 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 08:49:43 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 08:49:43 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 08:49:43 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 08:49:43 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 08:49:43 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 08:49:43 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 08:49:44 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-21 08:49:44 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 08:49:44 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-21 08:49:44 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 08:49:44 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-21 08:49:47 INFO  org.example.bank.App - Запуск приложения
+2024-11-21 09:00:36 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 09:00:36 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 09:00:37 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 09:00:37 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 09:00:37 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 09:00:37 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 09:00:37 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 09:00:37 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 09:00:37 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 09:00:37 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 09:00:37 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-21 09:00:37 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 09:00:37 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-21 09:00:37 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 09:00:37 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-21 09:00:39 INFO  org.example.bank.App - Запуск приложения
+2024-11-21 09:08:19 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 09:08:19 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 09:08:20 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 09:08:20 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 09:08:20 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 09:08:20 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 09:08:20 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 09:08:20 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 09:08:20 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 09:08:20 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 09:08:20 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-21 09:08:20 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 09:08:20 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-21 09:08:21 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 09:08:21 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-21 09:08:22 INFO  org.example.bank.App - Запуск приложения
+2024-11-21 09:15:07 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 09:15:07 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 09:15:07 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 09:15:07 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 09:15:07 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 09:15:07 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 09:15:07 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 09:15:07 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 09:15:07 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 09:15:07 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 09:15:08 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-21 09:15:08 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 09:15:08 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-21 09:15:08 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 09:15:08 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-21 09:15:10 INFO  org.example.bank.App - Запуск приложения
+2024-11-21 09:27:48 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 09:27:48 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 09:27:48 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 09:27:48 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 09:27:48 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 09:27:48 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 09:27:48 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 09:27:48 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 09:27:48 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 09:27:49 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 09:27:49 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-21 09:27:49 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 09:27:49 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-21 09:27:49 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 09:27:49 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-21 09:27:51 INFO  org.example.bank.App - Запуск приложения
+2024-11-21 10:33:34 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 10:33:34 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 10:33:34 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 10:33:34 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 10:33:34 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 10:33:34 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 10:33:34 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 10:33:34 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 10:33:34 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 10:33:35 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 10:33:35 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-21 10:33:35 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 10:33:35 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-21 10:33:35 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 10:33:35 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-21 10:33:37 INFO  org.example.bank.App - Запуск приложения
+2024-11-21 10:45:03 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 10:45:03 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 10:45:04 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 10:45:04 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 10:45:04 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 10:45:04 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 10:45:04 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 10:45:04 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 10:45:04 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 10:45:04 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 10:45:04 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-21 10:45:04 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 10:45:04 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-21 10:45:04 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 10:45:04 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-21 10:45:07 INFO  org.example.bank.App - Запуск приложения
+2024-11-21 11:06:46 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:06:46 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:06:46 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:07:25 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:07:25 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:07:25 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:09:40 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:09:40 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:09:40 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:09:56 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:09:56 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:09:56 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:10:48 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:10:48 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:10:48 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:11:51 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:11:51 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:11:51 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:12:10 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:12:10 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:12:10 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:12:24 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:12:24 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:12:24 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:12:24 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:12:24 WARN  org.hibernate.orm.deprecation - HHH90000028: Support for `<hibernate-mappings/>` is deprecated [RESOURCE : /User.hbm.xml]; migrate to orm.xml or mapping.xml, or enable `hibernate.transform_hbm_xml.enabled` for on the fly transformation
+2024-11-21 11:12:24 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 11:12:24 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 11:12:24 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 11:12:24 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 11:12:24 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 11:12:24 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 11:12:25 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 11:12:25 INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 11:12:34 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:12:34 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:12:35 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:12:35 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:12:35 WARN  org.hibernate.orm.deprecation - HHH90000028: Support for `<hibernate-mappings/>` is deprecated [RESOURCE : User.hbm.xml]; migrate to orm.xml or mapping.xml, or enable `hibernate.transform_hbm_xml.enabled` for on the fly transformation
+2024-11-21 11:12:35 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 11:12:35 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 11:12:35 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 11:12:35 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 11:12:35 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 11:12:35 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 11:12:35 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 11:12:35 INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 11:17:12 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:17:12 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:17:13 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:18:32 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:18:32 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:18:33 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:31:28 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:31:28 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:31:28 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:31:51 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:31:51 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:31:51 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:31:51 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 11:31:51 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 11:31:51 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 11:31:51 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 11:31:51 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 11:31:51 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 11:31:52 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 11:31:52 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-21 11:31:52 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 11:31:52 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-21 11:31:52 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 11:31:52 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-21 11:31:54 INFO  org.example.bank.App - Запуск приложения
+2024-11-21 11:33:27 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:33:27 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:33:27 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:34:19 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:34:19 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:34:19 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:35:11 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:35:11 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:35:12 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:35:43 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:35:43 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:35:44 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:35:56 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:35:56 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:35:56 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:36:32 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:36:32 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:36:32 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:42:21 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:42:21 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:42:21 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:46:37 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:46:37 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:46:37 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:46:52 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:46:52 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:46:52 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:47:40 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:47:40 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:47:40 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:48:27 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:48:27 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:48:28 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:50:05 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:50:05 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:50:06 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:51:40 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:51:40 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:51:40 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:51:59 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:51:59 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:51:59 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:52:06 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:52:06 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:52:06 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:52:06 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 11:52:06 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 11:52:06 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 11:52:06 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 11:52:06 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 11:52:06 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 11:52:07 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 11:52:07 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-21 11:52:07 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 11:52:07 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-21 11:52:07 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 11:52:07 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-21 11:52:09 INFO  org.example.bank.App - Запуск приложения
+2024-11-21 11:52:12 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-11-21 11:52:14 INFO  o.e.bank.controller.Registration - Переход на страницу лобби
+2024-11-21 11:52:44 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:52:44 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:52:44 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 11:52:44 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 11:52:44 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 11:52:44 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 11:52:44 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 11:52:44 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 11:52:44 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 11:52:45 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 11:52:45 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-11-21 11:52:45 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 11:52:45 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-11-21 11:52:45 INFO  o.e.bank.database.DatabaseAccount - Connected to the PostgreSQL server successfully.
+2024-11-21 11:52:45 INFO  o.e.bank.database.DatabaseAccount - DatabaseAccount instance created.
+2024-11-21 11:52:47 INFO  org.example.bank.App - Запуск приложения
+2024-11-21 11:52:53 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 11:52:53 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 11:52:53 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 13:01:33 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 13:01:33 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 13:01:33 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 13:03:43 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+2024-11-21 13:03:43 WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2024-11-21 13:03:44 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-21 13:03:44 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2024-11-21 13:03:44 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-11-21 13:03:44 INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2024-11-21 13:03:44 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=postgres}
+2024-11-21 13:03:44 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-11-21 13:03:44 INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+2024-11-21 13:03:44 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21 13:03:44 INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/postgres]

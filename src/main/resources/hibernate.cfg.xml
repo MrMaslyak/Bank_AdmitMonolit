@@ -9,12 +9,15 @@
         <property name="hibernate.connection.password">LaLa27418182</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
-
         <property name="hibernate.connection.characterEncoding">utf8</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
-
         <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+<!--todo mapping path
+<mapping class="org.example.bank.until.User"/>-->
+
     </session-factory>
 </hibernate-configuration>
