@@ -1,27 +1,22 @@
 package org.example.bank.database;
 
-import org.example.bank.database.repository.IDB;
-import org.example.bank.until.HibernateUtil;
-import org.hibernate.Session;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class DatabaseR implements IDB {
+public class DatabaseR {
 
     private static volatile DatabaseR instance;
-    private static volatile DatabaseAccount dbAcc;
+
     private static final Logger logger = LoggerFactory.getLogger(DatabaseR.class);
-    private Session session = HibernateUtil.getSessionFactory().openSession();
 
     private DatabaseR() {
         try (Connection connection = DatabaseConnection.getConnection()) {
             logger.info("Connected to the PostgreSQL server successfully.");
-            dbAcc = new DatabaseAccount();
         } catch (Exception e) {
             logger.error("Connection failure during initialization.", e);
         }
@@ -41,28 +36,42 @@ public class DatabaseR implements IDB {
     }
 
     public void addUser(String login, String password, String email) {
-        String query = "INSERT INTO bankUsers (login, password, email) VALUES (?, ?, ?) " +
+        String userQuery = "INSERT INTO bankUsers (login, password, email) VALUES (?, ?, ?) " +
                 "ON CONFLICT (login) DO UPDATE SET password = EXCLUDED.password, email = EXCLUDED.email";
-        try (Connection connection = DatabaseConnection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(query)) {
+        String tokenQuery = "INSERT INTO bank_user_auth_token (user_id, token) VALUES (?, NULL) " +
+                "ON CONFLICT (user_id) DO NOTHING";
+        String balanceQuery = "INSERT INTO bank_user_balance (user_id, balance_usd) VALUES (?, 0) " +
+                "ON CONFLICT (user_id) DO NOTHING";
 
-            statement.setString(1, login);
-            statement.setString(2, password);
-            statement.setString(3, email);
-            statement.executeUpdate();
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement userStatement = connection.prepareStatement(userQuery);
+             PreparedStatement tokenStatement = connection.prepareStatement(tokenQuery);
+             PreparedStatement balanceStatement = connection.prepareStatement(balanceQuery)) {
+
+            userStatement.setString(1, login);
+            userStatement.setString(2, password);
+            userStatement.setString(3, email);
+            userStatement.executeUpdate();
 
             int userId = getUserId(login);
             if (userId == -1) {
-                logger.error("Failed to add account: user ID not found for login '{}'", login);
+                logger.error("Failed to retrieve user_id for login '{}'.", login);
                 return;
             }
-            dbAcc.addAccount(userId);
 
-            logger.info("User added or updated successfully.");
+            tokenStatement.setInt(1, userId);
+            tokenStatement.executeUpdate();
+
+
+            balanceStatement.setInt(1, userId);
+            balanceStatement.executeUpdate();
+
+            logger.info("User and related records added/updated successfully.");
         } catch (Exception e) {
             logger.error("Error during user addition or update.", e);
         }
     }
+
 
 
     public int getUserId(String login) {

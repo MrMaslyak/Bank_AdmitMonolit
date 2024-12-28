@@ -24,4 +24,6 @@ module org.example.bank {
     opens org.example.bank.systems to javafx.fxml;
     exports org.example.bank.controller;
     opens org.example.bank.controller to javafx.fxml;
+    exports org.example.bank.database;
+    opens org.example.bank.database to javafx.fxml;
 }

@@ -62,7 +62,7 @@ public class Registration {
                 DatabaseR.getInstance().addUser(loginS.getText(), hashedPassword, emailS.getText());
                 clearError();
                 logger.info("Регистрация успешна. Переход на главную страницу.");
-                StageManager.switchScene(accept, "/org/example/bank/fxml/bank.fxml");
+                StageManager.switchScene(accept, "/org/example/bank/fxml/lobby.fxml");
             } else {
                 if (isLoginExists) {
                     showError("Пользователь с таким логином уже существует.");

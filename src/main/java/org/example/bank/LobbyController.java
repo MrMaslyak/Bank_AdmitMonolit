@@ -7,16 +7,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import org.example.bank.controller.Bank;
-import org.example.bank.database.DatabaseAccount;
 import org.example.bank.database.DatabaseR;
 import org.example.bank.systems.StageManager;
-import org.example.bank.systems.UpdDataUserBank;
 import org.example.bank.until.TimeLobby;
 import org.example.bank.webscraper.ExchangeRate;
 import org.example.bank.webscraper.News;
 import org.slf4j.Logger;
 
-import java.math.BigDecimal;
+
 
 public class LobbyController {
 
@@ -34,7 +32,7 @@ public class LobbyController {
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(LobbyController.class);
     private final ExchangeRate exchangeRate = new ExchangeRate();
     private final DatabaseR database = DatabaseR.getInstance();
-    private final DatabaseAccount databaseAccount = DatabaseAccount.getInstance();
+
 
     public void initialize() {
         initializeThread();
@@ -89,13 +87,10 @@ public class LobbyController {
             return;
         }
 
-        UpdDataUserBank bankDataUser = new UpdDataUserBank(databaseAccount);
-        bankDataUser.setUserId(userId);
 
         StageManager.switchScene(registration, "/org/example/bank/fxml/bank.fxml");
 
         Bank bankController = (Bank) StageManager.getController("/org/example/bank/fxml/bank.fxml");
-        bankController.setBankDataUser(bankDataUser);
 
         logger.info("Переход на страницу банка. Пользователь ID: {}", userId);
     }
