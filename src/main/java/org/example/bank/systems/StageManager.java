@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class StageManager {
 
-    private static FXMLLoader currentLoader; // Сохраняем текущий загрузчик
+    private static FXMLLoader currentLoader;
 
     public static void switchScene(Button currentButton, String fxmlPath) {
         try {
@@ -20,7 +20,7 @@ public class StageManager {
             Stage stage = new Stage();
             stage.setResizable(false);
             stage.setScene(new Scene(root));
-            currentButton.getScene().getWindow().hide(); // Закрываем текущую сцену
+            currentButton.getScene().getWindow().hide();
             stage.show();
         } catch (IOException e) {
             Logger logger = org.slf4j.LoggerFactory.getLogger(StageManager.class);

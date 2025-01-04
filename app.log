@@ -3187,3 +3187,32 @@ org.postgresql.util.PSQLException: ОШИБКА: нет уникального �
 2024-12-28 22:58:49 INFO  org.example.bank.database.DatabaseR - Maslyak is available for use.
 2024-12-28 22:58:49 INFO  org.example.bank.database.DatabaseR - User and related records added/updated successfully.
 2024-12-28 22:58:49 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2024-12-28 23:05:13 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-12-28 23:05:13 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-12-28 23:05:15 INFO  org.example.bank.App - Запуск приложения
+2024-12-28 23:05:17 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-12-28 23:05:30 INFO  org.example.bank.database.DatabaseR - Dron is available for use.
+2024-12-28 23:05:30 INFO  org.example.bank.database.DatabaseR - dron@gmail.com is available for use.
+2024-12-28 23:05:30 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-12-28 23:05:30 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2024-12-28 23:05:30 INFO  org.example.bank.database.DatabaseR - dron@gmail.com is available for use.
+2024-12-28 23:05:30 INFO  org.example.bank.database.DatabaseR - Dron is available for use.
+2024-12-28 23:05:30 INFO  org.example.bank.database.DatabaseR - User and related records added/updated successfully.
+2024-12-28 23:05:30 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2024-12-31 16:09:13 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-12-31 16:09:13 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-12-31 16:09:15 INFO  org.example.bank.App - Запуск приложения
+2024-12-31 16:09:18 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2024-12-31 16:09:40 INFO  org.example.bank.database.DatabaseR - Maslyak123232 is available for use.
+2024-12-31 16:09:40 INFO  org.example.bank.database.DatabaseR - examplwe@gmail.com is available for use.
+2024-12-31 16:09:40 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2024-12-31 16:09:40 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2024-12-31 16:09:40 INFO  org.example.bank.database.DatabaseR - examplwe@gmail.com is available for use.
+2024-12-31 16:09:40 INFO  org.example.bank.database.DatabaseR - Maslyak123232 is available for use.
+2024-12-31 16:09:40 INFO  org.example.bank.database.DatabaseR - User and related records added/updated successfully.
+2024-12-31 16:09:40 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2024-12-31 16:11:49 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2024-12-31 16:11:50 INFO  org.example.bank.LobbyController - Переход на страницу банка. Пользователь ID: 5
+2024-12-31 16:16:34 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2024-12-31 16:16:34 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2024-12-31 16:16:38 INFO  org.example.bank.App - Запуск приложения

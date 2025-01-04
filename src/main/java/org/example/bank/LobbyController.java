@@ -87,7 +87,6 @@ public class LobbyController {
             return;
         }
 
-
         StageManager.switchScene(registration, "/org/example/bank/fxml/bank.fxml");
 
         Bank bankController = (Bank) StageManager.getController("/org/example/bank/fxml/bank.fxml");
