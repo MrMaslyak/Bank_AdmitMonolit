@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class GenerationJWT {
 
-    public static  String generateToken(String userId) {
+    public static  String generateToken(int userId) {
         try {
             Algorithm algorithm = Algorithm.HMAC256("secret_key");
                  String token = JWT.create()

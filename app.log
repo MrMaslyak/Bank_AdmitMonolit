@@ -3242,3 +3242,41 @@ org.postgresql.util.PSQLException: ОШИБКА: нет уникального �
 2025-01-04 21:22:55 WARN  o.e.bank.systems.SystemAuthorization - Неверный логин или пароль. Логин: MAslyka
 2025-01-04 21:23:01 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
 2025-01-04 21:23:02 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь ID: 3
+2025-01-04 21:40:09 INFO  org.example.bank.App - Запуск приложения
+2025-01-04 21:40:24 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2025-01-04 21:40:24 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2025-01-04 21:40:24 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2025-01-04 21:41:31 INFO  org.example.bank.App - Запуск приложения
+2025-01-04 21:41:38 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2025-01-04 21:41:38 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2025-01-04 21:41:38 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2025-01-04 21:44:40 INFO  org.example.bank.App - Запуск приложения
+2025-01-04 21:44:49 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2025-01-04 21:44:49 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2025-01-04 21:44:49 WARN  org.example.bank.database.DatabaseR - Invalid login or password.
+2025-01-04 21:44:49 WARN  o.e.bank.systems.SystemAuthorization - Неверный логин или пароль. Логин: Maslyak
+2025-01-04 21:44:58 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2025-01-04 21:44:58 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь ID: 3
+2025-01-04 21:47:37 INFO  org.example.bank.App - Запуск приложения
+2025-01-04 21:47:48 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2025-01-04 21:47:48 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2025-01-04 21:47:48 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2025-01-04 21:47:49 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь ID: 3
+2025-01-04 21:50:55 INFO  org.example.bank.App - Запуск приложения
+2025-01-04 21:51:33 INFO  org.example.bank.App - Запуск приложения
+2025-01-04 21:51:37 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2025-01-04 21:51:37 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2025-01-04 21:51:37 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2025-01-04 21:51:37 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь ID: 3
+2025-01-04 21:53:28 INFO  org.example.bank.App - Запуск приложения
+2025-01-04 21:53:33 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2025-01-04 21:53:33 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2025-01-04 21:53:33 WARN  org.example.bank.database.DatabaseR - Invalid login or password.
+2025-01-04 21:53:33 WARN  o.e.bank.systems.SystemAuthorization - Неверный логин или пароль. Логин: Maslyak
+2025-01-04 21:53:42 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2025-01-04 21:53:42 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь ID: 3
+2025-01-04 21:55:31 INFO  org.example.bank.App - Запуск приложения
+2025-01-04 21:55:46 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2025-01-04 21:55:46 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2025-01-04 21:55:46 INFO  org.example.bank.database.DatabaseR - User authenticated successfully.
+2025-01-04 21:55:47 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь ID: 3
