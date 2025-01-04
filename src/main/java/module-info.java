@@ -16,6 +16,7 @@ module org.example.bank {
     requires org.hibernate.orm.core;
     requires jakarta.persistence;
     requires static lombok;
+    requires com.auth0.jwt;
 
 
     opens org.example.bank to javafx.fxml;
