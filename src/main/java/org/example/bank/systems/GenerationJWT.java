@@ -11,7 +11,7 @@ public class GenerationJWT {
         try {
             Algorithm algorithm = Algorithm.HMAC256("secret_key");
                  String token = JWT.create()
-                    .withIssuer("YourBankApp")
+                    .withIssuer("MaslyakBank")
                     .withClaim("userId", userId)
                     .withExpiresAt(new Date(System.currentTimeMillis() + 3600 * 1000)) // Токен на 1 час
                     .sign(algorithm);

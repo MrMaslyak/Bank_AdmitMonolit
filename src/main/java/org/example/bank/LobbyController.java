@@ -6,9 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import org.example.bank.controller.Bank;
 import org.example.bank.database.DatabaseR;
 import org.example.bank.systems.StageManager;
+import org.example.bank.systems.SystemAuthorization;
 import org.example.bank.until.TimeLobby;
 import org.example.bank.webscraper.ExchangeRate;
 import org.example.bank.webscraper.News;
@@ -31,7 +31,8 @@ public class LobbyController {
 
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(LobbyController.class);
     private final ExchangeRate exchangeRate = new ExchangeRate();
-    private final DatabaseR database = DatabaseR.getInstance();
+
+
 
 
     public void initialize() {
@@ -66,43 +67,9 @@ public class LobbyController {
         logger.info("Переход на страницу регистрации");
     }
 
-    public void setLogin() {
-        if (validateLogin()) {
-            proceedToBank();
-        } else {
-            showLoginError();
-        }
+    public void Authorization() {
+        SystemAuthorization systemAuthorization = new SystemAuthorization(registration, loginL, passwordL, errorL);
+        systemAuthorization.setLogin();
     }
-
-    private boolean validateLogin() {
-        return database.passBank(loginL.getText(), passwordL.getText());
-    }
-
-
-    private void proceedToBank() {
-        int userId = database.getUserId(loginL.getText());
-        if (userId == -1) {
-            logger.warn("Пользователь с логином {} не найден.", loginL.getText());
-            showLoginError();
-            return;
-        }
-
-        StageManager.switchScene(registration, "/org/example/bank/fxml/bank.fxml");
-
-        Bank bankController = (Bank) StageManager.getController("/org/example/bank/fxml/bank.fxml");
-
-        logger.info("Переход на страницу банка. Пользователь ID: {}", userId);
-    }
-
-
-
-
-    private void showLoginError() {
-        errorL.setVisible(true);
-        errorL.setText("Incorrect login or password");
-        logger.warn("Неверный логин или пароль. Логин: {}", loginL.getText());
-    }
-
-
 
 }
