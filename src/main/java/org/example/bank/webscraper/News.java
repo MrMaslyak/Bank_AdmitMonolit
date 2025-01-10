@@ -12,7 +12,7 @@ import java.util.List;
 public class News {
 
     private final String url = "https://www.pravda.com.ua/news/";
-    private final List<String> newsList = new ArrayList<>();
+    private static final List<String[]> newsList = new ArrayList<>();
 
     public News() {
         loadNews();
@@ -22,11 +22,13 @@ public class News {
         try {
             Document doc = Jsoup.connect(url).get();
             Elements newsElements = doc.select(".article_news_list .article_header");
+            Elements newsHref = doc.select(".article_news_list .article_header a");
 
             for (int i = 0; i < 6; i++) {
                 Element newsElement = newsElements.get(i);
                 String newsText = newsElement.text();
-                newsList.add(validateFirstWord(newsText));
+                String newsHrefText = newsHref.get(i).attr("href");
+                newsList.add(new String[]{validateFirstWord(newsText), newsHrefText});
             }
 
         } catch (IOException e) {
@@ -46,11 +48,14 @@ public class News {
         if (index < 1 || index > newsList.size()) {
             return "Новость недоступна";
         }
-        return newsList.get(index - 1);
+        return newsList.get(index - 1)[0];
+    }
+    public static String getNewsLink(int index) {
+        if (index < 1 || index > newsList.size()) {
+            return null;
+        }
+        return newsList.get(index - 1)[1];
     }
 
-    public List<String> getAllNews() {
-        return new ArrayList<>(newsList);
-    }
 
 }

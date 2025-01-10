@@ -52,7 +52,7 @@
             </font>
         </Label>
 
-        <ScrollPane layoutX="31.0" layoutY="144.0" prefHeight="54.0" prefWidth="525.0" styleClass="border-pane">
+        <ScrollPane layoutX="31.0" layoutY="144.0" prefHeight="54.0" prefWidth="454.0" styleClass="border-pane">
             <content>
                 <VBox>
                     <Label fx:id="news1" styleClass="news" text="News1" />
@@ -60,7 +60,7 @@
             </content>
         </ScrollPane>
 
-        <ScrollPane layoutX="31.0" layoutY="226.0" prefHeight="54.0" prefWidth="525.0" styleClass="border-pane">
+        <ScrollPane layoutX="31.0" layoutY="226.0" prefHeight="54.0" prefWidth="454.0" styleClass="border-pane">
             <content>
                 <VBox>
                     <Label fx:id="news2" styleClass="news" text="News2" />
@@ -69,7 +69,7 @@
         </ScrollPane>
 
 
-        <ScrollPane layoutX="31.0" layoutY="306.0" prefHeight="54.0" prefWidth="525.0" styleClass="border-pane">
+        <ScrollPane layoutX="31.0" layoutY="306.0" prefHeight="54.0" prefWidth="454.0" styleClass="border-pane">
             <content>
                 <VBox>
                     <Label fx:id="news3" styleClass="news" text="News3" />
@@ -77,7 +77,7 @@
             </content>
         </ScrollPane>
 
-        <ScrollPane layoutX="31.0" layoutY="388.0" prefHeight="54.0" prefWidth="525.0" styleClass="border-pane">
+        <ScrollPane layoutX="31.0" layoutY="388.0" prefHeight="54.0" prefWidth="454.0" styleClass="border-pane">
             <content>
                 <VBox>
                     <Label fx:id="news4" styleClass="news" text="News4" />
@@ -85,7 +85,7 @@
             </content>
         </ScrollPane>
 
-        <ScrollPane layoutX="31.0" layoutY="471.0" prefHeight="54.0" prefWidth="525.0" styleClass="border-pane">
+        <ScrollPane layoutX="31.0" layoutY="471.0" prefHeight="54.0" prefWidth="454.0" styleClass="border-pane">
             <content>
                 <VBox>
                     <Label fx:id="news5" styleClass="news" text="News5" />
@@ -93,7 +93,7 @@
             </content>
         </ScrollPane>
 
-        <ScrollPane layoutX="31.0" layoutY="552.0" prefHeight="54.0" prefWidth="525.0" styleClass="border-pane">
+        <ScrollPane layoutX="31.0" layoutY="552.0" prefHeight="54.0" prefWidth="454.0" styleClass="border-pane">
             <content>
                 <VBox>
                     <Label fx:id="news6" styleClass="news" text="News6" />
@@ -131,6 +131,12 @@
                 <Font size="18.0" />
             </font>
         </Label>
+      <Button fx:id="btn1" layoutX="492.0" layoutY="159.0" mnemonicParsing="false"  text="Посмотреть" />
+      <Button fx:id="btn2" layoutX="492.0" layoutY="241.0" mnemonicParsing="false"  text="Посмотреть" />
+      <Button fx:id="btn3" layoutX="492.0" layoutY="320.0" mnemonicParsing="false"  text="Посмотреть" />
+      <Button fx:id="btn4" layoutX="492.0" layoutY="403.0" mnemonicParsing="false"  text="Посмотреть" />
+      <Button fx:id="btn5" layoutX="492.0" layoutY="486.0" mnemonicParsing="false"  text="Посмотреть" />
+      <Button fx:id="btn6" layoutX="492.0" layoutY="567.0" mnemonicParsing="false"  text="Посмотреть" />
 
     </children>
 </AnchorPane>
