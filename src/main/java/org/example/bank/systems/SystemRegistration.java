@@ -55,7 +55,7 @@ public class SystemRegistration {
 
     public void onPasswordChanged() {
         String password = passwordS.getText();
-        boolean isValid = password != null && isValidPassword(password) && password.length() >= 8;
+        boolean isValid = password != null && isValidPassword(password) && password.length() >= 8  && password.length() <= 72;
         updateIndicator(indicatorPassword, isValid);
         setPasswordValid(isValid);
     }

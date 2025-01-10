@@ -54,7 +54,9 @@ public class Registration {
             logger.info("Данные валидны. Начало регистрации.");
 
 
-            String hashedPassword = BCrypt.hashpw(passwordS.getText(), BCrypt.gensalt());
+            String hashedPassword = BCrypt.hashpw(passwordS.getText(), BCrypt.gensalt(12));
+
+
             boolean isEmailExists = DatabaseR.getInstance().availableEmail(emailS.getText());
             boolean isLoginExists = DatabaseR.getInstance().availableLogin(loginS.getText());
 

@@ -5,12 +5,16 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import org.example.bank.controller.Bank;
+import org.example.bank.database.DatabaseAuthorizationAccount;
 import org.example.bank.database.DatabaseConnection;
 import org.example.bank.database.DatabaseR;
+import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class SystemAuthorization {
 
@@ -18,7 +22,7 @@ public class SystemAuthorization {
     private Button registration;
     private TextField loginL;
     private PasswordField passwordL;
-    private Label  errorL;
+    private Label errorL;
 
     private final DatabaseR database = DatabaseR.getInstance();
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(SystemAuthorization.class);
@@ -39,14 +43,24 @@ public class SystemAuthorization {
         }
     }
 
-    private void saveToken(){
+    private void saveToken() {
         int userId = database.getUserId(loginL.getText());
         String token = GenerationJWT.generateToken(userId);
-        saveTokenToDatabase(userId, token);
+        DatabaseAuthorizationAccount.saveTokenToDatabase(userId, token);
     }
 
     private boolean validateLogin() {
-        return database.passBank(loginL.getText(), passwordL.getText());
+        String login = loginL.getText();
+        String password = passwordL.getText();
+
+        String hashedPassword = DatabaseAuthorizationAccount.takeHashedPasswordDB(login);
+
+        if (hashedPassword != null && BCrypt.checkpw(password, hashedPassword)) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
     private void proceedToBank() {
@@ -62,19 +76,7 @@ public class SystemAuthorization {
     }
 
 
-    public void saveTokenToDatabase(int userId, String token) {
-        String query = "UPDATE bank_user_auth_token SET token = ? WHERE user_id = ?";
-        try (Connection connection = DatabaseConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-            preparedStatement.setString(1, token);
-            preparedStatement.setInt(2, userId);
-            preparedStatement.executeUpdate();
 
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException("Ошибка при сохранении токена в базу данных");
-        }
-    }
 
 }
