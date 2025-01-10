@@ -1,9 +1,7 @@
 package org.example.bank.controller;
 
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.Tooltip;
 import javafx.scene.shape.Circle;
 import org.example.bank.database.DatabaseR;
 import org.example.bank.systems.StageManager;
@@ -23,6 +21,9 @@ public class Registration {
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(Registration.class);
 
     public void initialize() {
+        Tooltip.install(indicatorEmail, new Tooltip("Email має бути у форматі example@gmail.com"));
+        Tooltip.install(indicatorLogin, new Tooltip("Login має бути написаний тільки латиницею" + "\n" + "Login має бути від 4 символів"));
+        Tooltip.install(indicatorPassword, new Tooltip("Password повинен містити від 8 до 20 символів" + "\n" + "Password не повинен містити спеціальних символів"));
         systemRegistration = new SystemRegistration(indicatorEmail, indicatorLogin, indicatorPassword, passwordS, loginS, emailS, errorMsg);
     }
 

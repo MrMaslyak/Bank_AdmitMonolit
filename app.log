@@ -3438,3 +3438,137 @@ org.postgresql.util.PSQLException: ОШИБКА: нет уникального �
 2025-01-10 22:43:56 INFO  org.example.bank.App - Запуск приложения
 2025-01-10 22:46:02 INFO  org.example.bank.App - Запуск приложения
 2025-01-10 22:47:40 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 22:47:55 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 22:51:48 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 22:52:33 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2025-01-10 22:52:33 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2025-01-10 22:52:34 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь ID: 8
+2025-01-10 22:52:39 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 22:53:12 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-10 22:53:13 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:53:13 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:53:13 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:55:01 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2025-01-10 22:55:01 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2025-01-10 22:55:01 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:55:01 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:55:01 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:55:01 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:55:13 INFO  org.example.bank.database.DatabaseR - Maslyak1 is available for use.
+2025-01-10 22:55:13 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:55:13 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:55:13 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:56:50 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:56:50 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:56:50 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:56:50 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:07 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:07 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:07 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:07 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:13 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:13 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:13 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:13 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:16 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:16 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:16 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:16 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:22 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:22 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:22 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:22 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:27 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:27 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:27 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:27 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:30 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:30 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:30 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:30 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:32 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:32 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:32 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:32 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:52 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:52 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:52 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:52 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:54 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:54 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:54 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:54 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:55 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:55 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:55 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:55 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:57 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:57 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:57 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:57 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:57:59 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:57:59 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:57:59 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:57:59 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:14 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:14 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:14 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:14 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:16 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:16 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:16 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:16 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:17 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:17 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:17 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:17 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:18 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:18 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:18 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:18 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:20 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:20 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:20 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:20 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:21 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:21 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:21 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:21 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:22 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:22 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:22 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:22 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:23 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:23 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:23 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:23 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:24 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:24 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:24 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:24 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:26 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:26 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:26 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:26 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:27 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:27 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:27 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:27 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 22:58:29 WARN  org.example.bank.database.DatabaseR - Maslyak already exists in the database.
+2025-01-10 22:58:29 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-10 22:58:29 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-10 22:58:29 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-10 23:07:33 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 23:07:35 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-10 23:09:17 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 23:09:18 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-10 23:11:41 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 23:11:46 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-10 23:12:09 INFO  o.e.bank.controller.Registration - Переход на страницу лобби
+2025-01-10 23:13:10 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 23:13:56 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 23:15:05 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-10 23:16:23 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 23:16:23 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-10 23:16:37 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 23:16:38 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
