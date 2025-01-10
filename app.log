@@ -3427,3 +3427,7 @@ org.postgresql.util.PSQLException: ОШИБКА: нет уникального �
 2025-01-10 22:07:04 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
 2025-01-10 22:07:04 WARN  o.e.bank.systems.SystemAuthorization - Неверный логин или пароль. Логин: Maslyak
 2025-01-10 22:07:12 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь ID: 8
+2025-01-10 22:13:41 INFO  org.example.bank.App - Запуск приложения
+2025-01-10 22:13:49 INFO  org.example.bank.database.DatabaseR - Connected to the PostgreSQL server successfully.
+2025-01-10 22:13:49 INFO  org.example.bank.database.DatabaseR - DatabaseR instance created.
+2025-01-10 22:13:50 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь ID: 8
