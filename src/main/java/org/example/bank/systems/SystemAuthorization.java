@@ -1,20 +1,19 @@
 package org.example.bank.systems;
 
+import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import org.example.bank.controller.Bank;
 import org.example.bank.database.DatabaseAuthorizationAccount;
-import org.example.bank.database.DatabaseConnection;
 import org.example.bank.database.DatabaseR;
+import org.example.bank.until.ErrorDialog;
 import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class SystemAuthorization {
 
@@ -23,7 +22,7 @@ public class SystemAuthorization {
     private TextField loginL;
     private PasswordField passwordL;
     private Label errorL;
-
+   private boolean isInBank = false;
     private final DatabaseR database = DatabaseR.getInstance();
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(SystemAuthorization.class);
 
@@ -38,6 +37,8 @@ public class SystemAuthorization {
         if (validateLogin()) {
             saveToken();
             proceedToBank();
+            monitorToken();
+
         } else {
             showLoginError();
         }
@@ -45,8 +46,27 @@ public class SystemAuthorization {
 
     private void saveToken() {
         int userId = database.getUserId(loginL.getText());
-        String token = GenerationJWT.generateToken(userId);
+        String token = JWToken.generateToken(userId);
         DatabaseAuthorizationAccount.saveTokenToDatabase(userId, token);
+    }
+
+    private void monitorToken(){
+        int userId = database.getUserId(loginL.getText());
+
+        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+
+            scheduler.scheduleAtFixedRate(() -> {
+                String token = DatabaseAuthorizationAccount.takeTokenDB(userId);
+                if (token != null && JWToken.isExpiresToken(token)) {
+                    logger.info("Токен истёк! Перенаправляем на другую сцену.");
+                    Platform.runLater(() -> {
+                        StageManager.switchScene("/org/example/bank/fxml/lobby.fxml");
+                        ErrorDialog.showErrorDialog("");
+                    });
+                    scheduler.shutdown();
+                }
+            },0,10, TimeUnit.SECONDS);
+
     }
 
     private boolean validateLogin() {
@@ -67,6 +87,7 @@ public class SystemAuthorization {
         int userId = database.getUserId(loginL.getText());
         StageManager.switchScene(registration, "/org/example/bank/fxml/bank.fxml");
         logger.info("Переход на страницу банка. Пользователь ID: {}", userId);
+        isInBank = true;
     }
 
     private void showLoginError() {

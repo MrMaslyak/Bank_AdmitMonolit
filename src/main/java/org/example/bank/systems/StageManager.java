@@ -28,6 +28,24 @@ public class StageManager {
         }
     }
 
+    public static void switchScene(String fxmlPath) {
+        try {
+            currentLoader = new FXMLLoader(StageManager.class.getResource(fxmlPath));
+            Parent root = currentLoader.load();
+
+            Stage currentStage = (Stage) Stage.getWindows().stream()
+                    .findFirst()
+                    .orElseThrow(() -> new IllegalStateException("Нет активного окна"));
+
+            currentStage.setScene(new Scene(root));
+            currentStage.show();
+        } catch (IOException e) {
+            Logger logger = org.slf4j.LoggerFactory.getLogger(StageManager.class);
+            logger.error("Ошибка при смене сцены: " + fxmlPath, e);
+        }
+    }
+
+
     public static Object getController(String s) {
         if (currentLoader != null) {
             return currentLoader.getController();
