@@ -8,13 +8,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class DatabaseR {
+public class DatabaseReg {
 
-    private static volatile DatabaseR instance;
+    private static volatile DatabaseReg instance;
 
-    private static final Logger logger = LoggerFactory.getLogger(DatabaseR.class);
+    private static final Logger logger = LoggerFactory.getLogger(DatabaseReg.class);
 
-    private DatabaseR() {
+    private DatabaseReg() {
         try (Connection connection = DatabaseConnection.getConnection()) {
             logger.info("Connected to the PostgreSQL server successfully.");
         } catch (Exception e) {
@@ -23,11 +23,11 @@ public class DatabaseR {
 
     }
 
-    public static DatabaseR getInstance() {
+    public static DatabaseReg getInstance() {
         if (instance == null) {
-            synchronized (DatabaseR.class) {
+            synchronized (DatabaseReg.class) {
                 if (instance == null) {
-                    instance = new DatabaseR();
+                    instance = new DatabaseReg();
                     logger.info("DatabaseR instance created.");
                 }
             }
@@ -53,7 +53,7 @@ public class DatabaseR {
             userStatement.setString(3, email);
             userStatement.executeUpdate();
 
-            int userId = getUserId(login);
+            int userId = DatabaseGetter.getUserId(login);
             if (userId == -1) {
                 logger.error("Failed to retrieve user_id for login '{}'.", login);
                 return;
@@ -74,45 +74,8 @@ public class DatabaseR {
 
 
 
-    public int getUserId(String login) {
-        String query = "SELECT user_id FROM bankusers WHERE login = ?";
-        try (Connection connection = DatabaseConnection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(query)) {
-
-            statement.setString(1, login);
-            ResultSet resultSet = statement.executeQuery();
-            if (resultSet.next()) {
-                return resultSet.getInt("user_id");
-            }
-        } catch (Exception e) {
-            logger.error("Error fetching user ID.", e);
-        }
-        return -1;
-    }
 
 
-    public boolean passBank(String login, String password) {
-        String query = "SELECT * FROM bankUsers WHERE login = ? AND password = ?";
-        try (Connection connection = DatabaseConnection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(query)) {
-
-            statement.setString(1, login);
-            statement.setString(2, password);
-
-            ResultSet resultSet = statement.executeQuery();
-            boolean exists = resultSet.next();
-
-            if (exists) {
-                logger.info("User authenticated successfully.");
-            } else {
-                logger.warn("Invalid login or password.");
-            }
-            return exists;
-        } catch (Exception e) {
-            logger.error("Error during user authentication.", e);
-            return false;
-        }
-    }
 
     public boolean availableLogin(String login) {
         return isFieldExists("SELECT 1 FROM bankUsers WHERE login = ?", login);

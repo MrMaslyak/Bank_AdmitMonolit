@@ -46,12 +46,4 @@ public class StageManager {
     }
 
 
-    public static Object getController(String s) {
-        if (currentLoader != null) {
-            return currentLoader.getController();
-        }
-        Logger logger = org.slf4j.LoggerFactory.getLogger(StageManager.class);
-        logger.warn("Попытка получить контроллер, но currentLoader == null.");
-        return null;
-    }
 }

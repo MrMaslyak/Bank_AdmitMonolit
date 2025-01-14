@@ -4,7 +4,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Circle;
-import org.example.bank.database.DatabaseR;
+import org.example.bank.database.DatabaseReg;
 
 import java.util.regex.Pattern;
 
@@ -37,7 +37,7 @@ public class SystemRegistration {
 
         boolean isAvailable = false;
         try {
-            isAvailable = DatabaseR.getInstance().availableLogin(login);
+            isAvailable = DatabaseReg.getInstance().availableLogin(login);
         } catch (Exception e) {
             errorMsg.setText("Ошибка проверки логина.");
             errorMsg.setVisible(true);
@@ -75,7 +75,7 @@ public class SystemRegistration {
 
         boolean isAvailable = false;
         try {
-            isAvailable = DatabaseR.getInstance().availableEmail(email);
+            isAvailable = DatabaseReg.getInstance().availableEmail(email);
         } catch (Exception e) {
             errorMsg.setText("Ошибка проверки email.");
             errorMsg.setVisible(true);

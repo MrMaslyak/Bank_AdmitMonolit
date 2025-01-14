@@ -38,8 +38,23 @@ public class JWToken {
         } catch (Exception e) {
             e.printStackTrace();
             return true;
+
         }
     }
+
+    public static void verifyToken(String token) {
+        try {
+            Algorithm algorithm = Algorithm.HMAC256("secret_key");
+            JWT.require(algorithm)
+                    .withIssuer("MaslyakBank")
+                    .build()
+                    .verify(token);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Ошибка при верификации токена");
+        }
+    }
+
 
 
 

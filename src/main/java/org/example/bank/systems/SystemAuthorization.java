@@ -5,8 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import org.example.bank.database.DatabaseAuthorizationAccount;
-import org.example.bank.database.DatabaseR;
+import org.example.bank.controller.Bank;
+import org.example.bank.database.DatabaseAuth;
+import org.example.bank.database.DatabaseGetter;
 import org.example.bank.until.ErrorDialog;
 import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
@@ -22,8 +23,6 @@ public class SystemAuthorization {
     private TextField loginL;
     private PasswordField passwordL;
     private Label errorL;
-   private boolean isInBank = false;
-    private final DatabaseR database = DatabaseR.getInstance();
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(SystemAuthorization.class);
 
     public SystemAuthorization(Button registration, TextField loginL, PasswordField passwordL, Label errorL) {
@@ -45,18 +44,18 @@ public class SystemAuthorization {
     }
 
     private void saveToken() {
-        int userId = database.getUserId(loginL.getText());
+        int userId = DatabaseGetter.getUserId(loginL.getText());
         String token = JWToken.generateToken(userId);
-        DatabaseAuthorizationAccount.saveTokenToDatabase(userId, token);
+        DatabaseAuth.saveTokenToDatabase(userId, token);
     }
 
     private void monitorToken(){
-        int userId = database.getUserId(loginL.getText());
+        int userId = DatabaseGetter.getUserId(loginL.getText());
 
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
             scheduler.scheduleAtFixedRate(() -> {
-                String token = DatabaseAuthorizationAccount.takeTokenDB(userId);
+                String token = DatabaseGetter.getTokenDB(userId);
                 if (token != null && JWToken.isExpiresToken(token)) {
                     logger.info("Токен истёк! Перенаправляем на другую сцену.");
                     Platform.runLater(() -> {
@@ -73,7 +72,7 @@ public class SystemAuthorization {
         String login = loginL.getText();
         String password = passwordL.getText();
 
-        String hashedPassword = DatabaseAuthorizationAccount.takeHashedPasswordDB(login);
+        String hashedPassword = DatabaseGetter.getHashedPasswordDB(login);
 
         if (hashedPassword != null && BCrypt.checkpw(password, hashedPassword)) {
             return true;
@@ -84,11 +83,12 @@ public class SystemAuthorization {
     }
 
     private void proceedToBank() {
-        int userId = database.getUserId(loginL.getText());
+        Bank bank = new Bank(loginL.getText());
         StageManager.switchScene(registration, "/org/example/bank/fxml/bank.fxml");
-        logger.info("Переход на страницу банка. Пользователь ID: {}", userId);
-        isInBank = true;
+        bank.initialize();
+        logger.info("Переход на страницу банка. Пользователь: {}", loginL.getText());
     }
+
 
     private void showLoginError() {
         errorL.setVisible(true);

@@ -3,7 +3,7 @@ package org.example.bank.controller;
 import javafx.scene.control.*;
 import javafx.scene.control.Tooltip;
 import javafx.scene.shape.Circle;
-import org.example.bank.database.DatabaseR;
+import org.example.bank.database.DatabaseReg;
 import org.example.bank.systems.StageManager;
 import org.example.bank.systems.SystemRegistration;
 import org.mindrot.jbcrypt.BCrypt;
@@ -58,11 +58,11 @@ public class Registration {
             String hashedPassword = BCrypt.hashpw(passwordS.getText(), BCrypt.gensalt(12));
 
 
-            boolean isEmailExists = DatabaseR.getInstance().availableEmail(emailS.getText());
-            boolean isLoginExists = DatabaseR.getInstance().availableLogin(loginS.getText());
+            boolean isEmailExists = DatabaseReg.getInstance().availableEmail(emailS.getText());
+            boolean isLoginExists = DatabaseReg.getInstance().availableLogin(loginS.getText());
 
             if (!isEmailExists && !isLoginExists) {
-                DatabaseR.getInstance().addUser(loginS.getText(), hashedPassword, emailS.getText());
+                DatabaseReg.getInstance().addUser(loginS.getText(), hashedPassword, emailS.getText());
                 clearError();
                 logger.info("Регистрация успешна. Переход на главную страницу.");
                 StageManager.switchScene(accept, "/org/example/bank/fxml/lobby.fxml");
