@@ -49,22 +49,22 @@ public class SystemAuthorization {
         DatabaseAuth.saveTokenToDatabase(userId, token);
     }
 
-    private void monitorToken(){
+    private void monitorToken() {
         int userId = DatabaseGetter.getUserId(loginL.getText());
 
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
-            scheduler.scheduleAtFixedRate(() -> {
-                String token = DatabaseGetter.getTokenDB(userId);
-                if (token != null && JWToken.isExpiresToken(token)) {
-                    logger.info("Токен истёк! Перенаправляем на другую сцену.");
-                    Platform.runLater(() -> {
-                        StageManager.switchScene("/org/example/bank/fxml/lobby.fxml");
-                        ErrorDialog.showErrorDialog("");
-                    });
-                    scheduler.shutdown();
-                }
-            },0,10, TimeUnit.SECONDS);
+        scheduler.scheduleAtFixedRate(() -> {
+            String token = DatabaseGetter.getTokenDB(userId);
+            if (token != null && JWToken.isExpiresToken(token)) {
+                logger.info("Токен истёк! Перенаправляем на другую сцену.");
+                Platform.runLater(() -> {
+                    StageManager.switchScene("/org/example/bank/fxml/lobby.fxml");
+                    ErrorDialog.showErrorDialog("");
+                });
+                scheduler.shutdown();
+            }
+        }, 0, 10, TimeUnit.SECONDS);
 
     }
 
@@ -83,9 +83,9 @@ public class SystemAuthorization {
     }
 
     private void proceedToBank() {
-        Bank bank = new Bank(loginL.getText());
         StageManager.switchScene(registration, "/org/example/bank/fxml/bank.fxml");
-        bank.initialize();
+        Bank bank = new Bank(loginL.getText());
+        bank.start();
         logger.info("Переход на страницу банка. Пользователь: {}", loginL.getText());
     }
 

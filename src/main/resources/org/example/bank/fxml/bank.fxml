@@ -25,7 +25,7 @@
                   <Font name="Bell MT" size="19.0" />
                </font>
             </Label>
-            <Label fx:id="balanceLabel" layoutX="21.0" layoutY="184.0" prefHeight="37.0" prefWidth="82.0" text="500" textFill="WHITE">
+            <Label fx:id="balanceLabel" layoutX="21.0" layoutY="184.0" prefHeight="37.0" prefWidth="82.0" text="0" textFill="WHITE">
                <font>
                   <Font name="Bell MT" size="30.0" />
                </font>

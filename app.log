@@ -4309,3 +4309,130 @@ Caused by: java.lang.NullPointerException: null
 2025-01-14 21:39:44 INFO  org.example.bank.App - Запуск приложения
 2025-01-14 21:39:51 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
 2025-01-14 21:40:24 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:40:31 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:41:01 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-14 21:42:04 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:42:54 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:43:00 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:43:35 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:43:41 ERROR o.example.bank.systems.StageManager - Ошибка при смене сцены: /org/example/bank/fxml/bank.fxml
+javafx.fxml.LoadException: 
+/C:/Users/Komp/IdeaProjects/Bank1/target/classes/org/example/bank/fxml/bank.fxml:9
+
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:946)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$InstanceDeclarationElement.processAttribute(FXMLLoader.java:983)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$Element.processStartElement(FXMLLoader.java:230)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$ValueElement.processStartElement(FXMLLoader.java:757)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2853)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at org.example.bank/org.example.bank.systems.StageManager.switchScene(StageManager.java:19)
+	at org.example.bank/org.example.bank.systems.SystemAuthorization.proceedToBank(SystemAuthorization.java:87)
+	at org.example.bank/org.example.bank.systems.SystemAuthorization.setLogin(SystemAuthorization.java:38)
+	at org.example.bank/org.example.bank.LobbyController.Authorization(LobbyController.java:85)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.NoSuchMethodException: org.example.bank.controller.Bank.<init>()
+	at java.base/java.lang.Class.getConstructor0(Class.java:3761)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2930)
+	at javafx.fxml@21/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:941)
+	... 65 common frames omitted
+2025-01-14 21:43:41 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:44:11 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-14 21:44:26 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:44:32 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:45:02 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-14 21:45:11 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:45:19 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:45:54 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:46:04 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:46:20 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:46:26 WARN  o.e.bank.systems.SystemAuthorization - Неверный логин или пароль. Логин: Maslyak
+2025-01-14 21:46:31 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:46:48 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:46:56 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:47:27 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:47:34 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:48:05 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:48:13 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:48:43 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:48:50 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:49:25 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:49:31 WARN  o.e.bank.systems.SystemAuthorization - Неверный логин или пароль. Логин: Maslyakl
+2025-01-14 21:49:34 WARN  o.e.bank.systems.SystemAuthorization - Неверный логин или пароль. Логин: Maslyakl
+2025-01-14 21:49:39 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:50:09 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-14 21:51:54 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:52:04 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:52:35 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-14 21:53:10 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:53:21 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:53:45 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:55:41 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:55:52 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:56:22 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-14 21:56:54 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:57:05 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:57:31 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:57:40 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:58:10 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-14 21:58:26 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 21:58:34 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 21:59:04 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-14 22:00:06 INFO  org.example.bank.App - Запуск приложения
+2025-01-14 22:00:13 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-14 22:00:43 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
