@@ -27,6 +27,20 @@ public class StageManager {
             logger.error("Ошибка при смене сцены: " + fxmlPath, e);
         }
     }
+    public static void switchScene(Button currentButton, Parent root) {
+        try {
+            Stage stage = new Stage();
+            stage.setResizable(false);
+            stage.setScene(new Scene(root));
+            currentButton.getScene().getWindow().hide();
+            stage.show();
+        } catch (Exception e) {
+            Logger logger = org.slf4j.LoggerFactory.getLogger(StageManager.class);
+            logger.error("Ошибка при смене сцены", e);
+        }
+    }
+
+
 
     public static void switchScene(String fxmlPath) {
         try {

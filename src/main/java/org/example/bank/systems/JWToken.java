@@ -14,7 +14,7 @@ public class JWToken {
             String token = JWT.create()
                     .withIssuer("MaslyakBank")
                     .withClaim("userId", userId)
-                    .withExpiresAt(new Date(System.currentTimeMillis() + 30 * 1000)) // Токен на 1 час
+                    .withExpiresAt(new Date(System.currentTimeMillis() + 3600 * 1000)) // Токен на 1 час
                     .sign(algorithm);
             return token;
         } catch (Exception e) {

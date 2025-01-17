@@ -72,11 +72,6 @@ public class DatabaseReg {
         }
     }
 
-
-
-
-
-
     public boolean availableLogin(String login) {
         return isFieldExists("SELECT 1 FROM bankUsers WHERE login = ?", login);
     }

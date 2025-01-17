@@ -1,6 +1,8 @@
 package org.example.bank.systems;
 
 import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -12,6 +14,7 @@ import org.example.bank.until.ErrorDialog;
 import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 
+import java.io.IOException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -64,7 +67,7 @@ public class SystemAuthorization {
                 });
                 scheduler.shutdown();
             }
-        }, 0, 10, TimeUnit.SECONDS);
+        }, 0, 10, TimeUnit.MINUTES);
 
     }
 
@@ -83,10 +86,18 @@ public class SystemAuthorization {
     }
 
     private void proceedToBank() {
-        StageManager.switchScene(registration, "/org/example/bank/fxml/bank.fxml");
-        Bank bank = new Bank(loginL.getText());
-        bank.start();
-        logger.info("Переход на страницу банка. Пользователь: {}", loginL.getText());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/bank/fxml/bank.fxml"));
+        try {
+            Parent root = loader.load();
+
+            Bank bankController = loader.getController();
+            bankController.setUserLogin(loginL.getText());
+            StageManager.switchScene(registration, root);
+
+            logger.info("Авторизация прошла успешно. Перенаправление на страницу банка.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

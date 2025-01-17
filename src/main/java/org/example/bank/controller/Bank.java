@@ -12,31 +12,24 @@ public class Bank {
 
     private String userLogin;
 
-    public Bank() {}
-
-    public Bank(String userLogin) {
+    public void setUserLogin(String userLogin) {
         this.userLogin = userLogin;
+        updateUserInfo();
     }
 
     @FXML
     public void initialize() {
-        if (userLogin != null) {
-            start();
-        }
     }
 
-    public void start() {
+    private void updateUserInfo() {
+        if (userLogin == null) return;
 
         int userId = DatabaseGetter.getUserId(userLogin);
         String balance = DatabaseGetter.getBalanceUserDB(userId);
 
-        System.out.println("User in bank: " + userLogin);
-        System.out.println("Id user in bank: " + userId);
-        System.out.println("Balance user: " + balance);
-
         Platform.runLater(() -> {
-            balanceLabel = new Label(balance);
-            user = new Label(userLogin);
+            balanceLabel.setText(balance);
+            user.setText(userLogin);
         });
     }
 }

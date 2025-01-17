@@ -4436,3 +4436,66 @@ Caused by: java.lang.NoSuchMethodException: org.example.bank.controller.Bank.<in
 2025-01-14 22:00:06 INFO  org.example.bank.App - Запуск приложения
 2025-01-14 22:00:13 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
 2025-01-14 22:00:43 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-17 19:36:22 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:37:32 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:37:41 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-17 19:38:11 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-17 19:38:48 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:38:55 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-17 19:39:25 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-17 19:42:29 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:42:44 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-17 19:43:03 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:44:00 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:44:06 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-17 19:45:37 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:45:44 INFO  o.e.bank.systems.SystemAuthorization - Переход на страницу банка. Пользователь: Maslyak
+2025-01-17 19:46:15 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-17 19:48:54 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:49:53 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:50:17 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:53:19 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:53:30 ERROR o.e.bank.systems.SystemAuthorization - Ошибка при смене сцены
+java.lang.NullPointerException: Cannot invoke "javafx.stage.Window.hide()" because the return value of "javafx.scene.Scene.getWindow()" is null
+	at org.example.bank/org.example.bank.systems.StageManager.switchScene(StageManager.java:26)
+	at org.example.bank/org.example.bank.systems.SystemAuthorization.lambda$proceedToBank$2(SystemAuthorization.java:98)
+	at javafx.graphics@21/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
+	at javafx.graphics@21/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-01-17 19:54:00 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-17 19:54:06 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:54:06 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-17 19:54:09 INFO  o.e.bank.controller.Registration - Переход на страницу лобби
+2025-01-17 19:54:54 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:55:00 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 19:55:31 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-17 19:55:52 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:56:05 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 19:56:35 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-17 19:57:29 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:58:19 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 19:58:27 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 19:58:57 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-17 20:01:16 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:01:32 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:02:02 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-17 20:05:24 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:06:04 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-17 20:06:19 INFO  o.example.bank.database.DatabaseReg - Connected to the PostgreSQL server successfully.
+2025-01-17 20:06:19 INFO  o.example.bank.database.DatabaseReg - DatabaseR instance created.
+2025-01-17 20:06:19 INFO  o.example.bank.database.DatabaseReg - Dron is available for use.
+2025-01-17 20:06:19 INFO  o.example.bank.database.DatabaseReg - dron@gmail.com is available for use.
+2025-01-17 20:06:19 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-17 20:06:19 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2025-01-17 20:06:20 INFO  o.example.bank.database.DatabaseReg - dron@gmail.com is available for use.
+2025-01-17 20:06:20 INFO  o.example.bank.database.DatabaseReg - Dron is available for use.
+2025-01-17 20:06:20 INFO  o.example.bank.database.DatabaseReg - User and related records added/updated successfully.
+2025-01-17 20:06:20 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2025-01-17 20:06:31 WARN  o.e.bank.systems.SystemAuthorization - Неверный логин или пароль. Логин: Dron
+2025-01-17 20:06:36 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:07:06 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
+2025-01-17 20:07:48 INFO  org.example.bank.App - Запуск приложения
