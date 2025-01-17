@@ -45,7 +45,6 @@ public class Bank {
         if (JWToken.verifyToken(token)) {
             Platform.runLater(() -> {
                 double balance = Double.parseDouble(balanceLabel.getText()) + 100;
-                System.out.println(balance);
                 balanceLabel.setText(String.format("%.2f", balance).replace(",", "."));
                 databaseBank.updateBalanceUserDB(userId, balance);
             });
