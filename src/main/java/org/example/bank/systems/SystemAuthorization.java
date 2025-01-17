@@ -63,7 +63,7 @@ public class SystemAuthorization {
                 logger.info("Токен истёк! Перенаправляем на другую сцену.");
                 Platform.runLater(() -> {
                     StageManager.switchScene("/org/example/bank/fxml/lobby.fxml");
-                    ErrorDialog.showErrorDialog("");
+                    ErrorDialog.showErrorDialog("Термин дії минув! Зайди в аккаунт заново");
                 });
                 scheduler.shutdown();
             }

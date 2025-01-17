@@ -3,6 +3,8 @@ package org.example.bank.systems;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import org.example.bank.until.ErrorDialog;
+
 import java.util.Date;
 
 
@@ -28,6 +30,7 @@ public class JWToken {
         try {
             DecodedJWT jwt = JWT.decode(token);
             Date expirationDate = jwt.getExpiresAt();
+            System.out.println(expirationDate);
             if (expirationDate != null && expirationDate.before(new Date())) {
 
                 return true;
@@ -42,16 +45,18 @@ public class JWToken {
         }
     }
 
-    public static void verifyToken(String token) {
+    public static boolean verifyToken(String token) {
         try {
             Algorithm algorithm = Algorithm.HMAC256("secret_key");
             JWT.require(algorithm)
                     .withIssuer("MaslyakBank")
                     .build()
                     .verify(token);
+            System.out.println("Token is valid");
+            return true;
         } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException("Ошибка при верификации токена");
+            ErrorDialog.showErrorDialog("Ошибка при проверке токена");
+            return false;
         }
     }
 

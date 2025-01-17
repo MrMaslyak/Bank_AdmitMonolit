@@ -4499,3 +4499,111 @@ java.lang.NullPointerException: Cannot invoke "javafx.stage.Window.hide()" becau
 2025-01-17 20:06:36 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
 2025-01-17 20:07:06 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
 2025-01-17 20:07:48 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:08:21 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:17:26 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:17:33 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:25:40 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:25:47 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:27:33 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:27:45 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:30:42 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:30:50 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:31:31 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:31:38 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:34:24 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:34:32 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:35:15 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:35:30 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:37:07 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:38:34 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:40:09 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:40:15 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:44:35 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:44:55 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 20:45:17 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 20:45:23 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:04:29 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:04:35 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:04:35 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:04:36 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:16:07 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:16:14 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:16:14 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:16:14 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:17:13 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:17:19 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:17:19 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:17:19 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:18:13 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:18:20 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:18:20 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:18:20 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:18:59 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:19:05 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:19:05 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:19:05 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:19:34 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:19:41 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:19:41 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:19:41 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:19:43 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:20:00 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:20:12 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:20:20 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:21:12 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:21:26 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:21:26 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:21:26 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:21:29 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:21:55 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:22:53 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:23:00 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:23:00 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:23:01 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:23:05 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:23:07 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:23:23 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:23:33 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:23:33 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:23:33 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:23:37 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:24:39 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:24:47 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:24:47 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:24:48 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:26:57 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:27:03 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:27:03 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:27:04 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:27:10 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:29:12 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:29:20 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:29:20 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:29:20 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:29:22 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:30:02 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:30:12 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:30:12 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:30:12 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:30:13 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:30:32 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:30:39 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:30:39 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:30:39 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:30:40 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:30:42 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:30:44 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:30:45 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:31:19 INFO  org.example.bank.App - Запуск приложения
+2025-01-17 21:31:30 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-17 21:31:30 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-17 21:31:30 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-17 21:31:32 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:31:32 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:31:33 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:31:33 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:31:33 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:31:33 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:31:33 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:31:34 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-17 21:31:34 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.

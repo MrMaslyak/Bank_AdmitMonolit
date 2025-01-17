@@ -10,7 +10,7 @@ public class ErrorDialog {
         Alert alert = new Alert(Alert.AlertType.ERROR);
 
         alert.setTitle("Error");
-        alert.setHeaderText("Термін дії минув! Зайди в аккаунт заново");
+        alert.setHeaderText(message);
 
         alert.getDialogPane().setMinWidth(125);
         alert.getDialogPane().setMinHeight(50);
