@@ -3,6 +3,7 @@ package org.example.bank.systems;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import org.example.bank.database.DatabaseGetter;
 import org.example.bank.until.ErrorDialog;
 
 import java.util.Date;

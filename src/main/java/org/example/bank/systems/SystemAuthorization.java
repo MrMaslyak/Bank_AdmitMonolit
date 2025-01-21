@@ -67,7 +67,7 @@ public class SystemAuthorization {
                 });
                 scheduler.shutdown();
             }
-        }, 0, 10, TimeUnit.MINUTES);
+        }, 0, 10, TimeUnit.SECONDS);
 
     }
 

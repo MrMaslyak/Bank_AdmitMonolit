@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Date;
 
 public class DatabaseGetter {
 
@@ -117,6 +118,28 @@ public class DatabaseGetter {
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Ошибка при получении баланса", e);
+        }
+    }
+
+    public static Date getTokenCreatedAt(String token) {
+        String query = "SELECT created_at FROM bank_user_auth_token WHERE token = ?";
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setString(1, token);
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    return resultSet.getTimestamp("created_at");
+                } else {
+                    logger.info("Пользователь с таким token: " + token + " не найден.");
+                    return null;
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Ошибка при получении даты создания токена", e);
         }
     }
 
