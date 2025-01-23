@@ -17,6 +17,7 @@ module org.example.bank {
     requires jakarta.persistence;
     requires static lombok;
     requires com.auth0.jwt;
+    requires io.github.cdimascio.dotenv.java;
 
 
     opens org.example.bank to javafx.fxml;
