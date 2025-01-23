@@ -1,0 +1,7 @@
+2025-01-23 20:23:08 INFO  org.example.bank.App - Запуск приложения
+2025-01-23 20:23:57 INFO  org.example.bank.App - Запуск приложения
+2025-01-23 20:24:01 WARN  o.e.bank.systems.SystemAuthorization - Неверный логин или пароль. Логин: 
+2025-01-23 20:24:30 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-23 20:24:35 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-23 20:24:35 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-23 20:24:35 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.

@@ -4718,3 +4718,4 @@ java.lang.NullPointerException: Cannot invoke "javafx.stage.Window.hide()" becau
 2025-01-19 19:32:24 INFO  o.e.bank.systems.SystemAuthorization - Токен истёк! Перенаправляем на другую сцену.
 2025-01-21 20:48:09 INFO  org.example.bank.App - Запуск приложения
 2025-01-21 21:38:26 INFO  org.example.bank.App - Запуск приложения
+2025-01-23 20:12:09 INFO  org.example.bank.App - Запуск приложения
