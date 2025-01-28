@@ -5201,3 +5201,7 @@ Caused by: java.net.UnknownHostException: db
 2025-01-23 22:25:22 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
 2025-01-23 22:25:22 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
 2025-01-23 22:25:25 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 13 обновлен.
+2025-01-28 19:42:16 INFO  org.example.bank.App - Запуск приложения
+2025-01-28 19:42:25 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-28 19:42:25 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-28 19:42:25 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.

@@ -10,7 +10,7 @@ services:
         condition: service_healthy
     environment:
       - DB_HOST= jdbc:postgresql://db:5432/${DB_NAME}
-      - DB_PORT=5432
+      - DB_PORT=5431
       - DB_NAME=${DB_NAME}
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
@@ -27,7 +27,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     ports:
-      - "5432:5432"
+      - "5431:5431"
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}" ]
       interval: 10s
