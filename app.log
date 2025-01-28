@@ -5206,3 +5206,8 @@ Caused by: java.net.UnknownHostException: db
 2025-01-28 19:42:25 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
 2025-01-28 19:42:25 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
 2025-01-28 21:21:33 INFO  org.example.bank.App - Запуск приложения
+2025-01-28 22:51:31 INFO  org.example.bank.App - Запуск приложения
+2025-01-28 22:51:32 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-28 22:51:37 INFO  o.e.bank.controller.Registration - Переход на страницу лобби
+2025-01-28 22:52:54 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-28 22:52:58 INFO  o.e.bank.controller.Registration - Переход на страницу лобби
