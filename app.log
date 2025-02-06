@@ -7718,3 +7718,127 @@ org.postgresql.util.PSQLException: ERROR: there is no unique or exclusion constr
 2025-01-30 22:18:49 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 5 обновлен.
 2025-01-30 22:18:50 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 5 обновлен.
 2025-01-30 22:18:50 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 5 обновлен.
+2025-01-30 22:18:56 INFO  org.example.bank.App - Запуск приложения
+2025-01-30 22:26:55 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-30 22:27:06 INFO  o.example.bank.database.DatabaseReg - Connected to the PostgreSQL server successfully.
+2025-01-30 22:27:06 INFO  o.example.bank.database.DatabaseReg - DatabaseR instance created.
+2025-01-30 22:27:06 INFO  o.example.bank.database.DatabaseReg - Antont is available for use.
+2025-01-30 22:27:06 INFO  o.example.bank.database.DatabaseReg - anton@gmail.com is available for use.
+2025-01-30 22:27:06 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-30 22:27:06 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2025-01-30 22:27:07 INFO  o.example.bank.database.DatabaseReg - anton@gmail.com is available for use.
+2025-01-30 22:27:07 INFO  o.example.bank.database.DatabaseReg - Antont is available for use.
+2025-01-30 22:27:07 INFO  o.example.bank.database.DatabaseReg - User and related records added/updated successfully.
+2025-01-30 22:27:07 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2025-01-30 22:41:09 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-30 22:41:26 INFO  o.example.bank.database.DatabaseReg - Ecample is available for use.
+2025-01-30 22:41:26 INFO  o.example.bank.database.DatabaseReg - excampke@gmail.com is available for use.
+2025-01-30 22:41:26 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-30 22:41:26 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2025-01-30 22:41:27 INFO  o.example.bank.database.DatabaseReg - excampke@gmail.com is available for use.
+2025-01-30 22:41:27 INFO  o.example.bank.database.DatabaseReg - Ecample is available for use.
+2025-01-30 22:41:27 INFO  o.example.bank.database.DatabaseReg - User and related records added/updated successfully.
+2025-01-30 22:41:27 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2025-01-30 22:44:29 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-30 22:44:44 INFO  o.example.bank.database.DatabaseReg - ecampl2@gmail.com is available for use.
+2025-01-30 22:44:44 INFO  o.example.bank.database.DatabaseReg - ecxampkle@gmail.com is available for use.
+2025-01-30 22:44:44 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-30 22:44:44 WARN  o.e.bank.controller.Registration - Данные не валидны. Регистрация отклонена.
+2025-01-30 22:44:44 ERROR o.e.bank.controller.Registration - Ошибка: Проверьте правильность введенных данных.
+2025-01-30 22:44:53 INFO  o.example.bank.database.DatabaseReg - Exampl23 is available for use.
+2025-01-30 22:44:53 INFO  o.example.bank.database.DatabaseReg - ecxampkle@gmail.com is available for use.
+2025-01-30 22:44:53 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-30 22:44:53 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2025-01-30 22:44:53 INFO  o.example.bank.database.DatabaseReg - ecxampkle@gmail.com is available for use.
+2025-01-30 22:44:53 INFO  o.example.bank.database.DatabaseReg - Exampl23 is available for use.
+2025-01-30 22:44:53 INFO  o.example.bank.database.DatabaseReg - User and related records added/updated successfully.
+2025-01-30 22:44:53 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2025-01-30 22:52:54 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-30 22:53:05 INFO  o.example.bank.database.DatabaseReg - Maslyak is available for use.
+2025-01-30 22:53:05 INFO  o.example.bank.database.DatabaseReg - maslyak@gmail.com is available for use.
+2025-01-30 22:53:05 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-30 22:53:05 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2025-01-30 22:53:05 INFO  o.example.bank.database.DatabaseReg - maslyak@gmail.com is available for use.
+2025-01-30 22:53:05 INFO  o.example.bank.database.DatabaseReg - Maslyak is available for use.
+2025-01-30 22:53:05 INFO  o.example.bank.database.DatabaseReg - User and related records added/updated successfully.
+2025-01-30 22:53:05 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2025-01-31 19:14:48 INFO  org.example.bank.App - Запуск приложения
+2025-01-31 19:15:04 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-01-31 19:15:14 INFO  o.example.bank.database.DatabaseReg - Connected to the PostgreSQL server successfully.
+2025-01-31 19:15:14 INFO  o.example.bank.database.DatabaseReg - DatabaseR instance created.
+2025-01-31 19:15:14 INFO  o.example.bank.database.DatabaseReg - Andrew is available for use.
+2025-01-31 19:15:14 INFO  o.example.bank.database.DatabaseReg - andrew@gmail.com is available for use.
+2025-01-31 19:15:14 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-01-31 19:15:14 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2025-01-31 19:15:14 INFO  o.example.bank.database.DatabaseReg - andrew@gmail.com is available for use.
+2025-01-31 19:15:14 INFO  o.example.bank.database.DatabaseReg - Andrew is available for use.
+2025-01-31 19:15:14 INFO  o.example.bank.database.DatabaseReg - User and related records added/updated successfully.
+2025-01-31 19:15:14 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2025-01-31 19:15:54 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-01-31 19:15:54 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-01-31 19:15:54 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-01-31 19:15:55 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-31 19:15:55 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-31 19:15:55 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-31 19:15:55 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-31 19:15:56 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-31 19:15:56 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-31 19:15:56 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-31 19:15:56 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 10 обновлен.
+2025-01-31 19:16:29 INFO  org.example.bank.App - Запуск приложения
+2025-01-31 19:39:35 INFO  org.example.bank.App - Запуск приложения
+2025-02-04 20:20:41 INFO  org.example.bank.App - Запуск приложения
+2025-02-04 20:20:49 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-02-04 20:21:05 INFO  o.example.bank.database.DatabaseReg - Connected to the PostgreSQL server successfully.
+2025-02-04 20:21:05 INFO  o.example.bank.database.DatabaseReg - DatabaseR instance created.
+2025-02-04 20:21:05 INFO  o.example.bank.database.DatabaseReg - Antosha is available for use.
+2025-02-04 20:21:05 INFO  o.example.bank.database.DatabaseReg - antosha@gmail.com is available for use.
+2025-02-04 20:21:05 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-02-04 20:21:05 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2025-02-04 20:21:05 INFO  o.example.bank.database.DatabaseReg - antosha@gmail.com is available for use.
+2025-02-04 20:21:05 INFO  o.example.bank.database.DatabaseReg - Antosha is available for use.
+2025-02-04 20:21:05 INFO  o.example.bank.database.DatabaseReg - User and related records added/updated successfully.
+2025-02-04 20:21:05 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2025-02-04 20:21:13 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-02-04 20:21:13 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-02-04 20:21:14 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-02-04 20:21:15 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 11 обновлен.
+2025-02-04 20:21:15 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 11 обновлен.
+2025-02-04 20:21:15 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 11 обновлен.
+2025-02-04 20:21:15 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 11 обновлен.
+2025-02-04 20:21:16 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 11 обновлен.
+2025-02-04 20:21:16 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 11 обновлен.
+2025-02-04 20:21:16 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 11 обновлен.
+2025-02-04 20:21:16 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 11 обновлен.
+2025-02-04 20:21:16 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 11 обновлен.
+2025-02-04 20:21:16 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 11 обновлен.
+2025-02-04 22:52:08 INFO  org.example.bank.App - Запуск приложения
+2025-02-04 22:52:10 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-02-04 22:52:52 INFO  o.example.bank.database.DatabaseReg - Connected to the PostgreSQL server successfully.
+2025-02-04 22:52:52 INFO  o.example.bank.database.DatabaseReg - DatabaseR instance created.
+2025-02-04 22:52:52 INFO  o.example.bank.database.DatabaseReg - Tolik is available for use.
+2025-02-04 22:52:53 INFO  o.example.bank.database.DatabaseReg - tolik@gmail.com is available for use.
+2025-02-04 22:52:53 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-02-04 22:52:53 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2025-02-04 22:52:53 INFO  o.example.bank.database.DatabaseReg - tolik@gmail.com is available for use.
+2025-02-04 22:52:53 INFO  o.example.bank.database.DatabaseReg - Tolik is available for use.
+2025-02-04 22:52:53 INFO  o.example.bank.database.DatabaseReg - User and related records added/updated successfully.
+2025-02-04 22:52:53 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.
+2025-02-04 22:53:00 WARN  o.e.bank.systems.SystemAuthorization - Неверный логин или пароль. Логин: Tolik
+2025-02-04 22:53:03 WARN  o.e.bank.systems.SystemAuthorization - Неверный логин или пароль. Логин: Tolik
+2025-02-04 22:53:07 INFO  o.example.bank.database.DatabaseBank - Connected to the PostgreSQL server successfully.
+2025-02-04 22:53:07 INFO  o.example.bank.database.DatabaseBank - DatabaseR instance created.
+2025-02-04 22:53:07 INFO  o.e.bank.systems.SystemAuthorization - Авторизация прошла успешно. Перенаправление на страницу банка.
+2025-02-04 22:53:09 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:10 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:10 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:10 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:10 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:10 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:10 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:10 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:11 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:11 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:11 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:11 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-04 22:53:11 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.

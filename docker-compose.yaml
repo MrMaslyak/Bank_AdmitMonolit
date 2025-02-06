@@ -9,7 +9,7 @@ services:
       db:
         condition: service_healthy
     environment:
-      - DB_HOST= jdbc:postgresql://db:1212/${DB_NAME}
+      - DB_HOST=jdbc:postgresql://db:1212/${DB_NAME}
       - DB_PORT=1212
       - DB_NAME=${DB_NAME}
       - DB_USER=${DB_USER}
@@ -19,6 +19,9 @@ services:
       - ACCESS_TOKEN_EXPIRE_MINUTES=${ACCESS_TOKEN_EXPIRE_MINUTES}
     volumes:
       - .:/app
+    networks:
+      - MNBank
+
   db:
     image: postgres:latest
     restart: always
@@ -26,17 +29,18 @@ services:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
-
     ports:
       - "1212:5432"
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}" ]
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
       interval: 10s
       timeout: 5s
       retries: 5
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - MNBank
 
-
-volumes:
-  postgres-data:
+networks:
+  MNBank:
+    external: true
