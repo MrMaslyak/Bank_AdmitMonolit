@@ -38,7 +38,7 @@ public class DatabaseGetter {
 
 
     public static int getUserId(String login) {
-        String query = "SELECT user_id FROM bankusers WHERE login = ?";
+        String query = "SELECT user_id FROM bank_users_data WHERE login = ?";
         try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
 
@@ -55,7 +55,7 @@ public class DatabaseGetter {
 
 
     public static String getHashedPasswordDB(String login) {
-        String query = "SELECT password FROM bankusers WHERE login = ?";
+        String query = "SELECT password FROM bank_users_data WHERE login = ?";
         try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 

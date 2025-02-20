@@ -7842,3 +7842,15 @@ org.postgresql.util.PSQLException: ERROR: there is no unique or exclusion constr
 2025-02-04 22:53:11 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
 2025-02-04 22:53:11 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
 2025-02-04 22:53:11 INFO  o.example.bank.database.DatabaseBank - Баланс пользователя с user_id 12 обновлен.
+2025-02-13 21:55:42 INFO  org.example.bank.App - Запуск приложения
+2025-02-13 21:55:44 INFO  org.example.bank.LobbyController - Переход на страницу регистрации
+2025-02-13 21:56:02 INFO  o.example.bank.database.DatabaseReg - Connected to the PostgreSQL server successfully.
+2025-02-13 21:56:02 INFO  o.example.bank.database.DatabaseReg - DatabaseR instance created.
+2025-02-13 21:56:02 INFO  o.example.bank.database.DatabaseReg - Anakentiy is available for use.
+2025-02-13 21:56:02 INFO  o.example.bank.database.DatabaseReg - anakentiy@gmail.com is available for use.
+2025-02-13 21:56:02 INFO  o.e.bank.controller.Registration - Проверка валидности данных...
+2025-02-13 21:56:02 INFO  o.e.bank.controller.Registration - Данные валидны. Начало регистрации.
+2025-02-13 21:56:02 INFO  o.example.bank.database.DatabaseReg - anakentiy@gmail.com is available for use.
+2025-02-13 21:56:02 INFO  o.example.bank.database.DatabaseReg - Anakentiy is available for use.
+2025-02-13 21:56:03 INFO  o.example.bank.database.DatabaseReg - User and related records added/updated successfully.
+2025-02-13 21:56:03 INFO  o.e.bank.controller.Registration - Регистрация успешна. Переход на главную страницу.

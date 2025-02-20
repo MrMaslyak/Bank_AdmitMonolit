@@ -36,7 +36,7 @@ public class DatabaseReg {
     }
 
     public void addUser(String login, String password, String email) {
-        String userQuery = "INSERT INTO bankUsers (login, password, email) VALUES (?, ?, ?) " +
+        String userQuery = "INSERT INTO bank_users_data (login, password, email) VALUES (?, ?, ?) " +
                 "ON CONFLICT (login) DO UPDATE SET password = EXCLUDED.password, email = EXCLUDED.email";
         String tokenQuery = "INSERT INTO bank_user_auth_token (user_id, token) VALUES (?, NULL) " +
                 "ON CONFLICT (user_id) DO NOTHING";
@@ -73,11 +73,11 @@ public class DatabaseReg {
     }
 
     public boolean availableLogin(String login) {
-        return isFieldExists("SELECT 1 FROM bankUsers WHERE login = ?", login);
+        return isFieldExists("SELECT 1 FROM bank_users_data WHERE login = ?", login);
     }
 
     public boolean availableEmail(String email) {
-        return isFieldExists("SELECT 1 FROM bankUsers WHERE email = ?", email);
+        return isFieldExists("SELECT 1 FROM bank_users_data WHERE email = ?", email);
     }
 
     private boolean isFieldExists(String query, String fieldValue) {
